@@ -12,8 +12,8 @@ export default function Template({ data }) {
       <SEO title={frontmatter.title} />
       <div className="blog-post">
         <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
         <h6>Recorded by: {frontmatter.recordedBy}</h6>
+        <h6>{frontmatter.date}</h6>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
