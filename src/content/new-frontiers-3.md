@@ -1,0 +1,21 @@
+---
+title: "New Frontiers #3: Satellite Tracking from Portable Ground Stations"
+date: 2019-19-09
+path: /new-frontiers-3
+youtubeLink: https://www.youtube.com/embed/fInNfEpQzSU
+recordedBy: Yeo Kheng Meng
+---
+
+## Speaker Bio:
+
+Roland is Chief Privacy Officer for TrustSphere where he is responsible for the company's information policy and practices. He is a HackerspaceSG founding member and FOSSASIA organiser, holds a Computer Science degree from UTS, and is an avid dancer, runner, and ham radio operator with a particular interest in space.
+
+## Talk Summary:
+
+Roland is Chief Privacy Officer for TrustSphere where he is responsible for the company's information policy and practices. He is a HackerspaceSG founding member and FOSSASIA organiser, holds a Computer Science degree from UTS, and is an avid dancer, runner, and ham radio operator with a particular interest in space.
+
+Presentation material: <https://rolandturner.com/nus-seds/>
+
+SARTS page: <https://www.sarts.org.sg/getting-a-9v-ham-license/>
+
+Exam notes: <https://github.com/sayanee/radio-amateur-exam-notes>

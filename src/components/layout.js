@@ -7,25 +7,25 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Navbar from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
 
-import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Navbar collapseOnSelect={true} expand="lg">
+        <Navbar.Brand href="/">NUS SEDS</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto">
+            <Nav.Link className="navbar-link" href="/posts">
+              BLOG
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
       <div
         style={{
           margin: `0 auto`,
