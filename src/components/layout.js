@@ -20,8 +20,17 @@ const Layout = ({ children }) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
+            <Nav.Link className="navbar-link" href="/about">
+              ABOUT
+            </Nav.Link>
+            <Nav.Link className="navbar-link" href="/events">
+              EVENTS
+            </Nav.Link>
             <Nav.Link className="navbar-link" href="/posts">
               BLOG
+            </Nav.Link>
+            <Nav.Link className="navbar-link" href="/contact">
+              CONTACT
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
