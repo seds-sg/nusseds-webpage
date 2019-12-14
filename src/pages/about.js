@@ -1,16 +1,18 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react"
+import { Link } from "gatsby"
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Layout, { NavbarPaddingContainer } from "../components/layout"
+import SEO from "../components/seo"
 
 const AboutPage = () => (
-	<Layout>
-		<SEO title="Page two" />
-		<h1>Hi from the about page</h1>
-		<p>Welcome to the about page</p>
-		<Link to="/">Go back to the homepage</Link>
-	</Layout>
-);
+  <Layout>
+    <NavbarPaddingContainer>
+      <SEO title="Page two" />
+      <h1>Hi from the about page</h1>
+      <p>Welcome to the about page</p>
+      <Link to="/">Go back to the homepage</Link>
+    </NavbarPaddingContainer>
+  </Layout>
+)
 
-export default AboutPage;
+export default AboutPage

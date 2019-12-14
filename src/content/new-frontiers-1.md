@@ -1,5 +1,5 @@
 ---
-title: "New Frontiers #2: Autonomous Rendezvous and Docking of Satellites"
+title: "New Frontiers #1: Autonomous Rendezvous and Docking of Satellites"
 date: 2019-09-05
 path: /new-frontiers-1
 youtubeLink: https://www.youtube.com/embed/p04pCGdyCDo
