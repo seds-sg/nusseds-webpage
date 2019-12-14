@@ -6,6 +6,7 @@ import styled from "styled-components"
 
 const BlogPostWrapper = styled.div`
   margin: 3rem;
+  margin-bottom: 0;
 `
 
 const BlogPostContentWrapper = styled.div`

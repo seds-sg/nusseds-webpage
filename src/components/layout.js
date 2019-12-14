@@ -59,7 +59,8 @@ Layout.propTypes = {
 // For padding from the navbar
 export const NavbarPaddingContainer = styled.div`
   padding-top: 5.5rem;
-  padding-left: 3.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 `
 
 export default StyledLayout

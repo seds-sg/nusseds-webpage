@@ -85,6 +85,8 @@ const ProjectDecriptionWrapper = styled(DescriptionFont)``
 const StyledIndexPage = styled(IndexPage)`
   width: 100%;
   height: 100vh;
+  background-position: center;
+  background-size: cover;
 `
 
 export default StyledIndexPage
