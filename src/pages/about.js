@@ -182,6 +182,7 @@ const StyledLeaderShipContent = styled(LeadershipContent)`
 const StyledImage = styled(Img)`
 	width: 200px;
 	height: 200px;
+	border-radius: 100px;
 `;
 
 const StyledImageName = styled(DescriptionFont)`
@@ -189,6 +190,7 @@ const StyledImageName = styled(DescriptionFont)`
 	font-weight: 900;
 	padding-top: 1rem;
 	max-width: 200px;
+	text-align: center;
 `;
 
 const StyledImageDescription = styled(StyledImageName)`
