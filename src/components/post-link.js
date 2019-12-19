@@ -15,6 +15,7 @@ const PostLink = ({ className, post }) => (
 
 const DateWrapper = styled(DescriptionFont)`
   padding-bottom: 1rem;
+  font-size: 1.25rem;
 `
 
 const StyledPostLink = styled(PostLink)`
@@ -28,7 +29,6 @@ const PostTitleWrapper = styled(TitleFont)`
 const ExcerptWrapper = styled(DescriptionFont)`
   padding-bottom: 2rem;
   margin: 0;
-  font-size: 0.75rem;
 `
 
 export default StyledPostLink
