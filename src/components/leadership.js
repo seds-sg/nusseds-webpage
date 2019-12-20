@@ -91,8 +91,8 @@ justify-content: space-evenly;
 export const squareImage = graphql`
 	fragment squareImage on File {
 		childImageSharp {
-			fluid(maxWidth: 200, maxHeight: 200) {
-				...GatsbyImageSharpFluid_withWebp
+			fixed(width: 200, height: 200) {
+				...GatsbyImageSharpFixed_withWebp
 			}
 		}
 	}
@@ -118,7 +118,7 @@ const StyledImageDescription = styled(StyledImageName)`
 
 const PersonImageWithTitle = ({ className, name, description, data, imageName }) => (
 	<div className={className}>
-		<StyledImage fluid={data[imageName].childImageSharp.fluid} />
+		<StyledImage fixed={data[imageName].childImageSharp.fixed} />
 		<StyledImageName>{name}</StyledImageName>
 		<StyledImageDescription>{description}</StyledImageDescription>
 	</div>

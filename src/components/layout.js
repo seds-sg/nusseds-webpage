@@ -11,39 +11,51 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import styled from 'styled-components';
 import './layout.css';
+import logo from '../images/NUS_SEDS_Logo.png';
 
 const NavbarLink = styled.span`color: #fef8e9;`;
 
 const Layout = ({ children, className }) => (
 	<div className={className}>
 		<StyledNavbar collapseOnSelect={true} expand="lg" fixed={'top'} variant="dark">
-			<Navbar.Brand href="/">NUS SEDS</Navbar.Brand>
+			<StyledBrand href="/">
+				<img src={logo} alt="logo" />
+			</StyledBrand>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="ml-auto">
+					<Nav.Link href="/projects">
+						<NavbarLink>Projects</NavbarLink>
+					</Nav.Link>
 					<Nav.Link href="/about">
-						<NavbarLink>ABOUT</NavbarLink>
+						<NavbarLink>About</NavbarLink>
 					</Nav.Link>
 					<Nav.Link href="/events">
-						<NavbarLink>EVENTS</NavbarLink>
+						<NavbarLink>Events</NavbarLink>
 					</Nav.Link>
 					<Nav.Link href="/posts">
-						<NavbarLink>BLOG</NavbarLink>
+						<NavbarLink>Blog</NavbarLink>
 					</Nav.Link>
 					<Nav.Link href="/contact">
-						<NavbarLink>CONTACT</NavbarLink>
+						<NavbarLink>Contact</NavbarLink>
 					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 		</StyledNavbar>
 		<main>{children}</main>
 		{/* <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer> */}
+				© {new Date().getFullYear()}, Built with
+				{` `}
+				<a href="https://www.gatsbyjs.org">Gatsby</a>
+			</footer> */}
 	</div>
 );
+const StyledBrand = styled(Navbar.Brand)`
+	padding: 0 !important;
+	img {
+		height: 50px;
+	}
+`;
 
 const StyledLayout = styled(Layout)`
   background-color: #141e22;
@@ -51,7 +63,7 @@ const StyledLayout = styled(Layout)`
 `;
 
 const StyledNavbar = styled(Navbar)`
-  background-color: rgba(255, 255, 255, 0.05)
+  background-color: rgba(255, 255, 255, 0.05);
 `;
 
 Layout.propTypes = {

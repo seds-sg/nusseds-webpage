@@ -6,6 +6,7 @@ import BackgroundImage from 'gatsby-background-image';
 import SEO from '../components/seo';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
+import StyledButton from '../components/button';
 
 const IndexPage = ({ className }) => {
 	const [ projectIndex, setProjectIndex ] = useState(0);
@@ -45,9 +46,9 @@ const IndexPage = ({ className }) => {
 				fluid={projectIndex === 0 ? newOppy.childImageSharp.fluid : darpa.childImageSharp.fluid}
 				className={className}
 			>
-				<NavbarPaddingContainer>
+				<StyledNavBarPadding>
 					<SEO title="Home" />
-					<ProjectWrapper>
+					<div>
 						<ProjectTitleWrapper>
 							{projectIndex === 0 ? 'New Opportunity' : 'DARPA Subterranean Challenge'}
 						</ProjectTitleWrapper>
@@ -58,14 +59,27 @@ const IndexPage = ({ className }) => {
 								'We are helping to revolutionize how we operate in the underground domain.'
 							)}
 						</ProjectDecriptionWrapper>
-					</ProjectWrapper>
-				</NavbarPaddingContainer>
+						<ProjectDetailsButton onClick={() => null} buttonText="Learn More" />
+					</div>
+				</StyledNavBarPadding>
 			</BackgroundImage>
 		</Layout>
 	);
 };
 
-const ProjectWrapper = styled.div`margin-top: 18rem;`;
+const StyledNavBarPadding = styled(NavbarPaddingContainer)`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+`;
+
+const ProjectDetailsButton = styled(StyledButton)`
+	background-color: #5557F6;
+	border: 0;
+	margin-top: 3rem;
+	padding: 0.75rem 2.5rem; 
+`;
 
 const ProjectTitleWrapper = styled(LandingTitleFont)`
   margin-bottom: 0.75rem;
