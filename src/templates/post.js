@@ -34,7 +34,9 @@ export default function Template({ data }) {
 					<h6>Recorded by: {frontmatter.recordedBy}</h6>
 					<h6>{frontmatter.date}</h6>
 					<h6>
-						<a href={frontmatter.youtubeLink}>Link to recording</a>
+						<a href={frontmatter.youtubeLink} target="_blank" rel="noopener noreferrer">
+							Link to recording
+						</a>
 					</h6>
 					<BlogPostContentWrapper dangerouslySetInnerHTML={{ __html: html }} />
 					{/* <div>

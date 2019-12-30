@@ -22,6 +22,7 @@ export const TitleFont = styled(BaseFont)`
 
 export const DescriptionFont = styled(BaseFont)`
   font-size: 1.5rem;
+  line-height: 2rem;
   font-family: 'Courier New', Courier, monospace;
 `;
 

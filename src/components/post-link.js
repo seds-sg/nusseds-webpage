@@ -6,11 +6,11 @@ import { TitleFont, DescriptionFont } from '../components/textStyles';
 const PostLink = ({ className, post }) => (
 	<div className={className}>
 		<PostLine />
-		<Link to={post.frontmatter.path}>
+		<StyledLink to={post.frontmatter.path}>
 			<PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
 			<DateWrapper>Date of post: {post.frontmatter.date}</DateWrapper>
 			<ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
-		</Link>
+		</StyledLink>
 	</div>
 );
 
@@ -24,6 +24,13 @@ const PostLine = styled.div`
 	margin-right: 2rem;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
+`;
+
+const StyledLink = styled(Link)`
+  :hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 3px white;
+  }
 `;
 
 const DateWrapper = styled(DescriptionFont)`

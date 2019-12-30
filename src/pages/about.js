@@ -27,12 +27,14 @@ const AboutPage = () => (
 					description="To empower youth in Singapore & beyond to make an impact in space exploration."
 				/>
 			</VisionMissionWrapper>
-			<SectionHeaderWrapper headerText="SOME FRIENDS WE HAVE WORKED WITH" />
+			{/* <SectionHeaderWrapper headerText="SOME FRIENDS WE HAVE WORKED WITH" /> */}
 			<SectionHeaderWrapper headerText="FOLLOW US ON" />
 			<StyledFollowUsContent />
 			<SectionHeaderWrapper headerText="OUR CORE TEAM" />
 			<StyledLeaderShipContent />
-			<SectionHeaderWrapper headerText="OUR ADVISORS" />
+			{/* <SectionHeaderWrapper headerText="OUR ADVISORS" /> */}
+			<SectionHeaderWrapper headerText="JOIN OUR MISSION" />
+			<StyledJoinUsContent />
 		</NavbarPaddingContainer>
 	</Layout>
 );
@@ -73,12 +75,16 @@ const VisionMissionDescription = styled(DescriptionFont)``;
 
 const FollowUsContent = ({ className }) => (
 	<div className={className}>
-		<StyledButton buttonText="TWITTER" onClick={() => null} />
+		<StyledButton buttonText="TELEGRAM" onClick={() => window.open('https://t.me/nusseds')} />
 		<StyledButton
 			buttonText="INSTAGRAM"
 			onClick={() => window.open('https://instagram.com/nus_seds?igshid=krgjw95pdxlm')}
 		/>
 		<StyledButton buttonText="FACEBOOK" onClick={() => window.open('https://www.facebook.com/nusseds/')} />
+		<StyledButton
+			buttonText="YOUTUBE"
+			onClick={() => window.open('https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ')}
+		/>
 	</div>
 );
 
@@ -86,6 +92,29 @@ const StyledFollowUsContent = styled(FollowUsContent)`
 	display: flex;
 	justify-content: space-evenly;
 	padding-bottom: 2rem;
+`;
+
+const JoinUsContent = ({ className }) => (
+	<div className={className}>
+		<JoinUsTitle>Let's Work Together.</JoinUsTitle>
+		<JoinUsText>
+			If you are inspired to believe in our mission and vision - please do reach out to us. Together, we can
+			inspire others to believe and help to create opportunities for fellow Singaporeans in the Space Industry.
+		</JoinUsText>
+		<StyledButton buttonText="REACH OUT TO US" onClick={() => window.open('mailto:missioncontrol@nusseds.space')} />
+	</div>
+);
+
+const JoinUsTitle = styled(TitleFont)`
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+`;
+const JoinUsText = styled(DescriptionFont)`
+	padding-bottom: 3rem;
+`;
+
+const StyledJoinUsContent = styled(JoinUsContent)`
+	padding-bottom: 3rem;
 `;
 
 export default AboutPage;
