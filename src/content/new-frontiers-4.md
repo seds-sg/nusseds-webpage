@@ -2,8 +2,8 @@
 title: "New Frontiers #4: Google Earth Engine"
 date: 2019-10-03
 path: /new-frontiers-4
-youtubeLink: https://www.youtube.com/embed/b6eS0joBKHQ
-recordedBy: Harsh Goel
+youtubeLink: https://youtu.be/b6eS0joBKHQ
+recordedBy: Harsh Goel, NUS SEDS '19
 ---
 
 ### Speaker Bio:

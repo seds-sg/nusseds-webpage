@@ -63,7 +63,11 @@ const StyledLayout = styled(Layout)`
 `;
 
 const StyledNavbar = styled(Navbar)`
-  background-color: rgba(255, 255, 255, 0.05);
+	background-color: rgba(255, 255, 255, 0.05);
+	.navbar-nav a.nav-link {
+		padding-right: 1rem;
+		padding-left: 1rem;
+	}
 `;
 
 Layout.propTypes = {

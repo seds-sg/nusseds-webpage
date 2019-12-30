@@ -24,7 +24,7 @@ const AboutPage = () => (
 				/>
 				<StyledVisionMission
 					title="Our Mission."
-					description="To empower youth in Singapore & beyond to make an impace in space exploration."
+					description="To empower youth in Singapore & beyond to make an impact in space exploration."
 				/>
 			</VisionMissionWrapper>
 			<SectionHeaderWrapper headerText="SOME FRIENDS WE HAVE WORKED WITH" />
@@ -60,7 +60,10 @@ const VisionMission = ({ className, title, description }) => (
 	</div>
 );
 
-const StyledVisionMission = styled(VisionMission)`padding: 1rem 0;`;
+const StyledVisionMission = styled(VisionMission)`
+	padding: 1rem 0;
+	max-width: 40rem;	
+`;
 
 const VisionMissionTitle = styled(TitleFont)`
   padding-bottom: 1rem;
@@ -71,8 +74,11 @@ const VisionMissionDescription = styled(DescriptionFont)``;
 const FollowUsContent = ({ className }) => (
 	<div className={className}>
 		<StyledButton buttonText="TWITTER" onClick={() => null} />
-		<StyledButton buttonText="INSTAGRAM" onClick={() => null} />
-		<StyledButton buttonText="FACEBOOK" onClick={() => null} />
+		<StyledButton
+			buttonText="INSTAGRAM"
+			onClick={() => window.open('https://instagram.com/nus_seds?igshid=krgjw95pdxlm')}
+		/>
+		<StyledButton buttonText="FACEBOOK" onClick={() => window.open('https://www.facebook.com/nusseds/')} />
 	</div>
 );
 

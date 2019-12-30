@@ -2,7 +2,7 @@
 title: "New Frontiers #1: Autonomous Rendezvous and Docking of Satellites"
 date: 2019-09-05
 path: /new-frontiers-1
-youtubeLink: https://www.youtube.com/embed/p04pCGdyCDo
+youtubeLink: https://youtu.be/h0ySpPfiYXA
 recordedBy: Bryan Lim, NUS SEDS '19
 ---
 
@@ -18,4 +18,4 @@ lnfinite Orbits (IO), a Singapore based company, is building the same from scrat
 
 This core IP of RvD, developed in-house uses the latest AI techniques for its navigation system. This competency allows many new markets to open such as life extension of GEO satellites, active Debris Removal for LEO constellations, lower cost, reusable and self assembling satellites, and other exciting future opportunities.
 
-**Do note that the recording for this session is split up into 3 parts, of which only the first is shown here. The rest can be found at our youtube channel, located [here](https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ).**
+**Do note that the recording for this session is split up into 3 parts, of which only the first is linked here. The rest can be found at our youtube channel, located [here](https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ).**

@@ -2,7 +2,7 @@
 title: "New Frontiers #7: Astropreneurship"
 date: 2019-10-31
 path: /new-frontiers-7
-youtubeLink: https://www.youtube.com/embed/5kpTj31LP_s
+youtubeLink: https://youtu.be/5kpTj31LP_s
 recordedBy: Yeoh Jun Kai, NUS SEDS '19
 ---
 

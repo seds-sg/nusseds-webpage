@@ -23,14 +23,14 @@ const IndexPage = ({ className }) => {
 			query {
 				darpa: file(relativePath: { eq: "darpa.png" }) {
 					childImageSharp {
-						fluid(quality: 100) {
+						fluid(quality: 100, maxWidth: 1440) {
 							...GatsbyImageSharpFluid_withWebp
 						}
 					}
 				}
 				newOppy: file(relativePath: { eq: "new_oppy.png" }) {
 					childImageSharp {
-						fluid(quality: 100) {
+						fluid(quality: 100, maxWidth: 1440) {
 							...GatsbyImageSharpFluid_withWebp
 						}
 					}

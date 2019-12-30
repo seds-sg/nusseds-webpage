@@ -1,34 +1,48 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import { TitleFont, DescriptionFont } from "../components/textStyles"
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+import { TitleFont, DescriptionFont } from '../components/textStyles';
 
 const PostLink = ({ className, post }) => (
-  <div className={className}>
-    <Link to={post.frontmatter.path}>
-      <PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
-      <DateWrapper>Date of post: {post.frontmatter.date}</DateWrapper>
-      <ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
-    </Link>
-  </div>
-)
+	<div className={className}>
+		<PostLine />
+		<Link to={post.frontmatter.path}>
+			<PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
+			<DateWrapper>Date of post: {post.frontmatter.date}</DateWrapper>
+			<ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
+		</Link>
+	</div>
+);
+
+const PostLine = styled.div`
+	height: 0;
+	width: 5rem;
+	border: 0;
+	flex-shrink: 0;
+	margin-left: -3rem;
+	margin-top: 2.3rem;
+	margin-right: 2rem;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+`;
 
 const DateWrapper = styled(DescriptionFont)`
   padding-bottom: 1rem;
   font-size: 1.25rem;
-`
+`;
 
 const StyledPostLink = styled(PostLink)`
   padding-bottom: 2rem;
-`
+  display: flex;
+`;
 
 const PostTitleWrapper = styled(TitleFont)`
   padding-bottom: 1rem;
-`
+`;
 
 const ExcerptWrapper = styled(DescriptionFont)`
   padding-bottom: 2rem;
   margin: 0;
-`
+`;
 
-export default StyledPostLink
+export default StyledPostLink;

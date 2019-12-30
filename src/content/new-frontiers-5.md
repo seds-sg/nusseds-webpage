@@ -2,7 +2,7 @@
 title: "New Frontiers #5: Journey to Become a Private Pilot"
 date: 2019-10-10
 path: /new-frontiers-5
-youtubeLink: https://www.youtube.com/embed/Tde0NruNWIk
+youtubeLink: https://youtu.be/Tde0NruNWIk
 recordedBy: Yeoh Jun Kai & Ramu Vairavan, NUS SEDS '19
 ---
 

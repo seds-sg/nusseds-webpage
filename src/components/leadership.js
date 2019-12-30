@@ -119,7 +119,7 @@ const StyledImageDescription = styled(StyledImageName)`
 const PersonImageWithTitle = ({ className, name, description, data, imageName }) => (
 	<div className={className}>
 		<StyledImage fixed={data[imageName].childImageSharp.fixed} />
-		<StyledImageName>{name}</StyledImageName>
+		<StyledImageName>{name.toUpperCase()}</StyledImageName>
 		<StyledImageDescription>{description}</StyledImageDescription>
 	</div>
 );
