@@ -1,27 +1,41 @@
 import React from 'react';
+import { StyledBriefPostLink } from '../components/post-link';
 import { PageHeaderFont, DescriptionFont } from '../components/textStyles';
 import Layout, { NavbarPaddingContainer } from '../components/layout';
 import SEO from '../components/seo';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 import StyledButton from '../components/button';
 import SectionHeaderWrapper from '../components/sectionHeader';
 
-const EventsPage = () => (
-	<Layout>
-		<NavbarPaddingContainer>
-			<SEO title="Events" />
-			<EventPageHeaderWrapper>Our Events.</EventPageHeaderWrapper>
-			<EventPageDescription>
-				Get event updates and post-event summaries every week! Just leave your email with us and we will take
-				care of it for you!
-			</EventPageDescription>
-			<ButtonWrapper buttonText="Get Updates 🚀" onClick={() => null} />
-			<SectionHeaderWrapper headerText="UPCOMING EVENTS" />
-			<SectionHeaderWrapper headerText="PAST EVENTS" />
-			<SectionHeaderWrapper headerText="OUR PAST SPEAKERS" />
-		</NavbarPaddingContainer>
-	</Layout>
-);
+const EventsPage = ({ data: { allMarkdownRemark: { edges } } }) => {
+	const Posts = edges
+		.filter((edge) => !!edge.node.frontmatter.date)
+		.map((edge) => <StyledBriefPostLink key={edge.node.id} post={edge.node} />);
+	return (
+		<Layout>
+			<NavbarPaddingContainer>
+				<SEO title="Events" />
+				<EventPageHeaderWrapper>Our Events.</EventPageHeaderWrapper>
+				<EventPageDescription>
+					Get event updates and post-event summaries every week! Just leave your email with us and we will
+					take care of it for you!
+				</EventPageDescription>
+				<ButtonWrapper buttonText="Get Updates 🚀" onClick={() => null} />
+				<SectionHeaderWrapper headerText="UPCOMING EVENTS" />
+				<SectionHeaderWrapper headerText="PAST EVENTS" />
+				<EventsWrapper>{Posts}</EventsWrapper>
+				<SectionHeaderWrapper headerText="OUR PAST SPEAKERS" />
+			</NavbarPaddingContainer>
+		</Layout>
+	);
+};
+
+const EventsWrapper = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+`;
 
 const EventPageHeaderWrapper = styled(PageHeaderFont)`
   margin-bottom: 3rem;
@@ -36,3 +50,21 @@ const ButtonWrapper = styled(StyledButton)`
 `;
 
 export default EventsPage;
+
+export const pageQuery = graphql`
+	query {
+		allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 4) {
+			edges {
+				node {
+					id
+					excerpt(pruneLength: 100)
+					frontmatter {
+						date(formatString: "MMMM DD, YYYY")
+						path
+						title
+					}
+				}
+			}
+		}
+	}
+`;

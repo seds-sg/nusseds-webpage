@@ -8,11 +8,24 @@ const PostLink = ({ className, post }) => (
 		<PostLine />
 		<StyledLink to={post.frontmatter.path}>
 			<PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
-			<DateWrapper>Date of post: {post.frontmatter.date}</DateWrapper>
+			<DateWrapper>Date: {post.frontmatter.date}</DateWrapper>
 			<ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
 		</StyledLink>
 	</div>
 );
+
+const BriefPostLink = ({ className, post }) => (
+	<StyledLink className={className} to={post.frontmatter.path}>
+		<PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
+		<DateWrapper>Date: {post.frontmatter.date}</DateWrapper>
+		<ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
+	</StyledLink>
+);
+
+export const StyledBriefPostLink = styled(BriefPostLink)`
+	max-width: 40rem;
+	padding-bottom: 2rem;
+`;
 
 const PostLine = styled.div`
 	height: 0;
