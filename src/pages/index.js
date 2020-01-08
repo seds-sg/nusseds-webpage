@@ -42,7 +42,7 @@ const IndexPage = ({ className }) => {
 	return (
 		<Layout>
 			<BackgroundImage
-				Tag="Section"
+				Tag="section"
 				fluid={projectIndex === 0 ? newOppy.childImageSharp.fluid : darpa.childImageSharp.fluid}
 				className={className}
 			>
