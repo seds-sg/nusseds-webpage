@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import classNames from classnames;
 import Layout, { NavbarPaddingContainer } from '../components/layout';
 import { LandingTitleFont, DescriptionFont } from '../components/textStyles';
 import BackgroundImage from 'gatsby-background-image';
@@ -8,11 +8,11 @@ import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import StyledButton from '../components/button';
 
-const IndexPage = ({ className }) => {
-	const [projectIndex, setProjectIndex] = useState(0);
+const IndexPage = () => {
+	const [currentIndex, setCurrentIndex] = useState(0);
 
 	useEffect(() => {
-		const intervalHandle = setInterval(() => setProjectIndex((prevIndex) => (prevIndex + 1) % 2), 5000);
+		const intervalHandle = setInterval(() => setCurrentIndex((prevIndex) => (prevIndex + 1) % 2), 10000);
 		return () => {
 			clearInterval(intervalHandle);
 		};
@@ -41,28 +41,37 @@ const IndexPage = ({ className }) => {
 
 	return (
 		<Layout>
-			<BackgroundImage
-				Tag="section"
-				fluid={projectIndex === 0 ? newOppy.childImageSharp.fluid : darpa.childImageSharp.fluid}
-				className={className}
-			>
-				<StyledNavBarPadding>
-					<SEO title="Home" />
-					<div>
-						<ProjectTitleWrapper>
-							{projectIndex === 0 ? 'New Opportunity' : 'DARPA Subterranean Challenge'}
-						</ProjectTitleWrapper>
-						<ProjectDecriptionWrapper>
-							{projectIndex === 0 ? (
-								'We are building an autonomous exploration rover from scratch.'
-							) : (
-									'We are helping to revolutionize how we operate in the underground domain.'
-								)}
-						</ProjectDecriptionWrapper>
-						<ProjectDetailsButton onClick={() => window.location = (projectIndex === 0 ? '/new-oppy' : 'darpa-subt')} buttonText="Learn More" />
-					</div>
-				</StyledNavBarPadding>
-			</BackgroundImage>
+			{[0, 1].map((projectIndex) => (
+				<StyledBackgroundImage
+					key={projectIndex}
+					Tag="section"
+					fluid={projectIndex === 0 ? newOppy.childImageSharp.fluid : darpa.childImageSharp.fluid}
+					className={classNames({ visible: projectIndex === currentIndex })}
+					projectIndex={projectIndex}
+					currentIndex={currentIndex}
+					preserveStackingContext={true}
+					style={{
+						position: 'fixed'
+					}}
+				>
+					<StyledNavBarPadding>
+						<SEO title="Home" />
+						<div>
+							<ProjectTitleWrapper>
+								{projectIndex === 0 ? 'New Opportunity' : 'DARPA Subterranean Challenge'}
+							</ProjectTitleWrapper>
+							<ProjectDecriptionWrapper>
+								{projectIndex === 0 ? (
+									'We are building an autonomous exploration rover from scratch.'
+								) : (
+										'We are helping to revolutionize how we operate in the underground domain.'
+									)}
+							</ProjectDecriptionWrapper>
+							<ProjectDetailsButton onClick={() => window.location = (projectIndex === 0 ? '/new-oppy' : 'darpa-subt')} buttonText="Learn More" />
+						</div>
+					</StyledNavBarPadding>
+				</StyledBackgroundImage>
+			))}
 		</Layout>
 	);
 };
@@ -89,11 +98,14 @@ const ProjectDecriptionWrapper = styled(DescriptionFont)`
   font-size: 1.875rem;
 `;
 
-const StyledIndexPage = styled(IndexPage)`
+const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
+	height: 100vh;
+	opacity: 0;
+	transition: opacity 2s ease-in;
+	&.visible {
+		opacity: 0.99
+	}
 `;
 
-export default StyledIndexPage;
+export default IndexPage;
