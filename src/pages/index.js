@@ -9,7 +9,7 @@ import styled from 'styled-components';
 import StyledButton from '../components/button';
 
 const IndexPage = ({ className }) => {
-	const [ projectIndex, setProjectIndex ] = useState(0);
+	const [projectIndex, setProjectIndex] = useState(0);
 
 	useEffect(() => {
 		const intervalHandle = setInterval(() => setProjectIndex((prevIndex) => (prevIndex + 1) % 2), 5000);
@@ -56,10 +56,10 @@ const IndexPage = ({ className }) => {
 							{projectIndex === 0 ? (
 								'We are building an autonomous exploration rover from scratch.'
 							) : (
-								'We are helping to revolutionize how we operate in the underground domain.'
-							)}
+									'We are helping to revolutionize how we operate in the underground domain.'
+								)}
 						</ProjectDecriptionWrapper>
-						<ProjectDetailsButton onClick={() => null} buttonText="Learn More" />
+						<ProjectDetailsButton onClick={() => window.location = (projectIndex === 0 ? '/new-oppy' : 'darpa-subt')} buttonText="Learn More" />
 					</div>
 				</StyledNavBarPadding>
 			</BackgroundImage>
