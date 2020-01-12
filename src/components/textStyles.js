@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const BaseFont = styled.div`
-  color: white;
+  color: #f8f3e9;
   /* SET FONT FAMILY HERE */
 `
 
