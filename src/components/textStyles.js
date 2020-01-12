@@ -9,22 +9,25 @@ export const LandingTitleFont = styled(BaseFont)`
   font-weight: 700;
   font-size: 4.5rem;
   font-family: Graphik;
+  -webkit-font-smoothing: antialiased;
 `
 
 export const PageHeaderFont = styled(BaseFont)`
   font-weight: 700;
   font-size: 5rem;
-  font-family: Graphik;
+  font-family: Brown;
+  letter-spacing: -0.04em;
 `
 
 export const TitleFont = styled(BaseFont)`
   font-weight: 700;
   font-size: 3rem;
-  font-family: Graphik;
+  font-family: Brown;
+  letter-spacing: -0.04em;
 `
 
 export const DescriptionFont = styled(BaseFont)`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 2rem;
   font-family: Graebenbach Mono;
   // font-family: Mono;
@@ -33,7 +36,21 @@ export const DescriptionFont = styled(BaseFont)`
 
 export const SmallFont = styled(BaseFont)`
   font-size: 0.875rem;
-  font-weight: 900;
+  font-weight: 700;
+  font-family: Brown;
+`
+
+export const ButtonFont = styled(BaseFont)`
+  font-family: Brown;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+`
+
+export const NavBarFont = styled(BaseFont)`
+  font-family: Brown;
+  font-weight: 400;
+  font-size: 1rem;
 `
 
 /**

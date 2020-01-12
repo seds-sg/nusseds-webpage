@@ -58,6 +58,7 @@ const VisionMissionWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 2rem;
 `
 
 const VisionMission = ({ className, title, description }) => (

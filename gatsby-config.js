@@ -40,7 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         custom: {
-          families: [`Graphik, Graebenbach Mono`],
+          families: [`Graphik, Graebenbach Mono, Brown`],
           urls: [`/fonts.css`],
         },
       },
