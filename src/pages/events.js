@@ -29,7 +29,7 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
 				<EventsWrapper>{NewPosts}</EventsWrapper>
 				<SectionHeaderWrapper headerText="PAST EVENTS" />
 				<EventsWrapper>{OldPosts}</EventsWrapper>
-				<SectionHeaderWrapper headerText="OUR PAST SPEAKERS" />
+				{/* <SectionHeaderWrapper headerText="OUR PAST SPEAKERS" /> */}
 			</NavbarPaddingContainer>
 		</Layout>
 	);

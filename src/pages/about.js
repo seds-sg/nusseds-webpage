@@ -107,7 +107,6 @@ const FollowUsContent = ({ className }) => (
 const StyledFollowUsContent = styled(FollowUsContent)`
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 2rem;
 `
 
 const JoinUsContent = ({ className }) => (

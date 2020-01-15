@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { DescriptionFont, ButtonFont } from "../components/textStyles"
+import { ButtonFont } from "../components/textStyles"
 
 const LeadershipContent = ({ className }) => {
   const images = useStaticQuery(
@@ -159,12 +159,12 @@ const PersonImageWithTitle = ({
   data,
   imageName,
 }) => (
-  <div className={className}>
-    <StyledImage fixed={data[imageName].childImageSharp.fixed} />
-    <StyledImageName>{name.toUpperCase()}</StyledImageName>
-    <StyledImageDescription>{description}</StyledImageDescription>
-  </div>
-)
+    <div className={className}>
+      <StyledImage fixed={data[imageName].childImageSharp.fixed} />
+      <StyledImageName>{name.toUpperCase()}</StyledImageName>
+      <StyledImageDescription>{description}</StyledImageDescription>
+    </div>
+  )
 
 const StyledPersonImage = styled(PersonImageWithTitle)`
   padding: 1rem;

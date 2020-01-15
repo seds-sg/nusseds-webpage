@@ -13,7 +13,7 @@ const Section = ({ className, headerText }) => (
 const SectionHeaderWrapper = styled(Section)`
   display: flex;
   align-items: center;
-  padding: 8vw 0 2rem 0;
+  padding: 4vw 0 2rem 0;
 `
 const SectionHeaderLine = styled.div`
   height: 0rem;
