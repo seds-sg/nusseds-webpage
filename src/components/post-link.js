@@ -29,7 +29,8 @@ export const StyledBriefPostLink = styled(BriefPostLink)`
 
 const PostLine = styled.div`
 	height: 0;
-	width: 5rem;
+	width: 8.5vw;
+	max-width: 5rem;
 	border: 0;
 	flex-shrink: 0;
 	margin-left: -3rem;
@@ -40,6 +41,7 @@ const PostLine = styled.div`
 `;
 
 const StyledLink = styled(Link)`
+	max-width: 100%;
   :hover {
     text-decoration: none;
     box-shadow: inset 0 0 3px white;

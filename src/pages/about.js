@@ -106,6 +106,7 @@ const FollowUsContent = ({ className }) => (
 
 const StyledFollowUsContent = styled(FollowUsContent)`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 `
 

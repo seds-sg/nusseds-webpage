@@ -84,6 +84,10 @@ export const NavbarPaddingContainer = styled.div`
   padding-top: 12rem;
   padding-left: 5rem;
   padding-right: 5rem;
+  @media only screen and (max-width: 600px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 `
 
 export default StyledLayout
