@@ -32,9 +32,6 @@ const Layout = ({ children, className }) => (
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="/projects">
-            <NavbarLink>Projects</NavbarLink>
-          </Nav.Link>
           <Nav.Link href="/about">
             <NavbarLink>About</NavbarLink>
           </Nav.Link>
