@@ -22,6 +22,14 @@ const BriefPostLink = ({ className, post }) => (
 	</StyledLink>
 );
 
+const StyledLink = styled(Link)`
+	max-width: 100%;
+  :hover {
+    text-decoration: none;
+    box-shadow: inset 0 0 3px white;
+  }
+`;
+
 export const StyledBriefPostLink = styled(BriefPostLink)`
 	max-width: 40rem;
 	padding-bottom: 2rem;
@@ -38,14 +46,6 @@ const PostLine = styled.div`
 	margin-right: 2rem;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
-`;
-
-const StyledLink = styled(Link)`
-	max-width: 100%;
-  :hover {
-    text-decoration: none;
-    box-shadow: inset 0 0 3px white;
-  }
 `;
 
 const DateWrapper = styled(DescriptionFont)`
