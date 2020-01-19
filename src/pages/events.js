@@ -7,8 +7,10 @@ import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import StyledButton from '../components/button';
 import SectionHeaderWrapper from '../components/sectionHeader';
+import { useState } from 'react';
 
 const EventsPage = ({ data: { pastEvents, newEvents } }) => {
+	const [showGetUpdateBtn, setGetUpdateBtn] = useState(true);
 	const OldPosts = pastEvents.edges
 		.filter((edge) => !!edge.node.frontmatter.date)
 		.map((edge) => <StyledBriefPostLink key={edge.node.id} post={edge.node} />);
@@ -24,7 +26,25 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
 					Get event updates and post-event summaries every week! Just leave your email with us and we will
 					take care of it for you!
 				</EventPageDescription>
-				<ButtonWrapper buttonText="Get Updates 🚀" onClick={() => null} />
+				{(showGetUpdateBtn) ? <ButtonWrapper buttonText="Get Updates 🚀" onClick={() => setGetUpdateBtn(false)} /> : (
+					<>
+					<input type="text" autoFocus	placeholder="Enter your email address!"/>
+					<ButtonWrapper buttonText="Submit!" onClick={() => {
+						var xhr = new XMLHttpRequest()
+
+						// get a callback when the server responds
+						xhr.addEventListener('load', () => {
+							// update the state of the component with the result here
+							console.log(xhr.responseText)
+						})
+						// open the request with the verb and the url
+						xhr.open('POST', 'https://maker.ifttt.com/trigger/email_sent/with/key/dHuqFr9kznrIlXrL5b35Vg')
+						// send the request
+						xhr.send(JSON.stringify({ value1: 'test5@gmail.com' }))
+						setGetUpdateBtn(true);
+					}} />
+					</>
+				)}
 				<SectionHeaderWrapper headerText="UPCOMING EVENTS" />
 				<EventsWrapper>{NewPosts}</EventsWrapper>
 				<SectionHeaderWrapper headerText="PAST EVENTS" />
