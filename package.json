@@ -5,7 +5,6 @@
 	"version": "0.1.0",
 	"author": "K Muruges <muruges95@gmail.com>",
 	"dependencies": {
-		"axios": "^0.19.1",
 		"babel-plugin-styled-components": "^1.10.6",
 		"gatsby": "^2.18.4",
 		"gatsby-background-image": "^0.9.12",

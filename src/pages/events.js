@@ -8,7 +8,6 @@ import { graphql } from "gatsby"
 import StyledButton from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
 import { useState } from "react"
-import axios from "axios"
 
 const EventsPage = ({ data: { pastEvents, newEvents } }) => {
   const [showGetUpdateBtn, setGetUpdateBtn] = useState(true)
@@ -42,17 +41,15 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
             <ButtonWrapper
               buttonText="Submit!"
               onClick={async () => {
-                const response = await axios.post(
+                const response = await fetch(
                   "https://maker.ifttt.com/trigger/email_sent/with/key/dHuqFr9kznrIlXrL5b35Vg",
-                  { value1: "test7@gmail.com" },
-                  { headers: { "Content-Type": "application/json" } }
+                  {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ value1: "test7@gmail.com" }),
+                  }
                 )
-                // const response = await fetch('https://maker.ifttt.com/trigger/email_sent/with/key/dHuqFr9kznrIlXrL5b35Vg', {
-                // 	method: 'POST',
-                // 	headers: { 'Content-Type': 'application/json' },
-                // 	body: JSON.stringify({ "value1": '' }),
-                // })
-                console.log(response)
+                console.log(await response)
                 setGetUpdateBtn(true)
               }}
             />
