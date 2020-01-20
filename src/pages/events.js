@@ -11,6 +11,7 @@ import { useState } from "react"
 
 const EventsPage = ({ data: { pastEvents, newEvents } }) => {
   const [showGetUpdateBtn, setGetUpdateBtn] = useState(true)
+  const [emailAddr, setEmailAddr] = useState('');
   const OldPosts = pastEvents.edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <StyledBriefPostLink key={edge.node.id} post={edge.node} />)
@@ -32,29 +33,29 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
             onClick={() => setGetUpdateBtn(false)}
           />
         ) : (
-          <>
-            <StyledInput
-              type="text"
-              autoFocus
-              placeholder="Enter your email address!"
-            />
-            <ButtonWrapper
-              buttonText="Submit!"
-              onClick={async () => {
-                const response = await fetch(
-                  "https://maker.ifttt.com/trigger/email_sent/with/key/dHuqFr9kznrIlXrL5b35Vg",
-                  {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ value1: "test7@gmail.com" }),
-                  }
-                )
-                console.log(await response)
-                setGetUpdateBtn(true)
-              }}
-            />
-          </>
-        )}
+            <>
+              <StyledInput
+                value={emailAddr}
+                onChange={(event) => setEmailAddr(event.target.value)}
+                type="text"
+                autoFocus
+                placeholder="Enter your email address!"
+              />
+              <ButtonWrapper
+                buttonText="Submit!"
+                onClick={async () => {
+                  await fetch(
+                    `https://maker.ifttt.com/trigger/email_sent/with/key/dREVjoEhXANwxcMY4LjYk-?value1=${emailAddr}`,
+                    {
+                      mode: 'no-cors'
+                    }
+                  )
+                  setGetUpdateBtn(true)
+                  setEmailAddr('')
+                }}
+              />
+            </>
+          )}
         <SectionHeaderWrapper headerText="UPCOMING EVENTS" />
         <EventsWrapper>{NewPosts}</EventsWrapper>
         <SectionHeaderWrapper headerText="PAST EVENTS" />
