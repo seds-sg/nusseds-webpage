@@ -46,67 +46,67 @@ const LeadershipContent = ({ className }) => {
   )
   return (
     <div className={className}>
-      <StyledPersonImage
+      <StyledAvatar
         name="Ramu Vairavan"
         description="President"
         data={images}
         imageName="ramu"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Yeoh Jun Kai"
         description="Vice President"
         data={images}
         imageName="jun_kai"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Ian Wu Ling En"
         description="Outreach Team Lead"
         data={images}
         imageName="ian"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Anisha Nicole Joseph"
         description="Finance Lead"
         data={images}
         imageName="anisha"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Ashwin Kumaar"
         description="Creative Lead"
         data={images}
         imageName="ashwin"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Dean Su Di Yang"
         description="Outreach (external) Lead"
         data={images}
         imageName="dean"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Yeoh Jun Jie"
         description="Events Manager"
         data={images}
         imageName="jun_jie"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Benedict Goh"
         description="Secretary"
         data={images}
         imageName="benedict"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Anushka Gaikwad"
         description="Project Manager (SubT DARPA)"
         data={images}
         imageName="anushka"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="Rachiket Arya"
         description="Project Manager (New Opportunity)"
         data={images}
         imageName="rachiket"
       />
-      <StyledPersonImage
+      <StyledAvatar
         name="K Muruges"
         description="Webmaster"
         data={images}
@@ -126,20 +126,20 @@ const StyledLeaderShipContent = styled(LeadershipContent)`
 export const squareImage = graphql`
   fragment squareImage on File {
     childImageSharp {
-      fixed(width: 180, height: 180) {
+      fixed(width: 180, height: 180, quality: 100) {
         ...GatsbyImageSharpFixed_withWebp
       }
     }
   }
 `
 
-const StyledImage = styled(Img)`
+const Avatar = styled(Img)`
   width: 160px;
   height: 160px;
   border-radius: 100px;
 `
 
-const StyledImageName = styled(ButtonFont)`
+const AvatarName = styled(ButtonFont)`
   font-size: 1rem;
   font-weight: 900;
   padding-top: 1rem;
@@ -147,26 +147,20 @@ const StyledImageName = styled(ButtonFont)`
   text-align: center;
 `
 
-const StyledImageDescription = styled(StyledImageName)`
+const AvatarDescription = styled(AvatarName)`
   font-weight: 400;
   font-size: 0.85rem;
 `
 
-const PersonImageWithTitle = ({
-  className,
-  name,
-  description,
-  data,
-  imageName,
-}) => (
-    <div className={className}>
-      <StyledImage fixed={data[imageName].childImageSharp.fixed} />
-      <StyledImageName>{name.toUpperCase()}</StyledImageName>
-      <StyledImageDescription>{description}</StyledImageDescription>
-    </div>
-  )
+const AvatarWithTitle = ({ className, name, description, data, imageName }) => (
+  <div className={className}>
+    <Avatar fixed={data[imageName].childImageSharp.fixed} />
+    <AvatarName>{name.toUpperCase()}</AvatarName>
+    <AvatarDescription>{description}</AvatarDescription>
+  </div>
+)
 
-const StyledPersonImage = styled(PersonImageWithTitle)`
+export const StyledAvatar = styled(AvatarWithTitle)`
   padding: 1rem;
 `
 
