@@ -11,6 +11,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import styled from 'styled-components';
 import './layout.css';
+import '../fonts/fonts.css';
 import logo from '../images/NUS_SEDS_Logo.png';
 import { NavBarFont } from '../components/textStyles';
 

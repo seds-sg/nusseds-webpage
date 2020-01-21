@@ -14,7 +14,6 @@
 		"gatsby-plugin-react-helmet": "^3.1.16",
 		"gatsby-plugin-sharp": "^2.3.4",
 		"gatsby-plugin-styled-components": "^3.1.16",
-		"gatsby-plugin-web-font-loader": "^1.0.4",
 		"gatsby-source-filesystem": "^2.1.40",
 		"gatsby-transformer-remark": "^2.6.39",
 		"gatsby-transformer-sharp": "^2.3.6",
@@ -29,9 +28,7 @@
 	"devDependencies": {
 		"prettier": "^1.19.1"
 	},
-	"keywords": [
-		"gatsby"
-	],
+	"keywords": [ "gatsby" ],
 	"license": "MIT",
 	"scripts": {
 		"build": "gatsby build",
