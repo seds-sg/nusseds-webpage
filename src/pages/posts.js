@@ -5,7 +5,7 @@ import { PageHeaderFont, DescriptionFont } from "../components/textStyles"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import StyledButton from "../components/button"
+import GetUpdates from "../components/getUpdates"
 
 const Posts = ({
   data: {
@@ -24,7 +24,8 @@ const Posts = ({
           Get an update we have a fancy new article. Learn tidbits about space
           exploration and our progress - right from your inbox.
         </PostsDescription>
-        <ButtonWrapper buttonText="Get Updates" onClick={() => null} />
+        <GetUpdates />
+        <Gap />
         {Posts}
       </NavbarPaddingContainer>
     </Layout>
@@ -36,12 +37,11 @@ const PostsTitleWrapper = styled(PageHeaderFont)`
 `
 
 const PostsDescription = styled(DescriptionFont)`
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 `
 
-const ButtonWrapper = styled(StyledButton)`
-  margin-bottom: 10rem;
-  padding: 0.75rem 2rem;
+const Gap = styled.div`
+  height: 5rem;
 `
 
 export default Posts

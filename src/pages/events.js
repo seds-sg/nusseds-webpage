@@ -5,13 +5,10 @@ import Layout, { NavbarPaddingContainer } from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import StyledButton from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
-import { useState } from "react"
+import GetUpdates from "../components/getUpdates"
 
 const EventsPage = ({ data: { pastEvents, newEvents } }) => {
-  const [showGetUpdateBtn, setGetUpdateBtn] = useState(true)
-  const [emailAddr, setEmailAddr] = useState('');
   const OldPosts = pastEvents.edges
     .filter(edge => !!edge.node.frontmatter.date)
     .map(edge => <StyledBriefPostLink key={edge.node.id} post={edge.node} />)
@@ -27,35 +24,7 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
           Get event updates and post-event summaries every week! Just leave your
           email with us and we will take care of it for you!
         </EventPageDescription>
-        {showGetUpdateBtn ? (
-          <ButtonWrapper
-            buttonText="Get Updates 🚀"
-            onClick={() => setGetUpdateBtn(false)}
-          />
-        ) : (
-            <>
-              <StyledInput
-                value={emailAddr}
-                onChange={(event) => setEmailAddr(event.target.value)}
-                type="text"
-                autoFocus
-                placeholder="Enter your email address!"
-              />
-              <ButtonWrapper
-                buttonText="Submit!"
-                onClick={async () => {
-                  await fetch(
-                    `https://maker.ifttt.com/trigger/email_sent/with/key/dREVjoEhXANwxcMY4LjYk-?value1=${emailAddr}`,
-                    {
-                      mode: 'no-cors'
-                    }
-                  )
-                  setGetUpdateBtn(true)
-                  setEmailAddr('')
-                }}
-              />
-            </>
-          )}
+        <GetUpdates />
         <SectionHeaderWrapper headerText="UPCOMING EVENTS" />
         <EventsWrapper>{NewPosts}</EventsWrapper>
         <SectionHeaderWrapper headerText="PAST EVENTS" />
@@ -77,19 +46,7 @@ const EventPageHeaderWrapper = styled(PageHeaderFont)`
 `
 
 const EventPageDescription = styled(DescriptionFont)`
-  padding-bottom: 4.5rem;
-`
-const ButtonWrapper = styled(StyledButton)`
-  margin-bottom: 5rem;
-  padding: 0.75rem 2rem;
-`
-
-const StyledInput = styled.input`
-  height: 44px;
-  padding: 12px 32px;
-  border: 1px solid white;
-  background-color: transparent;
-  color: white;
+  padding-bottom: 7rem;
 `
 
 export default EventsPage

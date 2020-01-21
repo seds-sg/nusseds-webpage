@@ -2,8 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout, { NavbarPaddingContainer } from "../components/layout"
 import SEO from "../components/seo"
-import { BlogPostWrapper, BlogPostContentWrapper } from "./common"
-import { PageHeaderFont, DescriptionFont } from "../components/textStyles"
+import {
+  PostHeaderFont,
+  BlogPostWrapper,
+  BlogPostContentWrapper,
+} from "./common"
+import { DescriptionFont } from "../components/textStyles"
 
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -13,9 +17,11 @@ export default function Template({ data }) {
       <NavbarPaddingContainer>
         <SEO title={frontmatter.title} />
         <BlogPostWrapper>
-          <PageHeaderFont>{frontmatter.title}</PageHeaderFont>
+          <PostHeaderFont>{frontmatter.title}</PostHeaderFont>
           {frontmatter.recordedBy !== null ? (
-            <DescriptionFont>Recorded by: {frontmatter.recordedBy}</DescriptionFont>
+            <DescriptionFont>
+              Recorded by: {frontmatter.recordedBy}
+            </DescriptionFont>
           ) : (
             <></>
           )}
