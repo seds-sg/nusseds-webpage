@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout, { NavbarPaddingContainer } from "../components/layout"
 import SEO from "../components/seo"
 import { BlogPostWrapper, BlogPostContentWrapper } from "./common"
+import { PageHeaderFont, DescriptionFont } from "../components/textStyles"
 
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -12,15 +13,15 @@ export default function Template({ data }) {
       <NavbarPaddingContainer>
         <SEO title={frontmatter.title} />
         <BlogPostWrapper>
-          <h1>{frontmatter.title}</h1>
+          <PageHeaderFont>{frontmatter.title}</PageHeaderFont>
           {frontmatter.recordedBy !== null ? (
-            <h6>Recorded by: {frontmatter.recordedBy}</h6>
+            <DescriptionFont>Recorded by: {frontmatter.recordedBy}</DescriptionFont>
           ) : (
             <></>
           )}
-          <h6>{frontmatter.date}</h6>
+          <DescriptionFont>{frontmatter.date}</DescriptionFont>
           {frontmatter.youtubeLink !== null ? (
-            <h6>
+            <DescriptionFont>
               <a
                 href={frontmatter.youtubeLink}
                 target="_blank"
@@ -28,7 +29,7 @@ export default function Template({ data }) {
               >
                 Link to recording
               </a>
-            </h6>
+            </DescriptionFont>
           ) : (
             <></>
           )}

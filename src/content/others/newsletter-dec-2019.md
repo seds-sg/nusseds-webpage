@@ -1,5 +1,5 @@
 ---
-title: "NUS SEDS Newsletter December 2019"
+title: "NUS SEDS Newsletter (Issue Dec '19)"
 date: 2019-12-29
 path: /newsletter-dec-2019
 ---
