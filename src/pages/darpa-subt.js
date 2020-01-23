@@ -30,9 +30,18 @@ const DarpaPage = () => (
 				Two rounds of competitions will be held. One in March 2020 and another in Fall 2021. In total there are
 				$5 million worth of prizes.
 			</DescriptionFont>
-			<SectionHeaderWrapper headerText="TEAM LEADS" />
+			{/* <SectionHeaderWrapper headerText="TEAM LEADS" /> */}
 			<SectionHeaderWrapper headerText="CONTACT" />
-			<SectionHeaderWrapper headerText="MEDIA" />
+			<DescriptionFont>
+				For any enquiries, please contact:
+				<ul>
+					<li> Anushka Gaikwad @ +65 8139 3083 or{" "}
+						<a href="mailto:anushka@u.nus.edu">anushka@u.nus.edu</a></li>
+					<li>Arjo Chakravarty @ +65 8722 6736 or{" "}
+						<a href="mailto:arjo@u.nus.edu">arjo@u.nus.edu</a></li>
+				</ul>
+			</DescriptionFont>
+			{/* <SectionHeaderWrapper headerText="MEDIA" /> */}
 		</NavbarPaddingContainer>
 	</Layout>
 );
