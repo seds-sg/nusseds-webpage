@@ -1,6 +1,6 @@
 module.exports = {
 	siteMetadata: {
-		title: `NUS SEDS Site`,
+		title: `NUS SEDS`,
 		description: `Webpage for anything related to the NUS chapter of the Students for Exploration and Development of Space`,
 		author: `@muruges95`
 	},
@@ -27,13 +27,13 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `nusseds-webpage`,
-				short_name: `nusseds`,
+				name: `NUS SEDS`,
+				short_name: `NUS SEDS`,
 				start_url: `/`,
-				background_color: `#663399`,
-				theme_color: `#663399`,
+				background_color: `#141e22`,
+				theme_color: `#141e22`,
 				display: `minimal-ui`,
-				icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+				icon: `src/images/site-icon.png` // This path is relative to the root of the site.
 			}
 		}
 		// {

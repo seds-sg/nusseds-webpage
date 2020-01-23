@@ -6,12 +6,13 @@ import {
   TitleFont,
 } from "../components/textStyles"
 import SEO from "../components/seo"
-import StyledLeaderShipContent from "../components/leadership"
+import { ImageWrapper, StyledAvatar, StyledPartnerWithTitle } from "../components/leadership"
 import styled from "styled-components"
 import StyledButton from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
+import { graphql } from "gatsby"
 
-const AboutPage = () => (
+const AboutPage = ({ data }) => (
   <Layout>
     <NavbarPaddingContainer>
       <SEO title="About Us" />
@@ -32,12 +33,97 @@ const AboutPage = () => (
           description="To empower youth in Singapore & beyond to make an impact in space exploration."
         />
       </VisionMissionWrapper>
-      {/* <SectionHeaderWrapper headerText="SOME FRIENDS WE HAVE WORKED WITH" /> */}
+      <SectionHeaderWrapper headerText="OUR FRIENDS" />
+      <ImageWrapper>
+        <StyledPartnerWithTitle name="Open Cosmos" description="Sponsor" data={data} imageName="open_cosmos" onClick={() => window.open("https://open-cosmos.com/")} />
+        <StyledPartnerWithTitle name="NUS Enterprise" description="Ecosystem Partner" data={data} imageName="nus" onClick={() => window.open("https://enterprise.nus.edu.sg/")} />
+      </ImageWrapper>
       <SectionHeaderWrapper headerText="FOLLOW US ON" />
       <StyledFollowUsContent />
       <SectionHeaderWrapper headerText="OUR CORE TEAM" />
-      <StyledLeaderShipContent />
-      {/* <SectionHeaderWrapper headerText="OUR ADVISORS" /> */}
+      <ImageWrapper>
+        <StyledAvatar
+          name="Ramu Vairavan"
+          description="President"
+          data={data}
+          imageName="ramu"
+        />
+        <StyledAvatar
+          name="Yeoh Jun Kai"
+          description="Vice President"
+          data={data}
+          imageName="jun_kai"
+        />
+        <StyledAvatar
+          name="Ian Wu Ling En"
+          description="Outreach Team Lead"
+          data={data}
+          imageName="ian"
+        />
+        <StyledAvatar
+          name="Anisha Nicole Joseph"
+          description="Finance Lead"
+          data={data}
+          imageName="anisha"
+        />
+        <StyledAvatar
+          name="Ashwin Kumaar"
+          description="Creative Lead"
+          data={data}
+          imageName="male_kerbal"
+        />
+        <StyledAvatar
+          name="Dean Su Di Yang"
+          description="Outreach (external) Lead"
+          data={data}
+          imageName="dean"
+        />
+        <StyledAvatar
+          name="Yeoh Jun Jie"
+          description="Events Manager"
+          data={data}
+          imageName="jun_jie"
+        />
+        <StyledAvatar
+          name="Benedict Goh"
+          description="Secretary"
+          data={data}
+          imageName="benedict"
+        />
+        <StyledAvatar
+          name="Anushka Gaikwad"
+          description="Project Manager (SubT DARPA)"
+          data={data}
+          imageName="female_kerbal"
+        />
+        <StyledAvatar
+          name="Rachiket Arya"
+          description="Project Manager (New Opportunity)"
+          data={data}
+          imageName="rachiket"
+        />
+        <StyledAvatar
+          name="K Muruges"
+          description="Webmaster"
+          data={data}
+          imageName="muruges"
+        />
+      </ImageWrapper>
+      <SectionHeaderWrapper headerText="OUR ADVISORS" />
+      <ImageWrapper>
+        <StyledAvatar
+          name="Prof. Low Kay-Soon"
+          description="Advisor"
+          data={data}
+          imageName="male_kerbal"
+        />
+        <StyledAvatar
+          name="Mr. Eugene Ee"
+          description="Mentor"
+          data={data}
+          imageName="male_kerbal"
+        />
+      </ImageWrapper>
       <SectionHeaderWrapper headerText="JOIN OUR MISSION" />
       <StyledJoinUsContent />
     </NavbarPaddingContainer>
@@ -70,7 +156,7 @@ const VisionMission = ({ className, title, description }) => (
 
 const StyledVisionMission = styled(VisionMission)`
   padding: 1rem 0;
-  max-width: 40rem;
+  max-width: 45rem;
 `
 
 const VisionMissionTitle = styled(TitleFont)`
@@ -138,3 +224,47 @@ const StyledJoinUsContent = styled(JoinUsContent)`
 `
 
 export default AboutPage
+
+export const pageQuery = graphql`
+  query {
+    anisha: file(relativePath: { eq: "Anisha.jpg" }) {
+      ...squareImage
+    }
+    benedict: file(relativePath: { eq: "Benedict.jpg" }) {
+      ...squareImage
+    }
+    dean: file(relativePath: { eq: "Dean_Su.png" }) {
+      ...squareImage
+    }
+    ian: file(relativePath: { eq: "Ian_Wu.jpg" }) {
+      ...squareImage
+    }
+    jun_jie: file(relativePath: { eq: "Jun_Jie.png" }) {
+      ...squareImage
+    }
+    jun_kai: file(relativePath: { eq: "Jun_Kai.jpg" }) {
+      ...squareImage
+    }
+    rachiket: file(relativePath: { eq: "Rachiket_Arya.jpeg" }) {
+      ...squareImage
+    }
+    male_kerbal: file(relativePath: { eq: "male_kerbal.jpeg" }) {
+      ...squareImage
+    }
+    ramu: file(relativePath: { eq: "Ramu_Vairavan.jpg" }) {
+      ...squareImage
+    }
+    female_kerbal: file(relativePath: { eq: "female_kerbal.jpeg" }) {
+      ...squareImage
+    }
+    muruges: file(relativePath: { eq: "Muruges.jpg" }) {
+      ...squareImage
+    }
+    open_cosmos: file(relativePath: { eq: "Open_Cosmos_Logo.png" }) {
+      ...thumbnail
+    }
+    nus: file(relativePath: { eq: "NUS_Logo.jpg" }) {
+      ...thumbnail
+    }
+  }
+`;
