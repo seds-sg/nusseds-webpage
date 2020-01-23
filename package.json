@@ -28,7 +28,10 @@
 	"devDependencies": {
 		"prettier": "^1.19.1"
 	},
-	"keywords": [ "gatsby" ],
+	"keywords": [
+		"gatsby",
+		"space"
+	],
 	"license": "MIT",
 	"scripts": {
 		"build": "gatsby build",
@@ -41,9 +44,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/gatsbyjs/gatsby-starter-default"
+		"url": "https://github.com/seds-sg/nusseds-webpage"
 	},
 	"bugs": {
-		"url": "https://github.com/gatsbyjs/gatsby/issues"
+		"url": "https://github.com/seds-sg/nusseds-webpage/issues"
 	}
 }
