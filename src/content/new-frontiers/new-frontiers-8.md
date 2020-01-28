@@ -12,4 +12,4 @@ The speakers for the event will be Eugene Ee and Zhen Ning.
 ## Details
 Event is scheduled occur from 7.30pm to 9.00pm. The venue has been confirmed to be the Hangar @I3 Building Level 1. Directions to the building can be located [here](https://enterprise.nus.edu.sg/contact-us/).
 
-There is a possibility that refreshments will be provided, but do not bet on it. Do take your dinner before arriving!
+Some refreshments will be provided, but do take your dinner before arriving!

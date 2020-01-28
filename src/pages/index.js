@@ -113,7 +113,8 @@ const ProjectDecriptionWrapper = styled(DescriptionFont)`
 
 const StyledBackgroundImage = styled(BackgroundImage)`
   width: 100%;
-  height: 100vh;
+  height: 100vh - 66px;
+  margin-top: 66px;
 `
 
 const BgImgContainer = styled.div`

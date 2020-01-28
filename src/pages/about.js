@@ -35,8 +35,10 @@ const AboutPage = ({ data }) => (
       </VisionMissionWrapper>
       <SectionHeaderWrapper headerText="OUR FRIENDS" />
       <ImageWrapper>
-        <StyledPartnerWithTitle name="Open Cosmos" description="Sponsor" data={data} imageName="open_cosmos" onClick={() => window.open("https://open-cosmos.com/")} />
-        <StyledPartnerWithTitle name="NUS Enterprise" description="Ecosystem Partner" data={data} imageName="nus" onClick={() => window.open("https://enterprise.nus.edu.sg/")} />
+        <StyledPartnerWithTitle description="Partner" data={data} imageName="open_cosmos" onClick={() => window.open("https://open-cosmos.com/")} />
+        <StyledPartnerWithTitle description="Ecosystem Partner" data={data} imageName="nus" onClick={() => window.open("https://enterprise.nus.edu.sg/")} />
+        <StyledPartnerWithTitle description="Partner" data={data} imageName="engineers_sg" onClick={() => window.open("https://engineers.sg/")} />
+        <StyledPartnerWithTitle description="Partner" data={data} imageName="nus_hackers" onClick={() => window.open("https://www.nushackers.org/")} />
       </ImageWrapper>
       <SectionHeaderWrapper headerText="FOLLOW US ON" />
       <StyledFollowUsContent />
@@ -101,6 +103,12 @@ const AboutPage = ({ data }) => (
           description="Project Manager (New Opportunity)"
           data={data}
           imageName="rachiket"
+        />
+        <StyledAvatar
+          name="Arka Ray"
+          description="Space Policy Unit Lead"
+          data={data}
+          imageName="arka_ray"
         />
         <StyledAvatar
           name="K Muruges"
@@ -254,6 +262,9 @@ export const pageQuery = graphql`
     ramu: file(relativePath: { eq: "Ramu_Vairavan.jpg" }) {
       ...squareImage
     }
+    arka_ray: file(relativePath: { eq: "arka_ray.jpeg" }) {
+      ...squareImage
+    }
     female_kerbal: file(relativePath: { eq: "female_kerbal.jpeg" }) {
       ...squareImage
     }
@@ -264,6 +275,12 @@ export const pageQuery = graphql`
       ...thumbnail
     }
     nus: file(relativePath: { eq: "NUS_Logo.jpg" }) {
+      ...thumbnail
+    }
+    engineers_sg: file(relativePath: { eq: "engineers-sg.svg"}) {
+      ...thumbnail
+    }
+    nus_hackers: file(relativePath: { eq: "nus-hackers.svg"}) {
       ...thumbnail
     }
   }

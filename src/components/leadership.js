@@ -28,6 +28,8 @@ export const thumbnail = graphql`
         ...GatsbyImageSharpFluid
       }
     }
+    extension
+    publicURL
   }
 `
 
@@ -62,11 +64,18 @@ const AvatarDescription = styled(AvatarName)`
 
 const PartnerLogoContainer = styled.div`
   min-height: 120px; /* THIS IS A HACK */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const PartnerWithTitle = ({ className, description, data, imageName, onClick }) => (
   <div className={className} onClick={onClick}>
-    <PartnerLogoContainer><Img fluid={data[imageName].childImageSharp.fluid} /> </PartnerLogoContainer>
+    <PartnerLogoContainer>
+      {(data[imageName].childImageSharp === null && data[imageName].extension === 'svg')
+        ? <img src={data[imageName].publicURL} alt={imageName} />
+        : <Img fluid={data[imageName].childImageSharp.fluid} />}
+    </PartnerLogoContainer>
     <AvatarDescription>{description}</AvatarDescription>
   </div>
 )
