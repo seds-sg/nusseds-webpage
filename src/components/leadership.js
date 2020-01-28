@@ -62,25 +62,25 @@ const AvatarDescription = styled(AvatarName)`
   font-size: 0.85rem;
 `
 
-const PartnerLogoContainer = styled.div`
-  min-height: 120px; /* THIS IS A HACK */
+const ImageContainer = styled.div`
+  min-height: ${props => props.minHeight}; /* THIS IS A HACK */
   display: flex;
   flex-direction: column;
   justify-content: center;
 `;
 
-const PartnerWithTitle = ({ className, description, data, imageName, onClick }) => (
+const ImageWithTitle = ({ className, description, data, imageName, onClick, minHeight }) => (
   <div className={className} onClick={onClick}>
-    <PartnerLogoContainer>
+    <ImageContainer minHeight={(minHeight) ? minHeight : '120px'}>
       {(data[imageName].childImageSharp === null && data[imageName].extension === 'svg')
         ? <img src={data[imageName].publicURL} alt={imageName} />
         : <Img fluid={data[imageName].childImageSharp.fluid} />}
-    </PartnerLogoContainer>
+    </ImageContainer>
     <AvatarDescription>{description}</AvatarDescription>
   </div>
 )
 
-export const StyledPartnerWithTitle = styled(PartnerWithTitle)`
+export const StyledImageWithTitle = styled(ImageWithTitle)`
   width: 300px;
   height: auto;
   max-width: 100%;

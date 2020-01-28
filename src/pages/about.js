@@ -6,7 +6,7 @@ import {
   TitleFont,
 } from "../components/textStyles"
 import SEO from "../components/seo"
-import { ImageWrapper, StyledAvatar, StyledPartnerWithTitle } from "../components/leadership"
+import { ImageWrapper, StyledAvatar, StyledImageWithTitle } from "../components/leadership"
 import styled from "styled-components"
 import StyledButton from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
@@ -35,10 +35,10 @@ const AboutPage = ({ data }) => (
       </VisionMissionWrapper>
       <SectionHeaderWrapper headerText="OUR FRIENDS" />
       <ImageWrapper>
-        <StyledPartnerWithTitle description="Partner" data={data} imageName="open_cosmos" onClick={() => window.open("https://open-cosmos.com/")} />
-        <StyledPartnerWithTitle description="Ecosystem Partner" data={data} imageName="nus" onClick={() => window.open("https://enterprise.nus.edu.sg/")} />
-        <StyledPartnerWithTitle description="Partner" data={data} imageName="engineers_sg" onClick={() => window.open("https://engineers.sg/")} />
-        <StyledPartnerWithTitle description="Partner" data={data} imageName="nus_hackers" onClick={() => window.open("https://www.nushackers.org/")} />
+        <StyledImageWithTitle description="Partner" data={data} imageName="open_cosmos" onClick={() => window.open("https://open-cosmos.com/")} />
+        <StyledImageWithTitle description="Ecosystem Partner" data={data} imageName="nus" onClick={() => window.open("https://enterprise.nus.edu.sg/")} />
+        <StyledImageWithTitle description="Partner" data={data} imageName="engineers_sg" onClick={() => window.open("https://engineers.sg/")} />
+        <StyledImageWithTitle description="Partner" data={data} imageName="nus_hackers" onClick={() => window.open("https://www.nushackers.org/")} />
       </ImageWrapper>
       <SectionHeaderWrapper headerText="FOLLOW US ON" />
       <StyledFollowUsContent />

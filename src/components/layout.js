@@ -31,6 +31,9 @@ const Layout = ({ children, className }) => (
 					<Nav.Link href="/about">
 						<NavbarLink>About</NavbarLink>
 					</Nav.Link>
+					<Nav.Link href="/projects">
+						<NavbarLink>Projects</NavbarLink>
+					</Nav.Link>
 					<Nav.Link href="/events">
 						<NavbarLink>Events</NavbarLink>
 					</Nav.Link>
