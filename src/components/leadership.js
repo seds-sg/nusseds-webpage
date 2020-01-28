@@ -99,5 +99,5 @@ const AvatarWithTitle = ({ className, name, description, data, imageName }) => (
 )
 
 export const StyledAvatar = styled(AvatarWithTitle)`
-  padding: 1rem;
+  padding: 1rem 2rem;
 `
