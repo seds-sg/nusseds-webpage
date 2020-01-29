@@ -16,7 +16,7 @@ This is also our first event for this semester. As such, in addition to the talk
 RSVP [here](https://www.facebook.com/events/162066558421118/)! This helps us in estimating how much refreshments to prepare as well.
 
 ## Details
-Event is scheduled occur from 7.30pm to 9.00pm. The venue has been confirmed to be the Hangar @I3 Building Level 1, room SR-787. Directions to the building can be located [here](https://enterprise.nus.edu.sg/contact-us/).
+Event is scheduled occur from 7.30pm to 9.00pm on 30th January, Thursday. The venue has been confirmed to be the Hangar @I3 Building Level 1, room SR-787. Directions to the building can be located [here](https://enterprise.nus.edu.sg/contact-us/).
 
 Some refreshments will be provided from 7pm so do come early!
 
