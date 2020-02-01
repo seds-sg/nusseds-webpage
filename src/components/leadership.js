@@ -53,7 +53,6 @@ const AvatarName = styled(ButtonFont)`
   margin: auto;
   max-width: 200px;
   text-align: center;
-  
 `
 
 const AvatarDescription = styled(AvatarName)`
@@ -67,14 +66,24 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
+`
 
-const ImageWithTitle = ({ className, description, data, imageName, onClick, minHeight }) => (
+const ImageWithTitle = ({
+  className,
+  description,
+  data,
+  imageName,
+  onClick,
+  minHeight,
+}) => (
   <div className={className} onClick={onClick}>
-    <ImageContainer minHeight={(minHeight) ? minHeight : '120px'}>
-      {(data[imageName].childImageSharp === null && data[imageName].extension === 'svg')
-        ? <img src={data[imageName].publicURL} alt={imageName} />
-        : <Img fluid={data[imageName].childImageSharp.fluid} />}
+    <ImageContainer minHeight={minHeight ? minHeight : "120px"}>
+      {data[imageName].childImageSharp === null &&
+      data[imageName].extension === "svg" ? (
+        <img src={data[imageName].publicURL} alt={imageName} />
+      ) : (
+        <Img fluid={data[imageName].childImageSharp.fluid} />
+      )}
     </ImageContainer>
     <AvatarDescription>{description}</AvatarDescription>
   </div>
@@ -88,7 +97,7 @@ export const StyledImageWithTitle = styled(ImageWithTitle)`
   :hover {
     cursor: pointer;
   }
-`;
+`
 
 const AvatarWithTitle = ({ className, name, description, data, imageName }) => (
   <div className={className}>

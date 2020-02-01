@@ -6,7 +6,11 @@ import {
   TitleFont,
 } from "../components/textStyles"
 import SEO from "../components/seo"
-import { ImageWrapper, StyledAvatar, StyledImageWithTitle } from "../components/leadership"
+import {
+  ImageWrapper,
+  StyledAvatar,
+  StyledImageWithTitle,
+} from "../components/leadership"
 import styled from "styled-components"
 import StyledButton from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
@@ -35,10 +39,30 @@ const AboutPage = ({ data }) => (
       </VisionMissionWrapper>
       <SectionHeaderWrapper headerText="OUR FRIENDS" />
       <ImageWrapper>
-        <StyledImageWithTitle description="Partner" data={data} imageName="open_cosmos" onClick={() => window.open("https://open-cosmos.com/")} />
-        <StyledImageWithTitle description="Ecosystem Partner" data={data} imageName="nus" onClick={() => window.open("https://enterprise.nus.edu.sg/")} />
-        <StyledImageWithTitle description="Partner" data={data} imageName="engineers_sg" onClick={() => window.open("https://engineers.sg/")} />
-        <StyledImageWithTitle description="Partner" data={data} imageName="nus_hackers" onClick={() => window.open("https://www.nushackers.org/")} />
+        <StyledImageWithTitle
+          description="Partner"
+          data={data}
+          imageName="open_cosmos"
+          onClick={() => window.open("https://open-cosmos.com/")}
+        />
+        <StyledImageWithTitle
+          description="Ecosystem Partner"
+          data={data}
+          imageName="nus"
+          onClick={() => window.open("https://enterprise.nus.edu.sg/")}
+        />
+        <StyledImageWithTitle
+          description="Partner"
+          data={data}
+          imageName="engineers_sg"
+          onClick={() => window.open("https://engineers.sg/")}
+        />
+        <StyledImageWithTitle
+          description="Partner"
+          data={data}
+          imageName="nus_hackers"
+          onClick={() => window.open("https://www.nushackers.org/")}
+        />
       </ImageWrapper>
       <SectionHeaderWrapper headerText="FOLLOW US ON" />
       <StyledFollowUsContent />
@@ -277,11 +301,11 @@ export const pageQuery = graphql`
     nus: file(relativePath: { eq: "NUS_Logo.jpg" }) {
       ...thumbnail
     }
-    engineers_sg: file(relativePath: { eq: "engineers-sg.svg"}) {
+    engineers_sg: file(relativePath: { eq: "engineers-sg.svg" }) {
       ...thumbnail
     }
-    nus_hackers: file(relativePath: { eq: "nus-hackers.svg"}) {
+    nus_hackers: file(relativePath: { eq: "nus-hackers.svg" }) {
       ...thumbnail
     }
   }
-`;
+`
