@@ -238,7 +238,7 @@ const JoinUsContent = ({ className }) => (
     </JoinUsText>
     <StyledButton
       buttonText="REACH OUT TO US"
-      onClick={() => window.open("mailto:missioncontrol@nusseds.space")}
+      onClick={() => window.open("mailto:nusseds@googlegroups.com")}
     />
   </div>
 )
