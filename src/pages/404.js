@@ -5,15 +5,15 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 
 const NotFoundPage = () => (
-  <Layout>
-    <NavbarPaddingContainer>
-      <SEO title="404: Not found" />
-      <NotFoundPageHeaderWrapper>NOT FOUND</NotFoundPageHeaderWrapper>
-      <NotFoundPageDescription>
-        You just hit a route that doesn&#39;t exist... the sadness.
-      </NotFoundPageDescription>
-    </NavbarPaddingContainer>
-  </Layout>
+	<Layout>
+		<NavbarPaddingContainer>
+			<SEO title="404: Not found" />
+			<NotFoundPageHeaderWrapper>NOT FOUND</NotFoundPageHeaderWrapper>
+			<NotFoundPageDescription>
+				You just hit a route that doesn&#39;t exist... the sadness.
+			</NotFoundPageDescription>
+		</NavbarPaddingContainer>
+	</Layout>
 )
 
 const NotFoundPageHeaderWrapper = styled(PageHeaderFont)`

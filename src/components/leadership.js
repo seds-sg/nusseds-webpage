@@ -5,32 +5,32 @@ import styled from "styled-components"
 import { ButtonFont } from "../components/textStyles"
 
 export const ImageWrapper = styled.div`
-  padding: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+	padding: 1rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 `
 
 export const squareImage = graphql`
-  fragment squareImage on File {
-    childImageSharp {
-      fixed(width: 180, height: 180, quality: 100) {
-        ...GatsbyImageSharpFixed_withWebp
-      }
-    }
-  }
+	fragment squareImage on File {
+		childImageSharp {
+			fixed(width: 180, height: 180, quality: 100) {
+				...GatsbyImageSharpFixed_withWebp
+			}
+		}
+	}
 `
 
 export const thumbnail = graphql`
-  fragment thumbnail on File {
-    childImageSharp {
-      fluid(maxWidth: 300, quality: 100) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-    extension
-    publicURL
-  }
+	fragment thumbnail on File {
+		childImageSharp {
+			fluid(maxWidth: 300, quality: 100) {
+				...GatsbyImageSharpFluid
+			}
+		}
+		extension
+		publicURL
+	}
 `
 
 export const StyledThumbnailImage = styled(Img)`
@@ -62,31 +62,23 @@ const AvatarDescription = styled(AvatarName)`
 `
 
 const ImageContainer = styled.div`
-  min-height: ${props => props.minHeight}; /* THIS IS A HACK */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	min-height: ${(props) => props.minHeight}; /* THIS IS A HACK */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 `
 
-const ImageWithTitle = ({
-  className,
-  description,
-  data,
-  imageName,
-  onClick,
-  minHeight,
-}) => (
-  <div className={className} onClick={onClick}>
-    <ImageContainer minHeight={minHeight ? minHeight : "120px"}>
-      {data[imageName].childImageSharp === null &&
-      data[imageName].extension === "svg" ? (
-        <img src={data[imageName].publicURL} alt={imageName} />
-      ) : (
-        <Img fluid={data[imageName].childImageSharp.fluid} />
-      )}
-    </ImageContainer>
-    <AvatarDescription>{description}</AvatarDescription>
-  </div>
+const ImageWithTitle = ({ className, description, data, imageName, onClick, minHeight }) => (
+	<div className={className} onClick={onClick}>
+		<ImageContainer minHeight={minHeight ? minHeight : "120px"}>
+			{data[imageName].childImageSharp === null && data[imageName].extension === "svg" ? (
+				<img src={data[imageName].publicURL} alt={imageName} />
+			) : (
+				<Img fluid={data[imageName].childImageSharp.fluid} />
+			)}
+		</ImageContainer>
+		<AvatarDescription>{description}</AvatarDescription>
+	</div>
 )
 
 export const StyledImageWithTitle = styled(ImageWithTitle)`
@@ -100,11 +92,11 @@ export const StyledImageWithTitle = styled(ImageWithTitle)`
 `
 
 const AvatarWithTitle = ({ className, name, description, data, imageName }) => (
-  <div className={className}>
-    <Avatar fixed={data[imageName].childImageSharp.fixed} />
-    <AvatarName>{name.toUpperCase()}</AvatarName>
-    <AvatarDescription>{description}</AvatarDescription>
-  </div>
+	<div className={className}>
+		<Avatar fixed={data[imageName].childImageSharp.fixed} />
+		<AvatarName>{name.toUpperCase()}</AvatarName>
+		<AvatarDescription>{description}</AvatarDescription>
+	</div>
 )
 
 export const StyledAvatar = styled(AvatarWithTitle)`

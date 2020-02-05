@@ -1,9 +1,7 @@
 import styled from "styled-components"
 import { PageHeaderFont, DescriptionFont } from "../components/textStyles"
 
-export const BlogPostWrapper = styled.div`
-  color: white;
-`
+export const BlogPostWrapper = styled.div`color: white;`
 
 export const BlogPostContentWrapper = styled(DescriptionFont)`
   margin-top: 3rem;

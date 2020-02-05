@@ -9,9 +9,9 @@ const StyledButtonText = styled(ButtonFont)`
 `
 
 const Button = ({ className, buttonText, onClick }) => (
-  <button className={className} onClick={onClick}>
-    <StyledButtonText>{buttonText}</StyledButtonText>
-  </button>
+	<button className={className} onClick={onClick}>
+		<StyledButtonText>{buttonText}</StyledButtonText>
+	</button>
 )
 
 const StyledButton = styled(Button)`
@@ -30,8 +30,8 @@ const StyledButton = styled(Button)`
 `
 
 StyledButton.propTypes = {
-  buttonText: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
+	buttonText: PropTypes.string.isRequired,
+	onClick: PropTypes.func.isRequired
 }
 
 export default StyledButton

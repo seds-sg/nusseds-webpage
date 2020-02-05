@@ -1,13 +1,13 @@
 import styled from "styled-components"
 
 const BaseFont = styled.div`
-  color: #f8f3e9;
-  font-family: Brown;
+	color: #f8f3e9;
+	font-family: Brown;
 `
 
 const BaseInlineFont = styled.span`
-  color: #f8f3e9;
-  font-family: Brown;
+	color: #f8f3e9;
+	font-family: Brown;
 `
 
 export const LandingTitleFont = styled(BaseFont)`
