@@ -5,4 +5,4 @@ path: /new-frontiers-9
 upcoming: true
 ---
 
-The speaker for the event will soon be confirmed. Event is scheduled occur from 7.30pm to 9.00pm.
+Event is currently postponed due to the situation with the 2019-nCoV. Stay tuned for updates.
