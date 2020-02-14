@@ -5,5 +5,4 @@ path: /new-horizons-4
 upcoming: true
 ---
 
-The topic and organizer for the event will soon be confirmed. Event is scheduled occur from 9.00am to 12.00pm.
-
+Event is currently postponed due to the situation with the 2019-nCoV. Stay tuned for updates.

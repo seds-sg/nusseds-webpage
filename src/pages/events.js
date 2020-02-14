@@ -14,7 +14,7 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
 		.map((edge) => <StyledBriefPostLink key={edge.node.id} post={edge.node} />)
 	const NewPosts = newEvents.edges
 		.filter((edge) => !!edge.node.frontmatter.date)
-		.map((edge) => <StyledBriefPostLink key={edge.node.id} post={edge.node} />)
+		.map((edge) => <StyledBriefPostLink isUpcoming={true} key={edge.node.id} post={edge.node} />)
 	return (
 		<Layout>
 			<NavbarPaddingContainer>

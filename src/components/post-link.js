@@ -14,10 +14,10 @@ const PostLink = ({ className, post }) => (
 	</div>
 )
 
-const BriefPostLink = ({ className, post }) => (
+const BriefPostLink = ({ className, post, isUpcoming }) => (
 	<StyledLink className={className} to={post.frontmatter.path}>
 		<PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
-		<DateWrapper>Date: {post.frontmatter.date}</DateWrapper>
+		<DateWrapper>Date: {isUpcoming ? "Currently Postponed" : post.frontmatter.date}</DateWrapper>
 		<ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
 	</StyledLink>
 )

@@ -4,12 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require(`path`);
+const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions;
+	const { createPage } = actions
 
-  const result = await graphql(`
+	const result = await graphql(`
     {
       newFrontiers: allMarkdownRemark(
         filter: { frontmatter: { upcoming: { eq: null } }, fileAbsolutePath: { regex: "/(new-frontiers)/" } }  
@@ -56,33 +56,33 @@ exports.createPages = async ({ actions, graphql }) => {
         }
       }
     }
-  `);
-  if (result.errors) {
-    console.error(result.errors);
-  }
+  `)
+	if (result.errors) {
+		console.error(result.errors)
+	}
 
-  result.data.newFrontiers.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: path.resolve(`src/templates/new-frontiers-post.js`)
-    });
-  });
-  result.data.newHorizons.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: path.resolve(`src/templates/new-horizons-post.js`)
-    });
-  });
-  result.data.upcomingEvents.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: path.resolve(`src/templates/upcoming-event-post.js`)
-    });
-  });
-  result.data.others.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: path.resolve(`src/templates/upcoming-event-post.js`)
-    });
-  });
-};
+	result.data.newFrontiers.edges.forEach(({ node }) => {
+		createPage({
+			path: node.frontmatter.path,
+			component: path.resolve(`src/templates/new-frontiers-post.js`)
+		})
+	})
+	result.data.newHorizons.edges.forEach(({ node }) => {
+		createPage({
+			path: node.frontmatter.path,
+			component: path.resolve(`src/templates/new-horizons-post.js`)
+		})
+	})
+	result.data.upcomingEvents.edges.forEach(({ node }) => {
+		createPage({
+			path: node.frontmatter.path,
+			component: path.resolve(`src/templates/upcoming-event-post.js`)
+		})
+	})
+	result.data.others.edges.forEach(({ node }) => {
+		createPage({
+			path: node.frontmatter.path,
+			component: path.resolve(`src/templates/new-horizons-post.js`)
+		})
+	})
+}

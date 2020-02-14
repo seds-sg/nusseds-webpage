@@ -29,7 +29,7 @@ const AboutPage = ({ data }) => (
 				/>
 			</VisionMissionWrapper>
 			<SectionHeaderWrapper headerText="OUR FRIENDS" />
-			<ImageWrapper>
+			<SponsorContainer>
 				<StyledImageWithTitle
 					description="Partner"
 					data={data}
@@ -39,7 +39,7 @@ const AboutPage = ({ data }) => (
 				<StyledImageWithTitle
 					description="Ecosystem Partner"
 					data={data}
-					imageName="nus"
+					imageName="nus_enterprise"
 					onClick={() => window.open("https://enterprise.nus.edu.sg/")}
 				/>
 				<StyledImageWithTitle
@@ -54,7 +54,19 @@ const AboutPage = ({ data }) => (
 					imageName="nus_hackers"
 					onClick={() => window.open("https://www.nushackers.org/")}
 				/>
-			</ImageWrapper>
+				<StyledImageWithTitle
+					description="Partner"
+					data={data}
+					imageName="nus_engineering"
+					onClick={() => window.open("https://www.eng.nus.edu.sg/")}
+				/>
+				<StyledImageWithTitle
+					description="Partner"
+					data={data}
+					imageName="nus_computing"
+					onClick={() => window.open("https://www.comp.nus.edu.sg/")}
+				/>
+			</SponsorContainer>
 			<SectionHeaderWrapper headerText="FOLLOW US ON" />
 			<StyledFollowUsContent />
 			<SectionHeaderWrapper headerText="OUR CORE TEAM" />
@@ -104,6 +116,13 @@ const AboutPageHeaderWrapper = styled(PageHeaderFont)`
 
 const AboutPageDescription = styled(DescriptionFont)`
   padding-bottom: 3rem;
+`
+
+const SponsorContainer = styled(ImageWrapper)`
+	background-color: white;
+	div {
+		color: black;
+	}
 `
 
 /** VISION MISSION */
@@ -220,7 +239,13 @@ export const pageQuery = graphql`
 		open_cosmos: file(relativePath: { eq: "Open_Cosmos_Logo.png" }) {
 			...thumbnail
 		}
-		nus: file(relativePath: { eq: "NUS_Logo.jpg" }) {
+		nus_enterprise: file(relativePath: { eq: "NUS_Enterprise_Logo.jpg" }) {
+			...thumbnail
+		}
+		nus_engineering: file(relativePath: { eq: "NUS_Engineering_Logo.png" }) {
+			...thumbnail
+		}
+		nus_computing: file(relativePath: { eq: "NUS_Computing_Logo.png" }) {
 			...thumbnail
 		}
 		engineers_sg: file(relativePath: { eq: "engineers-sg.svg" }) {

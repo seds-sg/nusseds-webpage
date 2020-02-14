@@ -86,7 +86,7 @@ const RoverPage = ({ data }) => (
 					imageName="asyraf_abbas"
 				/>
 				<StyledAvatar name="Jethro Kuan" description="Software Team Lead" data={data} imageName="jethro_kuan" />
-				<StyledAvatar name="Samuel Chua" description="Science Team Lead" data={data} imageName="samuel_chua" />
+				<StyledAvatar name="Chin Wei" description="Science Team Lead" data={data} imageName="chin_wei" />
 				<StyledAvatar
 					name="Gollapudi Venkata Sambhavi Deepthi"
 					description="Electrical Team Lead"
@@ -178,7 +178,7 @@ export const pageQuery = graphql`
 		sambhavi_deepthi: file(relativePath: { eq: "new-oppy/sambhavi-deepthi.jpg" }) {
 			...squareImage
 		}
-		samuel_chua: file(relativePath: { eq: "new-oppy/samuel-chua.jpg" }) {
+		chin_wei: file(relativePath: { eq: "new-oppy/chin-wei.jpg" }) {
 			...squareImage
 		}
 		male_kerbal: file(relativePath: { eq: "male_kerbal.jpeg" }) {
