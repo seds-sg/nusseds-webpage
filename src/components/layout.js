@@ -17,6 +17,9 @@ import { NavBarFont } from "../components/textStyles"
 
 const NavbarLink = styled(NavBarFont)`
   color: #fef8e9;
+	:hover {
+		text-decoration: underline;
+	}
 `
 
 const Layout = ({ children, className }) => (
