@@ -28,6 +28,24 @@ const AboutPage = ({ data }) => (
 					description="To empower youth in Singapore & beyond to make an impact in space exploration."
 				/>
 			</VisionMissionWrapper>
+			<SectionHeaderWrapper headerText="OUR SPONSORS" />
+			<SponsorContainer>
+				<StyledImageWithTitle
+					data={data}
+					imageName="nus_engineering"
+					onClick={() => window.open("https://www.eng.nus.edu.sg/")}
+				/>
+				<StyledImageWithTitle
+					data={data}
+					imageName="advisors_clique"
+					onClick={() => window.open("https://advisorsclique.com.sg/")}
+				/>
+				<StyledImageWithTitle
+					data={data}
+					imageName="nus_computing"
+					onClick={() => window.open("https://www.comp.nus.edu.sg/")}
+				/>
+			</SponsorContainer>
 			<SectionHeaderWrapper headerText="OUR PARTNERS" />
 			<SponsorContainer>
 				<StyledImageWithTitle
@@ -49,20 +67,6 @@ const AboutPage = ({ data }) => (
 					data={data}
 					imageName="open_cosmos"
 					onClick={() => window.open("https://open-cosmos.com/")}
-				/>
-				
-			</SponsorContainer>
-			<SectionHeaderWrapper headerText="OUR SPONSORS" />
-			<SponsorContainer>
-				<StyledImageWithTitle
-					data={data}
-					imageName="nus_engineering"
-					onClick={() => window.open("https://www.eng.nus.edu.sg/")}
-				/>
-				<StyledImageWithTitle
-					data={data}
-					imageName="nus_computing"
-					onClick={() => window.open("https://www.comp.nus.edu.sg/")}
 				/>
 			</SponsorContainer>
 			<SectionHeaderWrapper headerText="FOLLOW US ON" />
@@ -250,6 +254,9 @@ export const pageQuery = graphql`
 			...thumbnail
 		}
 		nus_hackers: file(relativePath: { eq: "nus-hackers.svg" }) {
+			...thumbnail
+		}
+		advisors_clique: file(relativePath: { eq: "advisors_clique.png" }) {
 			...thumbnail
 		}
 	}

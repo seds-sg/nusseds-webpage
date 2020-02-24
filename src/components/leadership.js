@@ -85,6 +85,9 @@ export const StyledImageWithTitle = styled(ImageWithTitle)`
   width: 300px;
   height: auto;
   max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
   margin: 1rem;
   :hover {
     cursor: pointer;
