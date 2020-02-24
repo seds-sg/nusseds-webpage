@@ -9,6 +9,8 @@ const PostLink = ({ className, post }) => (
 		<StyledLink to={post.frontmatter.path}>
 			<PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
 			<DateWrapper>Date: {post.frontmatter.date}</DateWrapper>
+{post.frontmatter.writtenBy ? <ContentProducerWrapper>Written by: {post.frontmatter.writtenBy}</ContentProducerWrapper>:
+post.frontmatter.recordedBy ? <ContentProducerWrapper>Recorded by: {post.frontmatter.recordedBy}</ContentProducerWrapper>: <></>}
 			<ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
 		</StyledLink>
 	</div>
@@ -48,9 +50,13 @@ const PostLine = styled.div`
 	border-bottom: 1px solid white;
 `
 
+
 const DateWrapper = styled(DescriptionFont)`
   padding-bottom: 1rem;
   font-size: 1.25rem;
+`
+const ContentProducerWrapper = styled(DateWrapper)`
+	font-style: italic;
 `
 
 const StyledPostLink = styled(PostLink)`

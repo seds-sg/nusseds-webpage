@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import styled from "styled-components"
 import SectionHeaderWrapper from "../components/sectionHeader"
 import { StyledAvatar, ImageWrapper } from "../components/leadership"
+import { graphql } from "gatsby"
 
 const DarpaPage = ({ data }) => (
 	<Layout>

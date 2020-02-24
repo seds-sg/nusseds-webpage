@@ -82,7 +82,7 @@ exports.createPages = async ({ actions, graphql }) => {
 	result.data.others.edges.forEach(({ node }) => {
 		createPage({
 			path: node.frontmatter.path,
-			component: path.resolve(`src/templates/new-horizons-post.js`)
+			component: path.resolve(`src/templates/written-post.js`)
 		})
 	})
 }
