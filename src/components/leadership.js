@@ -20,7 +20,6 @@ export const squareImage = graphql`
 		}
 	}
 `
-
 export const thumbnail = graphql`
 	fragment thumbnail on File {
 		childImageSharp {
@@ -82,7 +81,7 @@ const ImageWithTitle = ({ className, description, data, imageName, onClick, minH
 )
 
 export const StyledImageWithTitle = styled(ImageWithTitle)`
-  width: 300px;
+  width: ${(props) => (props.width) ? `${props.width}px` : '300px'};
   height: auto;
   max-width: 100%;
 	display: flex;

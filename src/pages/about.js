@@ -37,13 +37,16 @@ const AboutPage = ({ data }) => (
 				/>
 				<StyledImageWithTitle
 					data={data}
-					imageName="advisors_clique"
-					onClick={() => window.open("https://advisorsclique.com.sg/")}
-				/>
-				<StyledImageWithTitle
-					data={data}
 					imageName="nus_computing"
 					onClick={() => window.open("https://www.comp.nus.edu.sg/")}
+				/>
+			</SponsorContainer>
+			<SponsorContainer>
+				<StyledImageWithTitle
+					data={data}
+					width={100}
+					imageName="advisors_clique"
+					onClick={() => window.open("https://advisorsclique.com.sg/")}
 				/>
 			</SponsorContainer>
 			<SectionHeaderWrapper headerText="OUR PARTNERS" />
