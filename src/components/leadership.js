@@ -77,7 +77,7 @@ const ImageWithTitle = ({ className, description, data, imageName, onClick, minH
 				<Img fluid={data[imageName].childImageSharp.fluid} />
 			)}
 		</ImageContainer>
-		<AvatarDescription>{description}</AvatarDescription>
+		{(description) ? <AvatarDescription>{description}</AvatarDescription> : null}
 	</div>
 )
 

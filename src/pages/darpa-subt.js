@@ -4,8 +4,9 @@ import Layout, { NavbarPaddingContainer } from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import SectionHeaderWrapper from "../components/sectionHeader"
+import { StyledAvatar, ImageWrapper } from "../components/leadership"
 
-const DarpaPage = () => (
+const DarpaPage = ({ data }) => (
 	<Layout>
 		<NavbarPaddingContainer>
 			<SEO title="New Opportunity" />
@@ -32,7 +33,10 @@ const DarpaPage = () => (
 				Two rounds of competitions will be held. One in March 2020 and another in Fall 2021. In total there are
 				$5 million worth of prizes.
 			</DescriptionFont>
-			{/* <SectionHeaderWrapper headerText="TEAM LEADS" /> */}
+			<SectionHeaderWrapper headerText="ADVISORS" />
+			<ImageWrapper>
+				<StyledAvatar name="Dr. Colin Tan" description="Advisor" data={data} imageName="male_kerbal" />
+			</ImageWrapper>
 			<SectionHeaderWrapper headerText="CONTACT" />
 			<DescriptionFont>
 				For any enquiries, please contact:
@@ -61,3 +65,11 @@ const DarpaPageDescription = styled(DescriptionFont)`
 `
 
 export default DarpaPage
+
+export const pageQuery = graphql`
+	query {
+		male_kerbal: file(relativePath: { eq: "male_kerbal.jpeg" }) {
+			...squareImage
+		}
+	}
+`

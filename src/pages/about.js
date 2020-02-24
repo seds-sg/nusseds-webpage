@@ -28,40 +28,38 @@ const AboutPage = ({ data }) => (
 					description="To empower youth in Singapore & beyond to make an impact in space exploration."
 				/>
 			</VisionMissionWrapper>
-			<SectionHeaderWrapper headerText="OUR FRIENDS" />
+			<SectionHeaderWrapper headerText="OUR PARTNERS" />
 			<SponsorContainer>
 				<StyledImageWithTitle
-					description="Partner"
-					data={data}
-					imageName="open_cosmos"
-					onClick={() => window.open("https://open-cosmos.com/")}
-				/>
-				<StyledImageWithTitle
-					description="Ecosystem Partner"
 					data={data}
 					imageName="nus_enterprise"
 					onClick={() => window.open("https://enterprise.nus.edu.sg/")}
 				/>
 				<StyledImageWithTitle
-					description="Partner"
-					data={data}
-					imageName="engineers_sg"
-					onClick={() => window.open("https://engineers.sg/")}
-				/>
-				<StyledImageWithTitle
-					description="Partner"
 					data={data}
 					imageName="nus_hackers"
 					onClick={() => window.open("https://www.nushackers.org/")}
 				/>
 				<StyledImageWithTitle
-					description="Partner"
+					data={data}
+					imageName="engineers_sg"
+					onClick={() => window.open("https://engineers.sg/")}
+				/>
+				<StyledImageWithTitle
+					data={data}
+					imageName="open_cosmos"
+					onClick={() => window.open("https://open-cosmos.com/")}
+				/>
+				
+			</SponsorContainer>
+			<SectionHeaderWrapper headerText="OUR SPONSORS" />
+			<SponsorContainer>
+				<StyledImageWithTitle
 					data={data}
 					imageName="nus_engineering"
 					onClick={() => window.open("https://www.eng.nus.edu.sg/")}
 				/>
 				<StyledImageWithTitle
-					description="Partner"
 					data={data}
 					imageName="nus_computing"
 					onClick={() => window.open("https://www.comp.nus.edu.sg/")}

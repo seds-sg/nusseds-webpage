@@ -4,7 +4,7 @@ date: 2020-01-30
 path: /new-frontiers-8
 ---
 
-**Due to issues with the audio, there is a slight delay with the upload of the video recording. Once it has been uploaded on youtube it will be reflected on this article as well. Do stay subscribed to our [youtube channel](https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ) to be notified!**
+**Due to issues with the audio, we regret to inform that the video recording will not be available. Do stay subscribed to our [youtube channel](https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ) to be notified of any future videos!**
 
 Welcome back to school! Students and researchers from NUS have launched multiple nanosatelites called CubeSats into space. One such launch is **Galassia**.
 
