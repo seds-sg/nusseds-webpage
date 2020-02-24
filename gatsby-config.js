@@ -5,7 +5,20 @@ module.exports = {
 		author: `@muruges95`
 	},
 	plugins: [
-		`gatsby-transformer-remark`,
+		`gatsby-plugin-sharp`,
+		{
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 600,
+            },
+          },
+        ],
+      },
+    },
 		`gatsby-plugin-styled-components`,
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -22,8 +35,13 @@ module.exports = {
 				path: `${__dirname}/src/images`
 			}
 		},
+		{
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content`,
+      },
+    },
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {

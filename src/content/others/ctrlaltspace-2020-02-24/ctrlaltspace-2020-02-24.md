@@ -17,6 +17,7 @@ militaristic or civil purposes, for applications like communications, navigation
 accelerate scientific advancement or to transcend boundaries and unite the world. I certainly see the
 utility in these for collective groups of people. I would say these are important reasons from a
 societal perspective, but on an individual level they do not drive me.
+
 My interest in Space was primarily driven by my wish to **experience** Space first-hand. I wanted to
 hop on a spaceship and venture out to far worlds as an astronaut. What would it feel like to be
 “weightless”? What would it be like to look out at Earth while zipping past it? What would it be like
@@ -40,6 +41,7 @@ Space, watched Space films and documentaries, and pinned up Space infographics o
 I use my Twitter account almost solely for following developments in the Space industry. Going to
 outer space was a goal I set for myself early on and that spurred me on to grow my interest in all
 things Space. I told all my close friends I wanted to be an astronaut, unabashedly.
+
 There was also a natural side to the pull that Space had on me. Have you ever seen the sky from a
 place high up and far from light pollution? It is breath-taking. I’ve lived in cities most of my life but in
 my teen years I had opportunities to observe the sky in all its natural splendour in dark rural settings.
@@ -69,14 +71,14 @@ is out there is common to humanity and applies to me as well. We call it wonder,
 exploration. The enormity and mystery of Space kindle in me a deep fire, to go **explore** and see
 what’s out there. That which is unknown makes us eager to figure it out. There are so many
 possibilities to be uncovered, discoveries to be made, endeavours to be embarked on.
+
 I would like to close off with an anecdote, and a call for you to explore your interests in Space
 regardless of what other people think, wherever you might be, whichever field you are in.
+
 I am fortunate to stay a stone’s throw away from one of Singapore’s two public observatories (to my
 knowledge), the [Andromeda Observatory](https://www.facebook.com/AndromedaObservatory/) housed at Galaxy CC (previously Admiralty CC). Some years
 back in 2012 there was a Venus transit. (Venus appears as a dark spot as it travels between the Sun
-and the Earth).
-
-I had gone to the observatory to watch the rare event safely only to join a long
+and the Earth). I had gone to the observatory to watch the rare event safely only to join a long
 snaking queue. So, I ran back home, grabbed an A4 sheet and my pair of binos, and came back. I
 pointed it at the sun and focused the image on the paper placed on the ground (don’t do this unless
 your binos are expendable). There it was, crystal clear as it could be, a black dot travelling across a
@@ -91,5 +93,9 @@ yes, never listen to people who tell you what you can achieve and what you canno
 brain, follow your own heart. If you are not given an opportunity to achieve your dreams, then
 create that opportunity for yourself. You might be wrong, you might fail, but if your heart wills it,
 you must at least try.
+
+![image 1](./image1.png)
+
+![image 2](./image2.png)
 
 So much for my love letter to Space. What’s YOUR story? Why do YOU love space?
