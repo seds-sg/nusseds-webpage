@@ -14,7 +14,7 @@ const Posts = ({ data: { allMarkdownRemark: { edges } } }) => {
 	return (
 		<Layout>
 			<NavbarPaddingContainer>
-				<SEO title="New Frontier Posts" />
+				<SEO title="Blog Posts" />
 				<PostsTitleWrapper>We Write too.</PostsTitleWrapper>
 				<PostsDescription>
 					Get an update we have a fancy new article. Learn tidbits about space exploration and our progress -
