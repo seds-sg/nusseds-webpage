@@ -15,7 +15,6 @@ const GetUpdates = () => {
 				value={emailAddr}
 				onChange={(event) => setEmailAddr(event.target.value)}
 				type="text"
-				autoFocus
 				placeholder="Enter your email!"
 			/>
 			<ButtonWrapper

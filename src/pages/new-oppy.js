@@ -118,6 +118,7 @@ const RoverPage = ({ data }) => (
 			</DescriptionFont>
 			<SectionHeaderWrapper headerText="MEDIA" />
 			<ImageWrapper>
+				<StyledIFrame frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/3prBsOcPAeU"/>
 				<StyledThumbnailImage fluid={data.image1.childImageSharp.fluid} />
 				<StyledThumbnailImage fluid={data.image2.childImageSharp.fluid} />
 				<StyledThumbnailImage fluid={data.image3.childImageSharp.fluid} />
@@ -132,6 +133,13 @@ const RoverPage = ({ data }) => (
 
 const RoverPageHeaderWrapper = styled(PageHeaderFont)`
   margin-bottom: 3rem;
+`
+
+const StyledIFrame = styled.iframe`
+	width: 300px;
+	height: auto;
+	max-width: 100%;
+	margin: 1rem;
 `
 
 const RoverPageDescription = styled(DescriptionFont)`

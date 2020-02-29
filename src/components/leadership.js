@@ -68,7 +68,7 @@ const ImageContainer = styled.div`
 `
 
 const ImageWithTitle = ({ className, description, data, imageName, onClick, minHeight }) => (
-	<div className={className} onClick={onClick}>
+	<div className={className} onClick={onClick} onKeyPress={onClick} role="button" tabIndex={0}>
 		<ImageContainer minHeight={minHeight ? minHeight : "120px"}>
 			{data[imageName].childImageSharp === null && data[imageName].extension === "svg" ? (
 				<img src={data[imageName].publicURL} alt={imageName} />
