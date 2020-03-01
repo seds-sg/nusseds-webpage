@@ -23,7 +23,7 @@ export const squareImage = graphql`
 export const thumbnail = graphql`
 	fragment thumbnail on File {
 		childImageSharp {
-			fluid(maxWidth: 300, quality: 100) {
+			fluid(maxWidth: 400, quality: 100) {
 				...GatsbyImageSharpFluid
 			}
 		}
@@ -33,7 +33,7 @@ export const thumbnail = graphql`
 `
 
 export const StyledThumbnailImage = styled(Img)`
-  width: 300px;
+  width: 400px;
   height: auto;
   max-width: 100%;
   margin: 1rem;
@@ -81,7 +81,7 @@ const ImageWithTitle = ({ className, description, data, imageName, onClick, minH
 )
 
 export const StyledImageWithTitle = styled(ImageWithTitle)`
-  width: ${(props) => (props.width) ? `${props.width}px` : '300px'};
+  width: ${(props) => (props.width) ? `${props.width}px` : '400px'};
   height: auto;
   max-width: 100%;
 	display: flex;

@@ -4,8 +4,6 @@ date: 2019-10-14
 path: /new-horizons-2
 ---
 
-### Event Information
-
 This workshop focused on the STK Pro, SatPro and Comms features.
 Event Page: https://www.facebook.com/events/508591523316785/
 

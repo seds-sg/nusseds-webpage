@@ -19,7 +19,7 @@ post.frontmatter.recordedBy ? <ContentProducerWrapper>Recorded by: {post.frontma
 const BriefPostLink = ({ className, post, isUpcoming }) => (
 	<StyledLink className={className} to={post.frontmatter.path}>
 		<PostTitleWrapper>{post.frontmatter.title}</PostTitleWrapper>
-		<DateWrapper>Date: {isUpcoming ? "Currently Postponed" : post.frontmatter.date}</DateWrapper>
+		<DateWrapper>Date: {post.frontmatter.date}</DateWrapper>
 		<ExcerptWrapper>{post.excerpt}</ExcerptWrapper>
 	</StyledLink>
 )

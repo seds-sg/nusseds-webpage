@@ -4,7 +4,7 @@ date: 2020-01-30
 path: /new-frontiers-8
 ---
 
-**Due to issues with the audio, we regret to inform that the video recording will not be available. Do stay subscribed to our [youtube channel](https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ) to be notified of any future videos!**
+**Due to issues with the audio, we regret to inform that the video recording will not be available. Do stay subscribed to our [Youtube channel](https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ) to be notified of any future videos!**
 
 Welcome back to school! Students and researchers from NUS have launched multiple nanosatelites called CubeSats into space. One such launch is **Galassia**.
 
@@ -22,7 +22,7 @@ Event is scheduled occur from 7.30pm to 9.00pm on 30th January, Thursday. The ve
 
 Some refreshments will be provided from 7pm so do come early!
 
-## Speaker Bios:
+## Speaker Bios
 
 **Zhen Ning** is the co-founder & CEO of **NuSpace**, a startup working on satellite platform and satellite IoT solutions. He is an alumnus of Engineering Science as well as the Innovation & Design Programme at NUS.
 

@@ -25,7 +25,7 @@ export default function Template({ data }) {
           ) : (
             <></>
           )}
-          <DescriptionFont>{"Currently Postponed"}</DescriptionFont>
+          <DescriptionFont>{frontmatter.date}</DescriptionFont>
           {frontmatter.youtubeLink !== null ? (
             <DescriptionFont>
               <a

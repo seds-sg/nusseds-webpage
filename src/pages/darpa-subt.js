@@ -4,7 +4,7 @@ import Layout, { NavbarPaddingContainer } from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import SectionHeaderWrapper from "../components/sectionHeader"
-import { StyledAvatar, ImageWrapper } from "../components/leadership"
+import { StyledAvatar, ImageWrapper, StyledThumbnailImage } from "../components/leadership"
 import { graphql } from "gatsby"
 
 const DarpaPage = ({ data }) => (
@@ -52,7 +52,13 @@ const DarpaPage = ({ data }) => (
 				</ul>
 				<br />
 			</DescriptionFont>
-			{/* <SectionHeaderWrapper headerText="MEDIA" /> */}
+			<SectionHeaderWrapper headerText="MEDIA" />
+			<ImageWrapper>
+				<StyledThumbnailImage fluid={data.image1.childImageSharp.fluid} />
+				<StyledThumbnailImage fluid={data.image2.childImageSharp.fluid} />
+				<StyledThumbnailImage fluid={data.image3.childImageSharp.fluid} />
+				<StyledThumbnailImage fluid={data.image4.childImageSharp.fluid} />
+			</ImageWrapper>
 		</NavbarPaddingContainer>
 	</Layout>
 )
@@ -71,6 +77,18 @@ export const pageQuery = graphql`
 	query {
 		male_kerbal: file(relativePath: { eq: "male_kerbal.jpeg" }) {
 			...squareImage
+		}
+		image1: file(relativePath: { eq: "darpa-subt/image1.jpg" }) {
+			...thumbnail
+		}
+		image2: file(relativePath: { eq: "darpa-subt/image2.jpg" }) {
+			...thumbnail
+		}
+		image3: file(relativePath: { eq: "darpa-subt/image3.jpg" }) {
+			...thumbnail
+		}
+		image4: file(relativePath: { eq: "darpa-subt/image4.jpeg" }) {
+			...thumbnail
 		}
 	}
 `

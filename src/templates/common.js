@@ -5,8 +5,9 @@ export const BlogPostWrapper = styled.div`color: white;`
 
 export const BlogPostContentWrapper = styled(DescriptionFont)`
   margin-top: 3rem;
-  h3 {
+  h2 {
     padding-bottom: 1rem;
+    padding-top: 1.5rem;
   }
   p {
     padding-bottom: 2rem;
