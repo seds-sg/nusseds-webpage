@@ -41,14 +41,6 @@ const AboutPage = ({ data }) => (
 					onClick={() => window.open("https://www.comp.nus.edu.sg/")}
 				/>
 			</SponsorContainer>
-			<SponsorContainer>
-				<StyledImageWithTitle
-					data={data}
-					width={100}
-					imageName="advisors_clique"
-					onClick={() => window.open("https://advisorsclique.com.sg/")}
-				/>
-			</SponsorContainer>
 			<SectionHeaderWrapper headerText="OUR PARTNERS" />
 			<SponsorContainer>
 				<StyledImageWithTitle
@@ -257,9 +249,6 @@ export const pageQuery = graphql`
 			...thumbnail
 		}
 		nus_hackers: file(relativePath: { eq: "nus-hackers.svg" }) {
-			...thumbnail
-		}
-		advisors_clique: file(relativePath: { eq: "advisors_clique.png" }) {
 			...thumbnail
 		}
 	}
