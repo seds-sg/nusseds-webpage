@@ -13,6 +13,8 @@ Find out the story behind Singapore’s very own rocket startup, and how Equator
 
 Event is scheduled occur from 7.30pm to 9.00pm on 30th January, Thursday. The venue has been confirmed to be the Hangar @I3 Building Level 1, room SR-787. Directions to the building can be located [here](https://enterprise.nus.edu.sg/contact-us/). The room will be opened at 6.30pm, so do come early!
 
+DO RSVP [here](https://www.facebook.com/events/198387158175137/). In addition, due to the situation with COVID-19, do fill up our [contact tracing form](https://forms.gle/YovdktPKzcdfhGmUA).
+
 ## Speaker Bio
 
 Simon Gwozdz founded Equatorial Space Industries in 2017, in a mission to provide frequent and affordable launch services to the New Space community from its highly strategic location in Southeast Asia. Self-taught in the areas of propulsion and orbital mechanics, Simon believes small launchers will enable a wave of innovation akin to the impact of drones on the aerospace sector. When not developing launch vehicles, Simon enjoys hiking, music production, and home brewing. 
