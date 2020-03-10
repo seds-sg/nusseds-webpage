@@ -10,7 +10,7 @@ Taking to the air has been a long dream for me. But only recently did I decide t
 
 Speaker's blog posts: <http://yeokhengmeng.com/category/flight/>
 
-Playlist of his journey: <http://tiny.cc/ohleez>
+Playlist of his journey: <https://tiny.cc/ohleez>
 
 ## Speaker Bio
 
