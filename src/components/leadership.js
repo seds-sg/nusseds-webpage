@@ -97,7 +97,7 @@ const AvatarWithTitle = ({ className, name, description, data, imageName }) => (
 	<div className={className}>
 		<Avatar fixed={data[imageName].childImageSharp.fixed} />
 		<AvatarName>{name.toUpperCase()}</AvatarName>
-		<AvatarDescription>{description}</AvatarDescription>
+		{description && <AvatarDescription>{description}</AvatarDescription>}
 	</div>
 )
 

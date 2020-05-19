@@ -46,6 +46,9 @@ const Layout = ({ children, className }) => (
 					<Nav.Link href="/join-us">
 						<NavbarLink>Join Us</NavbarLink>
 					</Nav.Link>
+					<Nav.Link href="/alumni">
+						<NavbarLink>Alumni</NavbarLink>
+					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 		</StyledNavbar>

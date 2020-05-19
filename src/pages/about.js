@@ -68,11 +68,9 @@ const AboutPage = ({ data }) => (
 			<StyledFollowUsContent />
 			<SectionHeaderWrapper headerText="OUR CORE TEAM" />
 			<ImageWrapper>
-				<StyledAvatar name="Ramu Vairavan" description="President" data={data} imageName="ramu" />
-				<StyledAvatar name="Yeoh Jun Kai" description="Vice President" data={data} imageName="jun_kai" />
-				<StyledAvatar name="Ian Wu Ling En" description="Outreach Team Lead" data={data} imageName="ian" />
+				<StyledAvatar name="Ian Wu Ling En" description="President" data={data} imageName="ian" />
+				<StyledAvatar name="Yeoh Jun Kai" description="Project Manager (Propulsion)" data={data} imageName="jun_kai" />
 				<StyledAvatar name="Anisha Nicole Joseph" description="Finance Lead" data={data} imageName="anisha" />
-				<StyledAvatar name="Ashwin Kumaar" description="Creative Lead" data={data} imageName="male_kerbal" />
 				<StyledAvatar
 					name="Dean Su Di Yang"
 					description="Outreach (external) Lead"
@@ -82,19 +80,12 @@ const AboutPage = ({ data }) => (
 				<StyledAvatar name="Yeoh Jun Jie" description="Events Manager" data={data} imageName="jun_jie" />
 				<StyledAvatar name="Benedict Goh" description="Secretary" data={data} imageName="benedict" />
 				<StyledAvatar
-					name="Anushka Gaikwad"
-					description="Project Manager (SubT DARPA)"
+					name="Pranathi"
+					description="Project Manager (New Opportunity)"
 					data={data}
 					imageName="female_kerbal"
 				/>
-				<StyledAvatar
-					name="Rachiket Arya"
-					description="Project Manager (New Opportunity)"
-					data={data}
-					imageName="rachiket"
-				/>
 				<StyledAvatar name="Arka Ray" description="Space Policy Unit Lead" data={data} imageName="arka_ray" />
-				<StyledAvatar name="K Muruges" description="Webmaster" data={data} imageName="muruges" />
 			</ImageWrapper>
 			<SectionHeaderWrapper headerText="OUR ADVISORS" />
 			<ImageWrapper>
@@ -215,22 +206,13 @@ export const pageQuery = graphql`
 		jun_kai: file(relativePath: { eq: "Jun_Kai.jpg" }) {
 			...squareImage
 		}
-		rachiket: file(relativePath: { eq: "Rachiket_Arya.jpeg" }) {
-			...squareImage
-		}
 		male_kerbal: file(relativePath: { eq: "male_kerbal.jpeg" }) {
-			...squareImage
-		}
-		ramu: file(relativePath: { eq: "Ramu_Vairavan.jpg" }) {
 			...squareImage
 		}
 		arka_ray: file(relativePath: { eq: "arka_ray.jpeg" }) {
 			...squareImage
 		}
 		female_kerbal: file(relativePath: { eq: "female_kerbal.jpeg" }) {
-			...squareImage
-		}
-		muruges: file(relativePath: { eq: "Muruges.jpg" }) {
 			...squareImage
 		}
 		open_cosmos: file(relativePath: { eq: "Open_Cosmos_Logo.png" }) {
