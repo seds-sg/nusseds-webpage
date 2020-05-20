@@ -93,11 +93,12 @@ export const StyledImageWithTitle = styled(ImageWithTitle)`
   }
 `
 
-const AvatarWithTitle = ({ className, name, description, data, imageName }) => (
+const AvatarWithTitle = ({ className, name, description, data, imageName, contactLink }) => (
 	<div className={className}>
 		<Avatar fixed={data[imageName].childImageSharp.fixed} />
 		<AvatarName>{name.toUpperCase()}</AvatarName>
 		{description && <AvatarDescription>{description}</AvatarDescription>}
+		{contactLink && <AvatarDescription><a href={contactLink}>LinkedIn</a></AvatarDescription>}
 	</div>
 )
 

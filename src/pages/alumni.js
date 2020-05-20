@@ -11,27 +11,27 @@ const AlumniPage = ({ data }) => (
 	<Layout>
 		<NavbarPaddingContainer>
 			<SEO title="Alumni" />
-			<AlumniPageHeaderWrapper>Alumni.</AlumniPageHeaderWrapper>
+			<AlumniPageHeaderWrapper>Our past members.</AlumniPageHeaderWrapper>
       <AlumniPageDescription>
-				Our past members.
+			Reach out to us for anything!
 			</AlumniPageDescription>
 			<SectionHeaderWrapper headerText="2019/20 Core Team" />
 			<ImageWrapper>
-				<StyledAvatar name="Ramu Vairavan" description="President" data={data} imageName="ramu" />
-				<StyledAvatar name="Ashwin Kumaar" description="Creative Lead" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Ramu Vairavan" contactLink="https://www.linkedin.com/in/vairavanramanathan/" data={data} imageName="ramu" />
+				<StyledAvatar name="Ashwin Kumaar" contactLink="https://www.linkedin.com/in/ashwinkumaar/" data={data} imageName="male_kerbal" />
 				<StyledAvatar
         name="Anushka Gaikwad"
-					description="Project Manager (SubT DARPA)"
+					contactLink="https://www.linkedin.com/in/anushkagaikwad/"
 					data={data}
 					imageName="female_kerbal"
 				/>
 				<StyledAvatar
 					name="Rachiket Arya"
-					description="Project Manager (New Opportunity)"
+					contactLink="https://www.linkedin.com/in/rachiket-arya/"
 					data={data}
 					imageName="rachiket"
 				/>
-				<StyledAvatar name="K Muruges" description="Webmaster" data={data} imageName="muruges" />
+				<StyledAvatar name="K Muruges" contactLink="https://www.linkedin.com/in/k-muruges/" data={data} imageName="muruges" />
 			</ImageWrapper>
 		</NavbarPaddingContainer>
 	</Layout>
