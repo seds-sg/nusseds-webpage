@@ -80,10 +80,10 @@ const AboutPage = ({ data }) => (
 				<StyledAvatar name="Yeoh Jun Jie" description="Events Manager" data={data} imageName="jun_jie" />
 				<StyledAvatar name="Benedict Goh" description="Secretary" data={data} imageName="benedict" />
 				<StyledAvatar
-					name="Pranathi"
+					name="Pranati Rajagopal"
 					description="Project Manager (New Opportunity)"
 					data={data}
-					imageName="female_kerbal"
+					imageName="pranati"
 				/>
 				<StyledAvatar name="Arka Ray" description="Space Policy Unit Lead" data={data} imageName="arka_ray" />
 			</ImageWrapper>
@@ -210,6 +210,9 @@ export const pageQuery = graphql`
 			...squareImage
 		}
 		arka_ray: file(relativePath: { eq: "arka_ray.jpeg" }) {
+			...squareImage
+		}
+		pranati: file(relativePath: { eq: "pranati.jpg" }) {
 			...squareImage
 		}
 		female_kerbal: file(relativePath: { eq: "female_kerbal.jpeg" }) {
