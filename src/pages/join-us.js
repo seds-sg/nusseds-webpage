@@ -13,7 +13,7 @@ const JoinUs = () => {
 		<Layout>
 			<NavbarPaddingContainer>
 				<SEO title="Join Us" />
-				<JoinUsHeaderWrapper>We are recruiting.</JoinUsHeaderWrapper>
+				<JoinUsHeaderWrapper>Join us.</JoinUsHeaderWrapper>
 				<JoinUsDescription>
 					<ButtonWrapper buttonText="Join Now." onClick={() => window.open(formUrl)} />
 				</JoinUsDescription>
@@ -30,7 +30,7 @@ const JoinUs = () => {
 						<li><Underlined>Rover Team</Underlined> <Emoji emoji='⚙️' label='wheel-emoji'/></li>
 						<ul>
 							<li><b>The Rover team</b> handles our flagship engineering project, whose aim is to design and build a semi-autonomous 'Remotely Operated Vehicle' which can accomplish a variety of tasks.</li>
-							<li><b>Competitions: </b> Indian Rover Design Challenge over this summer <em>(Currently Recruiting)</em>. Other Rover Challenges, such as the University Rover Challenge, European Rover Challenge, Indian Rover Challenge and Canadian Rover Challenge over the following semester(s).</li>
+							<li><b>Competitions: </b> Indian Rover Design Challenge over this summer. Other Rover Challenges, such as the University Rover Challenge, European Rover Challenge, Indian Rover Challenge and Canadian Rover Challenge over the following semester(s).</li>
 							<li><b>Applicable Majors: </b> Engineering and science majors preferred, due to the highly technical nature of the project.</li>
 							<li>See more <Link to={"/new-oppy"}>here</Link></li>
 						</ul>
@@ -43,8 +43,8 @@ const JoinUs = () => {
 						</ul>
 						<li><Underlined>Space Policy Team</Underlined> <Emoji emoji='👽' label='alien-emoji' /></li>
 						<ul>
-							<li>Internal Finance</li>
-							<li><b>Competitions: </b> Compernicus Masters 2020 over this summer <em>(Currently Recruiting)</em>, Mars City-State Contest over this summer. Other case competition and research competitions over the following semester(s).</li>
+							<li><b>The Space Policy Unit</b> focuses on aspects of space-related policy and development, over multiple areas like space law, space entrepreneurship, space finance etc.</li>
+							<li><b>Competitions: </b> Compernicus Masters 2020 over this summer, Mars City-State Contest over this summer. Other case competition and research competitions over the following semester(s).</li>
 							<li><b>Applicable Majors: </b>All majors welcome as the nature of policy and business in space is highly diverse.</li>
 						</ul>
 					</NoBullet>
