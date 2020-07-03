@@ -12,9 +12,9 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
 	const OldPosts = pastEvents.edges
 		.filter((edge) => !!edge.node.frontmatter.date)
 		.map((edge) => <StyledBriefPostLink key={edge.node.id} post={edge.node} />)
-	const NewPosts = newEvents.edges
-		.filter((edge) => !!edge.node.frontmatter.date)
-		.map((edge) => <StyledBriefPostLink isUpcoming={true} key={edge.node.id} post={edge.node} />)
+	// const NewPosts = newEvents.edges
+	// 	.filter((edge) => !!edge.node.frontmatter.date)
+	// 	.map((edge) => <StyledBriefPostLink isUpcoming={true} key={edge.node.id} post={edge.node} />)
 	return (
 		<Layout>
 			<NavbarPaddingContainer>
@@ -26,14 +26,25 @@ const EventsPage = ({ data: { pastEvents, newEvents } }) => {
 				</EventPageDescription>
 				<GetUpdates />
 				<SectionHeaderWrapper headerText="UPCOMING EVENTS" />
-				<EventsWrapper>{NewPosts}</EventsWrapper>
-				<SectionHeaderWrapper headerText="PAST EVENTS" />
+				<NoticeFont>
+					In light of COVID-19, all F2F activities will be paused until further notice. We will try to have events livestreamed or recorded, so do stay tuned!
+				</NoticeFont>
+				{/* <EventsWrapper>{NewPosts}</EventsWrapper> */}
+				<SectionHeaderWrapper headerText="PAST EVENTS / ARTICLES" />
 				<EventsWrapper>{OldPosts}</EventsWrapper>
 				{/* <SectionHeaderWrapper headerText="OUR PAST SPEAKERS" /> */}
 			</NavbarPaddingContainer>
 		</Layout>
 	)
 }
+
+const NoticeFont = styled(DescriptionFont)`
+	font-style: italic;
+	font-size: 0.8rem;
+	line-height: 1.8;
+	margin-bottom: 2rem;
+	margin-top: -0.7rem;
+`
 
 const EventsWrapper = styled.div`
 	display: flex;

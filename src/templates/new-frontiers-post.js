@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 import Layout, { NavbarPaddingContainer } from "../components/layout"
 import SEO from "../components/seo"
 import {
-  BlogPostWrapper,
-  BlogPostContentWrapper,
+  ArticlePostWrapper,
+  ArticlePostContentWrapper,
   PostHeaderFont,
 } from "./common"
 import { DescriptionFont } from "../components/textStyles"
@@ -16,7 +16,7 @@ export default function Template({ data }) {
     <Layout>
       <NavbarPaddingContainer>
         <SEO title={frontmatter.title} />
-        <BlogPostWrapper>
+        <ArticlePostWrapper>
           <PostHeaderFont>{frontmatter.title}</PostHeaderFont>
           {frontmatter.recordedBy !== null ? (
             <DescriptionFont>
@@ -39,7 +39,7 @@ export default function Template({ data }) {
           ) : (
             <></>
           )}
-          <BlogPostContentWrapper dangerouslySetInnerHTML={{ __html: html }} />
+          <ArticlePostContentWrapper dangerouslySetInnerHTML={{ __html: html }} />
           {/* <div>
 						<h3>Recording of session</h3>
 						<iframe
@@ -51,7 +51,7 @@ export default function Template({ data }) {
 							title={frontmatter.title}
 						/>
 					</div> */}
-        </BlogPostWrapper>
+        </ArticlePostWrapper>
       </NavbarPaddingContainer>
     </Layout>
   )

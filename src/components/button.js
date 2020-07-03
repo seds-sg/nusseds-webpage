@@ -8,7 +8,7 @@ const StyledButtonText = styled(ButtonFont)`
   font-weight: 900;
 `
 
-const Button = ({ className, buttonText, onClick }) => (
+const Button = ({ className, buttonText, onClick, children }) => (
 	<button className={className} onClick={onClick}>
 		<StyledButtonText>{buttonText}</StyledButtonText>
 	</button>
@@ -26,6 +26,32 @@ const StyledButton = styled(Button)`
     ${StyledButtonText} {
       color: #141e22;
     }
+  }
+`
+
+export const IconButton = ({ onClick, children }) => (
+  <StyledIconButton onClick={onClick}>
+    {children}
+  </StyledIconButton>
+)
+
+const StyledIconButton = styled.button`
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background: none;
+  border: 1px solid white;
+  line-height: 1;
+  color: #f8f3e9;
+  border-radius: 100px;
+  &:hover {
+    background: #f8f3e9;
+    color: #141e22;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
   }
 `
 

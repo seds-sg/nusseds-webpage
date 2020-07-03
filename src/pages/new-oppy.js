@@ -70,6 +70,23 @@ const RoverPage = ({ data }) => (
 				designing and building New Spirit and future rovers. This was done to bring new team members up to speed
 				with regard to their technical skills, as well as to ensure project continuity.
 			</DescriptionFont>
+			<SectionHeaderWrapper headerText="ADVISORS" />
+			<ImageWrapper>
+				<StyledAvatar name="Prof. Loh Ai Poh" description="Advisor" data={data} imageName="female_kerbal" />
+				<StyledAvatar name="Prof. Marcelo Ang" description="Advisor" data={data} imageName="male_kerbal" />
+				<StyledAvatar
+					name="Mr. Lim Hong Wee"
+					description="Technical Advisor"
+					data={data}
+					imageName="male_kerbal"
+				/>
+				<StyledAvatar
+					name="Dr. Rajesh Panicker"
+					description="Technical Advisor"
+					data={data}
+					imageName="male_kerbal"
+				/>
+			</ImageWrapper>
 			<SectionHeaderWrapper headerText="TEAM LEADS" />
 			<ImageWrapper>
 				<StyledAvatar
@@ -92,23 +109,6 @@ const RoverPage = ({ data }) => (
 					description="Electrical Team Lead"
 					data={data}
 					imageName="sambhavi_deepthi"
-				/>
-			</ImageWrapper>
-			<SectionHeaderWrapper headerText="ADVISORS" />
-			<ImageWrapper>
-				<StyledAvatar name="Prof. Loh Ai Poh" description="Advisor" data={data} imageName="female_kerbal" />
-				<StyledAvatar name="Prof. Marcelo Ang" description="Advisor" data={data} imageName="male_kerbal" />
-				<StyledAvatar
-					name="Mr. Lim Hong Wee"
-					description="Technical Advisor"
-					data={data}
-					imageName="male_kerbal"
-				/>
-				<StyledAvatar
-					name="Dr. Rajesh Panicker"
-					description="Technical Advisor"
-					data={data}
-					imageName="male_kerbal"
 				/>
 			</ImageWrapper>
 			<SectionHeaderWrapper headerText="CONTACT" />

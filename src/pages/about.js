@@ -4,9 +4,10 @@ import { PageHeaderFont, DescriptionFont, TitleFont } from "../components/textSt
 import SEO from "../components/seo"
 import { ImageWrapper, StyledAvatar, StyledImageWithTitle } from "../components/leadership"
 import styled from "styled-components"
-import StyledButton from "../components/button"
+import StyledButton, { IconButton } from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
 import { graphql } from "gatsby"
+import { FaTelegramPlane, FaYoutube, FaInstagram, FaFacebookF } from 'react-icons/fa';
 
 const AboutPage = ({ data }) => (
 	<Layout>
@@ -64,16 +65,19 @@ const AboutPage = ({ data }) => (
 					onClick={() => window.open("https://open-cosmos.com/")}
 				/>
 			</SponsorContainer>
-			<SectionHeaderWrapper headerText="FOLLOW US ON" />
-			<StyledFollowUsContent />
+			<SectionHeaderWrapper headerText="OUR ADVISORS" />
+			<ImageWrapper>
+				<StyledAvatar name="Prof. Low Kay-Soon" description="Advisor" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Mr. Eugene Ee" description="Mentor" data={data} imageName="male_kerbal" />
+			</ImageWrapper>
 			<SectionHeaderWrapper headerText="OUR CORE TEAM" />
 			<ImageWrapper>
 				<StyledAvatar name="Ian Wu Ling En" description="President" data={data} imageName="ian" />
-				<StyledAvatar name="Yeoh Jun Kai" description="Project Manager (Propulsion)" data={data} imageName="jun_kai" />
+				<StyledAvatar name="Yeoh Jun Kai" description="Project Director (Propulsion Lab)" data={data} imageName="jun_kai" />
 				<StyledAvatar name="Anisha Nicole Joseph" description="Finance Lead" data={data} imageName="anisha" />
 				<StyledAvatar
 					name="Dean Su Di Yang"
-					description="Outreach (external) Lead"
+					description="Outreach Lead (External)"
 					data={data}
 					imageName="dean"
 				/>
@@ -81,18 +85,15 @@ const AboutPage = ({ data }) => (
 				<StyledAvatar name="Benedict Goh" description="Secretary" data={data} imageName="benedict" />
 				<StyledAvatar
 					name="Pranati Rajagopal"
-					description="Project Manager (New Opportunity)"
+					description="Project Director (Rover Team)"
 					data={data}
 					imageName="pranati"
 				/>
 				<StyledAvatar name="Arka Ray" description="Space Policy Unit Lead" data={data} imageName="arka_ray" />
 			</ImageWrapper>
-			<SectionHeaderWrapper headerText="OUR ADVISORS" />
-			<ImageWrapper>
-				<StyledAvatar name="Prof. Low Kay-Soon" description="Advisor" data={data} imageName="male_kerbal" />
-				<StyledAvatar name="Mr. Eugene Ee" description="Mentor" data={data} imageName="male_kerbal" />
-			</ImageWrapper>
-			<SectionHeaderWrapper headerText="JOIN OUR MISSION" />
+			<SectionHeaderWrapper headerText="FOLLOW US ON" />
+			<StyledFollowUsContent />
+			<SectionHeaderWrapper headerText="CONTACT US" />
 			<StyledJoinUsContent />
 		</NavbarPaddingContainer>
 	</Layout>
@@ -142,17 +143,10 @@ const VisionMissionDescription = styled(DescriptionFont)``
 
 const FollowUsContent = ({ className }) => (
 	<div className={className}>
-		<StyledButton buttonText="TELEGRAM" onClick={() => window.open("https://t.me/nusseds")} />
-		<StyledButton
-			buttonText="INSTAGRAM"
-			onClick={() => window.open("https://instagram.com/nus_seds?igshid=krgjw95pdxlm")}
-		/>
-		<StyledButton buttonText="FACEBOOK" onClick={() => window.open("https://www.facebook.com/nusseds/")} />
-		<StyledButton
-			buttonText="YOUTUBE"
-			onClick={() => window.open("https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ")}
-		/>
-	</div>
+		<IconButton onClick={() => window.open("https://t.me/nusseds")}><FaTelegramPlane /></IconButton>
+		<IconButton onClick={() => window.open("https://www.youtube.com/channel/UCUbobZWvBIYmCOsc_33vwGQ")}><FaYoutube /></IconButton>
+		<IconButton onClick={() => window.open("https://instagram.com/nus_seds?igshid=krgjw95pdxlm")}><FaInstagram /></IconButton>
+		<IconButton onClick={() => window.open("https://www.facebook.com/nusseds/")}><FaFacebookF /></IconButton></div>
 )
 
 const StyledFollowUsContent = styled(FollowUsContent)`
@@ -165,10 +159,12 @@ const JoinUsContent = ({ className }) => (
 	<div className={className}>
 		<JoinUsTitle>Let's Work Together.</JoinUsTitle>
 		<JoinUsText>
-			If you are inspired to believe in our mission and vision - please do reach out to us. Together, we can
-			inspire others to believe and help to create opportunities for fellow Singaporeans in the Space Industry.
+			If you are inspired to believe in our mission and vision - please do reach out to us. Currently, we are located at Faculty of Engineering (EW1A), National University of Singapore (NUS).
+			<br/><br/>
+			Alternatively, contact us via email through the button below.
 		</JoinUsText>
-		<StyledButton buttonText="REACH OUT TO US" onClick={() => window.open("mailto:missioncontrol@nusseds.space")} />
+		<StyledButton buttonText="JOIN OUR MISSION" onClick={() => window.open("mailto:missioncontrol@nusseds.space")} />
+		<JoinUsText><br/><br/>NUS SEDS is also constituent club of <a href="https://seds-sg.space">SEDS SG</a> and <a href="https://http://www.sedsearth.org/">SEDS Earth</a>.</JoinUsText>
 	</div>
 )
 

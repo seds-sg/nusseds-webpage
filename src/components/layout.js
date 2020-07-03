@@ -14,6 +14,7 @@ import "./layout.css"
 import "../fonts/fonts.css"
 import logo from "../images/NUS_SEDS_Logo.png"
 import { NavBarFont } from "../components/textStyles"
+import Footer from "./footer"
 
 const NavbarLink = styled(NavBarFont)`
   color: #fef8e9;
@@ -40,8 +41,8 @@ const Layout = ({ children, className }) => (
 					<Nav.Link href="/events">
 						<NavbarLink>Events</NavbarLink>
 					</Nav.Link>
-					<Nav.Link href="/posts">
-						<NavbarLink>Blog</NavbarLink>
+					<Nav.Link href="/articles">
+						<NavbarLink>Articles</NavbarLink>
 					</Nav.Link>
 					<Nav.Link href="/join-us">
 						<NavbarLink>Join Us</NavbarLink>
@@ -49,15 +50,14 @@ const Layout = ({ children, className }) => (
 					<Nav.Link href="/alumni">
 						<NavbarLink>Alumni</NavbarLink>
 					</Nav.Link>
+					<Nav.Link href="/resources">
+						<NavbarLink>Resources</NavbarLink>
+					</Nav.Link>
 				</Nav>
 			</Navbar.Collapse>
 		</StyledNavbar>
 		<main>{children}</main>
-		{/* <footer>
-				© {new Date().getFullYear()}, Built with
-				{` `}
-				<a href="https://www.gatsbyjs.org">Gatsby</a>
-			</footer> */}
+		<Footer />
 	</div>
 )
 const StyledBrand = styled(Navbar.Brand)`

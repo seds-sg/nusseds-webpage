@@ -4,8 +4,8 @@ import Layout, { NavbarPaddingContainer } from "../components/layout"
 import SEO from "../components/seo"
 import {
   PostHeaderFont,
-  BlogPostWrapper,
-  BlogPostContentWrapper,
+  ArticlePostWrapper,
+  ArticlePostContentWrapper,
 } from "./common"
 import { DescriptionFont } from "../components/textStyles"
 
@@ -16,7 +16,7 @@ export default function Template({ data }) {
     <Layout>
       <NavbarPaddingContainer>
         <SEO title={frontmatter.title} />
-        <BlogPostWrapper>
+        <ArticlePostWrapper>
           <PostHeaderFont>{frontmatter.title}</PostHeaderFont>
           {frontmatter.writtenBy !== null ? (
             <DescriptionFont>
@@ -26,8 +26,8 @@ export default function Template({ data }) {
             <></>
           )}
           <DescriptionFont>{frontmatter.date}</DescriptionFont>
-          <BlogPostContentWrapper dangerouslySetInnerHTML={{ __html: html }} />
-        </BlogPostWrapper>
+          <ArticlePostContentWrapper dangerouslySetInnerHTML={{ __html: html }} />
+        </ArticlePostWrapper>
       </NavbarPaddingContainer>
     </Layout>
   )

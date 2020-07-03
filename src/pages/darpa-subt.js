@@ -37,6 +37,8 @@ const DarpaPage = ({ data }) => (
 			<SectionHeaderWrapper headerText="ADVISORS" />
 			<ImageWrapper>
 				<StyledAvatar name="Dr. Colin Tan" description="Advisor" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Dr. Soo Yuen Jien" description="Advisor" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Prof. Hugh Anderson" description="Advisor" data={data} imageName="male_kerbal" />
 			</ImageWrapper>
 			<SectionHeaderWrapper headerText="CONTACT" />
 			<DescriptionFont>
