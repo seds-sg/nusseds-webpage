@@ -72,8 +72,8 @@ const RoverPage = ({ data }) => (
 			</DescriptionFont>
 			<SectionHeaderWrapper headerText="ADVISORS" />
 			<ImageWrapper>
-				<StyledAvatar name="Prof. Loh Ai Poh" description="Advisor" data={data} imageName="female_kerbal" />
 				<StyledAvatar name="Prof. Marcelo Ang" description="Advisor" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Prof. Loh Ai Poh" description="Advisor" data={data} imageName="female_kerbal" />
 				<StyledAvatar
 					name="Mr. Lim Hong Wee"
 					description="Technical Advisor"
