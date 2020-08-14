@@ -17,7 +17,7 @@ const ResourcesPage = () => {
         <DescriptionFont>
           <ul>
             <li><a href="/sponsorkit.pdf">Sponsorship kit</a></li>
-            <li><a href="/presentation.pdf">An introductory presentation</a></li>
+            <li><a href="/NUS_SEDS.pdf">An introductory presentation</a></li>
           </ul>
         </DescriptionFont>
       </NavbarPaddingContainer>
