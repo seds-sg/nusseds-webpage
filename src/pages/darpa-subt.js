@@ -46,13 +46,10 @@ const DarpaPage = ({ data }) => (
 				<ul>
 					<li>
 						{" "}
-						Arjo Chakravarty at +65 8722 6736 or <a href="mailto:arjo@u.nus.edu">arjo@u.nus.edu</a>
+						Anushka Gaikwad @ +65 8139 3083 or <a href="mailto:anushka@u.nus.edu">anushka@u.nus.edu</a>
 					</li>
 					<li>
-						Xavier Lee Kok Teng at <a href="mailto:lee.kokteng@u.nus.edu">lee.kokteng@u.nus.edu</a>
-					</li>
-					<li>
-						Nyang Shaw Bin at <a href="mailto:shawbin.nyang@u.nus.edu">shawbin.nyang@u.nus.edu</a>
+						Arjo Chakravarty @ +65 8722 6736 or <a href="mailto:arjo@u.nus.edu">arjo@u.nus.edu</a>
 					</li>
 				</ul>
 				<br />
