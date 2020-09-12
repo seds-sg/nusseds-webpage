@@ -163,7 +163,7 @@ const JoinUsContent = ({ className }) => (
 			<br/><br/>
 			Alternatively, contact us via email through the button below.
 		</JoinUsText>
-		<StyledButton buttonText="JOIN OUR MISSION" onClick={() => window.open("mailto:missioncontrol@nusseds.space")} />
+		<StyledButton buttonText="JOIN OUR MISSION" onClick={() => window.open("mailto:seds@u.nus.edu")} />
 		<JoinUsText><br/><br/>NUS SEDS is also constituent club of <a href="https://seds-sg.space">SEDS SG</a> and <a href="https://http://www.sedsearth.org/">SEDS Earth</a>.</JoinUsText>
 	</div>
 )
