@@ -16,6 +16,9 @@ const ProjectsPage = () => {
 				darpa_subt: file(relativePath: { eq: "SubTChallengeInfographica.png" }) {
 					...thumbnail
 				}
+				space_policy_unit: file(relativePath: { eq: "SpacePolicyUnit_Img.jpeg"}) {
+					...thumbnail
+				}
 			}
 		`
 	)
@@ -40,6 +43,13 @@ const ProjectsPage = () => {
 						data={data}
 						imageName="darpa_subt"
 						onClick={() => (window.location = "/darpa-subt")}
+					/>
+					<StyledImageWithTitle
+						description="Space Policy Unit"
+						minHeight="283px"
+						data={data}
+						imageName="space_policy_unit"
+						onClick={() => (window.location = "/space-policy-unit")}
 					/>
 				</ImageWrapper>
 				{/* <SectionHeaderWrapper headerText="PAST PROJECTS" /> */}

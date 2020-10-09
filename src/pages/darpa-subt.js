@@ -10,7 +10,7 @@ import { graphql } from "gatsby"
 const DarpaPage = ({ data }) => (
 	<Layout>
 		<NavbarPaddingContainer>
-			<SEO title="New Opportunity" />
+			<SEO title="DARPA SubT" />
 			<DarpaPageHeaderWrapper>DARPA SubT Challenge</DarpaPageHeaderWrapper>
 			<DarpaPageDescription>Aiming to understand the underground world.</DarpaPageDescription>
 			<SectionHeaderWrapper headerText="DESCRIPTION" />
