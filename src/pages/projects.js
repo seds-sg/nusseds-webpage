@@ -28,7 +28,7 @@ const ProjectsPage = () => {
 			<NavbarPaddingContainer>
 				<SEO title="Projects" />
 				<ProjectsPageHeaderWrapper>Our Projects.</ProjectsPageHeaderWrapper>
-				<ProjectsPageDescription>What we are working on right now.</ProjectsPageDescription>
+				<ProjectsPageDescription>Check out what we're working on right now:</ProjectsPageDescription>
 				{/* <SectionHeaderWrapper headerText="ACTIVE PROJECTS" /> */}
 				<ImageWrapper>
 					<StyledImageWithTitle

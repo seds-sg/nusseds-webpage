@@ -40,6 +40,9 @@ const SPUPage = ({ data }) => (
       feel about the opportunities and challenges she has ahead of her.
       </DescriptionFont>
 			<SectionHeaderWrapper headerText="CONTACT" />
+      <DescriptionFont>
+      For any enquiries, please contact Arka Ray at <a href="mailto:arka@u.nus.edu">arka@u.nus.edu</a>
+      </DescriptionFont>
 		</NavbarPaddingContainer>
 	</Layout>
 )
