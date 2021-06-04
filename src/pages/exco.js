@@ -9,7 +9,7 @@ import { ImageWrapper, StyledImageWithTitle } from "../components/leadership"
 class RecruitmentSlotComponent extends React.PureComponent {
 
 	componentDidMount () {
-		window.location.replace("https://doodle.com/poll/g9y6cu42bghmzk7e?utm_source=poll&utm_medium=link")
+		window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSfKq2FlHr_pwHyH1P7dmxIorFmS4dII2qSC0RMy4kcXlSUbww/viewform?usp=sf_link")
 	}
 	render () {
 		return (
