@@ -41,6 +41,9 @@ const Layout = ({ children, className }) => (
 					<Nav.Link href="/events">
 						<NavbarLink>Events</NavbarLink>
 					</Nav.Link>
+					<Nav.Link href="/Hackathon">
+						<NavbarLink>Space Out Hackathon</NavbarLink>
+					</Nav.Link>
 					<Nav.Link href="/articles">
 						<NavbarLink>Articles</NavbarLink>
 					</Nav.Link>
