@@ -106,7 +106,7 @@ const HackathonPage = () => {
 							date="28th Jul, 2pm - 4pm"
 							iconStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
 						>
-						<h3 className="vertical-timeline-element-title">Workshop 1</h3>
+						<h3 className="vertical-timeline-element-title">Workshop 1/Talk</h3>
 						<h4 className="vertical-timeline-element-subtitle">Introduction to ROS</h4>
 						<p>
 							
@@ -191,7 +191,7 @@ const HackathonPage = () => {
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Mini Hackathon</h3>
-							<h4 className="vertical-timeline-element-subtitle">Judges: </h4>
+							<h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4>
 							<p>
 								A broad themed hackathon.
 							</p>
@@ -205,7 +205,7 @@ const HackathonPage = () => {
 							iconStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Workshop 5</h3>
-							<h4 className="vertical-timeline-element-subtitle">PCB Design EE CAD</h4>
+							<h4 className="vertical-timeline-element-subtitle">PCB Design (CAD)</h4>
 							<p>
 							
 							</p>
@@ -283,7 +283,7 @@ const HackathonPage = () => {
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="CONTACT US" />
-						<DescriptionFont> Contact us via <a href="mailto:rovertam.nus@gmail.com">email</a> or follow us on:</DescriptionFont>
+						<DescriptionFont> Contact us via <a href="mailto:roverteam.nus@gmail.com">email</a> or follow us on:</DescriptionFont>
 						<div style={{paddingTop: 35}}>
 						<StyledFollowUsContent/>
 						</div>
@@ -379,9 +379,12 @@ const faqData = {
 			gain a holistic understanding of how multidisciplinary teams work. It is also a great opportunity to pick up some new skills while being guided by experienced instructors!`,
 		},
 		{
-			title: "Would a Y3 going on sem long internship + SEP be eligible to join the team?",
-			content: `Yes, you would be able to join! Sem 1 workload is anywhere from 5-7hrs a week. During the manufacturing stage (nearing sem 2) the workload may increase 
-			to 8-10hrs depending on your sub-team.For team members on SEP, our sub-team leads will assign tasks that can be done remotely.`,
+			title: "Where can I sign up for the NUS rover team?",
+			content: 
+			<p>
+				If you are interested in joining the rover team, you can fill in the registration form <a href="https://nus.campuslabs.com/engage/submitter/form/start/488630">here.</a> 
+				You can also join our interest group <a href="https://t.me/joinchat/Ht1uPdAmWkthNTc9">here.</a>
+			</p>,
 		},
 	],
 };
