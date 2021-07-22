@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import Layout, { NavbarPaddingContainer } from "../components/layout"
 import { LandingTitleFont, DescriptionFont } from "../components/textStyles"
 import BackgroundImage from "gatsby-background-image"
@@ -12,9 +12,27 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import { FaTelegramPlane, FaYoutube, FaInstagram} from 'react-icons/fa';
 import Faq from "react-faq-component";
+import ReadMoreReact from 'read-more-react';
+import "./Hackathon.css"
 
 const HackathonPage = () => {
 
+
+	const ReadMore = ({ children }) => {
+		const text = children;
+		const [isReadMore, setIsReadMore] = useState(true);
+		const toggleReadMore = () => {
+			setIsReadMore(!isReadMore);
+		};
+		return (
+			<p>
+				{isReadMore ? text.slice(0, 150) : text}
+				<span onClick={toggleReadMore} className="read-or-hide">
+				{isReadMore ? "...read more" : " show less"}
+				</span>
+			</p>
+		);
+	};
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -32,6 +50,15 @@ const HackathonPage = () => {
 					...squareImage
 				}
 				vouchers: file(relativePath: { eq: "spaceouthack/vouchers.jpg" }) {
+					...squareImage
+				}
+				Justyna: file(relativePath: { eq: "spaceouthack/Justyna.jpg" }) {
+					...squareImage
+				}
+				Cindy: file(relativePath: { eq: "spaceouthack/Cindy.jpg" }) {
+					...squareImage
+				}
+				Gokul: file(relativePath: { eq: "spaceouthack/Gokul.jpg" }) {
 					...squareImage
 				}
 			}
@@ -61,7 +88,11 @@ const HackathonPage = () => {
 							</ProjectDateWrapper>
 							<ProjectDetailsButton
 								onClick={() => window.open("https://nus.campuslabs.com/engage/submitter/form/start/491498")}
-								buttonText="Register Now"
+								buttonText="Register Now (For NUS Students)"
+							/>
+							<ProjectDetailsButton
+								onClick={() => window.open("https://forms.gle/5yiZ1c1JP8fLYofs9")}
+								buttonText="Register Now (For NON-NUS Students)"
 							/>
 						</div>
 					</StyledNavBarPadding>
@@ -73,8 +104,18 @@ const HackathonPage = () => {
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="PRIZES" />
-						<DescriptionFont>Amazing prizes to be won!</DescriptionFont>
-						<DescriptionFont>Details Coming Soon!</DescriptionFont>
+						{/* <DescriptionFont>Amazing prizes to be won!</DescriptionFont> */}
+						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
+						{/* <ImageWrapper>
+							<StyledAvatar name="Google Home" description="Top 3 For Main Hack" data={data} imageName="google_home"/>
+							<StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
+							<StyledAvatar name="Vouchers" description="Various categories" data={data} imageName="vouchers"/>
+						</ImageWrapper> */}
+					</div>
+					<div>
+						<SectionHeaderWrapper headerText="SPEAKERS" />
+						<DescriptionFont></DescriptionFont>
+						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
 						{/* <ImageWrapper>
 							<StyledAvatar name="Google Home" description="Top 3 For Main Hack" data={data} imageName="google_home"/>
 							<StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
@@ -103,13 +144,16 @@ const HackathonPage = () => {
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(26, 23, 68)' }}
-							date="28th Jul, 2pm - 4pm"
+							date="28th Jul, 3pm - 4pm"
 							iconStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
 						>
 						<h3 className="vertical-timeline-element-title">Workshop 1/Talk</h3>
 						<h4 className="vertical-timeline-element-subtitle">Introduction to ROS</h4>
 						<p>
-							
+							<b>Conducted by: A*STAR</b>
+							<br></br><br></br>
+							It is an introductory session to ROS and ROS-Industrial with coverage on navigation-related content.
+							Do not miss this opportunity to learn about some of the packages developed by the ARTC team at A*STAR!
 						</p>
   					</VerticalTimelineElement>
 
@@ -123,6 +167,11 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 2</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Beginners) Assembly and Simulation</h4>
 							<p>
+								<b>Conducted by: Daniel, an Autodesk represent and Factorem intern</b>
+								<br></br><br></br>
+								Some exciting things you can expect to learn include an introduction to Fusion 360 Interface, 
+								extruding 3D objects from sketches, turning a sketch into a surface and using sketching, modelling, 
+								and sculpting features.
 
 							</p>
 						</VerticalTimelineElement>
@@ -151,11 +200,13 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 3</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Intermediate) Modelling and Simulation</h4>
 							<p>
-							
+								<b>Conducted by: Daniel, an Autodesk represent and Factorem intern</b>
+								<br></br><br></br>
+								Subject to number of sign-ups.
 							</p>
 						</VerticalTimelineElement>
 
-						<VerticalTimelineElement
+						{/* <VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(170, 171, 174)' }}
@@ -167,7 +218,7 @@ const HackathonPage = () => {
 							<p>
 							
 							</p>
-						</VerticalTimelineElement>
+						</VerticalTimelineElement> */}
 
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
@@ -179,7 +230,11 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 4</h3>
 							<h4 className="vertical-timeline-element-subtitle">Energy Systems and Electronic Skills</h4>
 							<p>
-							
+								<b>Conducted by: TBC</b>
+								<br></br><br></br>
+								What do microcontrollers, sensors, wheels and cameras have in common? They are all powered by a central battery system!
+								With this workshop you can learn the fundamentals of setting up robust electrical systems and making judicious decisions 
+								that (literally) power systems like Mars Rovers.
 							</p>
 						</VerticalTimelineElement>
 
@@ -191,7 +246,7 @@ const HackathonPage = () => {
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Mini Hackathon</h3>
-							<h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4>
+							{/* <h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4> */}
 							<p>
 								A broad themed hackathon.
 							</p>
@@ -207,11 +262,13 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 5</h3>
 							<h4 className="vertical-timeline-element-subtitle">PCB Design (CAD)</h4>
 							<p>
-							
+								<b>Conducted by: Eugene Ee (Advisor, NUS iDP)</b>
+								<br></br><br></br>
+								Learn the basics of using EAGLE CAD to design professional-grade Printed Circuit Boards and Schematics.
 							</p>
 						</VerticalTimelineElement>
 
-						<VerticalTimelineElement
+						{/* <VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(225,123,16)' }}
@@ -222,6 +279,20 @@ const HackathonPage = () => {
 							<h4 className="vertical-timeline-element-subtitle">Introduction to OpenCV/CV Seminar</h4>
 							<p>
 							
+							</p>
+						</VerticalTimelineElement> */}
+
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid  rgb(225,123,16)' }}
+							date="30th Jul, 6pm - 7pm"
+							iconStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Talk by</h3>
+							<h4 className="vertical-timeline-element-subtitle">Gokul M. C.</h4>
+							<p>
+								View <a href="http://gokulmc.com">Gokul's Profile</a> to find out more about his works.
 							</p>
 						</VerticalTimelineElement>
 
@@ -235,7 +306,12 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 7</h3>
 							<h4 className="vertical-timeline-element-subtitle">Introduction to Rover Systems</h4>
 							<p>
-							
+								<b>Conducted by: The NUS Rover Team Representatives (Anoushka and Pranati)</b>
+								<br></br><br></br>
+								Fascinated by NASA’s Curiosity Mars Rover or want to join our team but don’t know how to put your technical skills to use? 
+								Or want a head-start on what to expect in our rover-themed hackathon? This workshop will break-down a rover into more 
+								manageable subsystems and introduce you to the exciting world of robotics and autonomous space exploratory vehicles.
+
 							</p>
 						</VerticalTimelineElement>
 
@@ -272,14 +348,60 @@ const HackathonPage = () => {
 					<div>
 						<SectionHeaderWrapper headerText="FAQ" />
 						<DescriptionFontFaq><Faq
-							data={faqData}
+							data={teamData}
 							styles={faqStyles}
 							config={faqConfig}
             /></DescriptionFontFaq>
+						<br></br><br></br>
+						<DescriptionFontFaq><Faq
+							data={workshopData}
+							styles={faqStyles}
+							config={faqConfig}
+            /></DescriptionFontFaq>
+						<br></br><br></br>
+						<DescriptionFontFaq><Faq
+							data={hackData}
+							styles={faqStyles}
+							config={faqConfig}
+            /></DescriptionFontFaq>
+						<br></br><br></br>
+						<DescriptionFontFaq><Faq
+							data={othersData}
+							styles={faqStyles}
+							config={faqConfig}
+            /></DescriptionFontFaq>
+	       		<DescriptionFontAsterix>*only applicable to NUS students</DescriptionFontAsterix>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="SPONSORS" />
-						<DescriptionFont>Coming Soon!</DescriptionFont>
+						<DescriptionFontSoon>Coming Soon!</DescriptionFontSoon>
+					</div>
+					<div>
+						<SectionHeaderWrapper headerText="JUDGES" />
+						<ImageWrapper>
+							<StyledAvatar name="Justyna Pelc" description="Broad-themed and Rover-themed Hackathon" data={data} imageName="Justyna"/>
+							<DescriptionFont>
+							<ReadMore>Justyna is an engineer and leader of Innspace group. Innspace is an interdisciplinary team, realizing space-related projects such as space bases and vehicles. 
+								They won the Student Aerospace Challenge, had 5th place at Mars Colony Prize, gained Gold Winner and Winner title for two of their projects at Future Mars Life Competition, 
+								and more. Justyna is involved in the Polish space sector as a member of the Student Council at the Polish Space Agency and a member of the board of the Polish Astrobiology 
+								Society. She is cooperating with other space associations as well. Justyna is a member of the Advisory Board of Mars Society South Asia and a judge during space and robotics 
+								competitions organized by this organization and she is a National Contact Point for Poland in Space Generation Advisory Council. She was awarded the title of "Rising Star of 
+								the Polish Space Industry" in the Constellations 2020, intended to honour companies and people for the development of the Polish space sector.
+								</ReadMore>
+							</DescriptionFont>
+							<StyledAvatarWithSpace name="Ng Shao Chin, Cindy" description="Broad-themed Hackathon" data={data} imageName="Cindy"/>
+							<DescriptionFont><ReadMore>Dr. Cindy Ng is a Senior Lecturer at the Department of Physics, National University of Singapore. She is the coordinator for the Primary Major in Physics with 
+								Specialization in Astrophysics Programme and co-coordinator for the Minor in Astronomy Programme.</ReadMore></DescriptionFont>
+								<StyledAvatarWithSpace name="Gokul M.C." description="Broad-themed and Rover-themed Hackathon" data={data} imageName="Gokul"/>
+							<DescriptionFont><ReadMore>Gokul is an ex-ISRO scientist, he has designed and developed space-qualified electronics packages for electric propulsion in satellites.  He was involved in the 
+								design, realisation and qualification of Power Processing and Control Unit (PPCU) for 300 and 75mn SPT thrusters which are used for orbit raising and NSSK respectively. He implemented 
+								high power ZVS topology (6.5KW) based power module with an overall efficiency of 90%; for the first time across ISRO.  During his time at Indian Space Research Organisation (ISRO), he 
+								has held various positions such as Secretary of Test Results Review Commitee for the PSLV launch vehicle, he was also the project manager for three Technology Development Projects amounting 
+								to a total budget of USD 1.4M. Gokul has B. Tech and M.Tech degrees in Electrical Engineering from IIT Bombay, and is currently pursuing his PhD from the National University of Singapore in 
+								Dept of Electrical and Computing Engineering. He is working on Cloud computing methodologies for Radar application, a project funded by DSO, Singapore. He is also the president of the 
+								Graduate Students’ Society of NUS. </ReadMore></DescriptionFont>
+						</ImageWrapper>
+						<DescriptionFontSoon>More judges coming soon!</DescriptionFontSoon>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="CONTACT US" />
@@ -296,20 +418,20 @@ const HackathonPage = () => {
 const StyledNavBarPadding = styled(NavbarPaddingContainer)`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 `
 
 const StyledNavBarPaddingContent = styled(NavbarPaddingContainer)`
   display: flex;
   flex-direction: column;
-  height: 900vh;
+  height: 100%;
 	padding-top : 3rem;
 `
 
 const ProjectDetailsButton = styled(StyledButton)`
   background-color: black;
   border: 0;
-  margin-top: 3rem;
+  margin: 3.5rem;
   padding: 0.75rem 2.5rem;
 	border-radius: 12px;
 `
@@ -337,22 +459,19 @@ const StyledBackgroundImage = styled(BackgroundImage)`
   margin-top: 66px;
 `
 
-const faqData = {
+const StyledAvatarWithSpace = styled(StyledAvatar)`
+ margin-top: 20px;
+`
+
+const teamData = {
+	title: "Teams", 
 	rows: [
-		{
-			title: "Do I need any prior knowledge/experience?",
-			content: `No! We will provide participants with the relevant resources and workshops. All are welcome :)`,
-		},
 		{
 			title: "Do I need to sign up with a team?",
 			content:
-				`You may sign up with a team or individually. Each team must consist of 2 to 4 people. However, if you sign up 
-				individually, we will match you with 1-3 other participants.`,
-		},
-		{
-			title: "What resources will I need for the workshop?",
-			content: `Just your laptop (and a mouse)! We’ll send you links to any software installations needed for specific 
-			workshops closer to the date. `,
+				`NUS students may sign up with a team or individually. Each team must consist of 2 to 4 people. However, if you sign up 
+				individually, we will match you with 1-3 other participants. Unfortunately, we currently do not have an idividual 
+				sign-up option for non-NUS students.`,
 		},
 		{
 			title: "Do all team-members have to be from the same faculty/year?",
@@ -360,42 +479,92 @@ const faqData = {
 			collaborate and sign up together!`,
 		},
 		{
+			title: "When will individual participants be put in teams?*",
+			content: "Teams will be assigned after registrations close.",
+		},
+		{
+			title: "How will individual sign-ups be sorted?*",
+			content: "The organisers will assign 3-4 people in a team with a certain randomising algorithm.",
+		},
+		{
+			title: "Can there be cross-Uni teams? (NUS/non-NUS)",
+			content: "No, all members of your team must be from the same institution/university.",
+		},
+
+	]
+	}
+	
+const workshopData = {
+	title: "Workshops and Talks", 	
+	rows: [
+		{
+			title: "Do I need any prior knowledge/experience?",
+			content: `No! We will provide participants with the relevant resources and workshops. All are welcome :)`,
+		},
+		{
+			title: "What resources will I need for the workshop?",
+			content: `Just your laptop (and a mouse)! We’ll send you links to any software installations needed for specific 
+			workshops closer to the date. `,
+		},
+		{
+			title: "Will both CAD workshops cover the same materials?",
+			content: `No, the 1st workshop is an introduction with basic modelling/design. The 2nd one is about simulations in CAD using concepts from the 1st workshop.
+			It will also cover design-for-manufacture techniques.`,
+		},
+		{
+			title: "Do I need to attend all the workshops?",
+			content: `You can choose which workshops you would like to attend. However, we do encourage all participants to attend as many workshops as possible to 
+			gain a holistic understanding of how multidisciplinary teams work. It is also a great opportunity to pick up some new skills while being guided by experienced instructors!`,
+		}]
+	}
+	
+const hackData = {
+	title: "Hackathons",	
+	rows:[
+		{
 			title: "What is the difference between the two hackathons? ",
 			content: `The first hackathon is a ‘broad-theme’ hack that gives everyone the opportunity to innovate, without the need for much technical expertise.
 			The second hackathon is centered around Rover Team’s work: you will be designing specific components of subsystems 
 			(eg: mobility system, science payload, etc) which will help the rover overcome various challenges it is likely to face on Mars.`,
 		},
 		{
-			title: "Will both CAD workshops cover the same materials?",
-			content: `No, the 1st workshop is an introduction with basic modelling/design. The 2nd one is about simulations in CAD using concepts from the 1st workshop.`,
-		},
-		{
 			title: "Do I have to attend both the hackathons?",
 			content: `Yes, you are highly encouraged to do so!`,
-		},
+		}]
+	}
+const othersData = {
+	title: "Others", 
+	rows:[
 		{
-			title: "Do I need to attend all the workshops?",
-			content: `You can choose which workshops you would like to attend. However, we do encourage all participants to attend as many workshops as possible to 
-			gain a holistic understanding of how multidisciplinary teams work. It is also a great opportunity to pick up some new skills while being guided by experienced instructors!`,
-		},
-		{
-			title: "Where can I sign up for the NUS rover team?",
+			title: "Where can I sign up for the NUS rover team?*",
 			content: 
 			<p>
 				If you are interested in joining the rover team, you can fill in the registration form <a href="https://nus.campuslabs.com/engage/submitter/form/start/488630">here.</a> 
 				You can also join our interest group <a href="https://t.me/joinchat/Ht1uPdAmWkthNTc9">here.</a>
 			</p>,
-		},
-	],
+		}]
 };
 
 const DescriptionFontFaq = styled(DescriptionFont)`
-paddingLeft: 15;
+padding-left: 0.5rem;
+`
+
+const DescriptionFontAsterix = styled(DescriptionFont)`
+margin-top: 3rem;
+font-size: 0.95rem;
+`
+
+const DescriptionFontSoon = styled(DescriptionFont)`
+	display: flex;
+  align-items: center;
+
+	justify-content: center;
+	font-size: 1.5rem;
 `
 
 const faqStyles = {
 	bgColor: '#141e22',
-	titleTextColor: "white",
+	titleTextColor: "#e17b10",
 	rowTitleColor: "white",
 	rowContentColor: 'orange',
 	arrowColor: "white",
