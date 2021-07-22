@@ -104,7 +104,7 @@ const HackathonPage = () => {
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="PRIZES" />
-						<DescriptionFont>Amazing prizes to be won!</DescriptionFont>
+						{/* <DescriptionFont>Amazing prizes to be won!</DescriptionFont> */}
 						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
 						{/* <ImageWrapper>
 							<StyledAvatar name="Google Home" description="Top 3 For Main Hack" data={data} imageName="google_home"/>
