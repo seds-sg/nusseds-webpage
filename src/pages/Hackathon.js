@@ -105,7 +105,7 @@ const HackathonPage = () => {
 					<div>
 						<SectionHeaderWrapper headerText="PRIZES" />
 						<DescriptionFont>Amazing prizes to be won!</DescriptionFont>
-						<DescriptionFont>Details Coming Soon!</DescriptionFont>
+						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
 						{/* <ImageWrapper>
 							<StyledAvatar name="Google Home" description="Top 3 For Main Hack" data={data} imageName="google_home"/>
 							<StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
@@ -115,7 +115,7 @@ const HackathonPage = () => {
 					<div>
 						<SectionHeaderWrapper headerText="SPEAKERS" />
 						<DescriptionFont></DescriptionFont>
-						<DescriptionFont>Details Coming Soon!</DescriptionFont>
+						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
 						{/* <ImageWrapper>
 							<StyledAvatar name="Google Home" description="Top 3 For Main Hack" data={data} imageName="google_home"/>
 							<StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
@@ -374,7 +374,7 @@ const HackathonPage = () => {
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="SPONSORS" />
-						<DescriptionFont>Coming Soon!</DescriptionFont>
+						<DescriptionFontSoon>Coming Soon!</DescriptionFontSoon>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="JUDGES" />
@@ -401,6 +401,7 @@ const HackathonPage = () => {
 								Dept of Electrical and Computing Engineering. He is working on Cloud computing methodologies for Radar application, a project funded by DSO, Singapore. He is also the president of the 
 								Graduate Students’ Society of NUS. </ReadMore></DescriptionFont>
 						</ImageWrapper>
+						<DescriptionFontSoon>More judges coming soon!</DescriptionFontSoon>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="CONTACT US" />
@@ -553,8 +554,12 @@ margin-top: 3rem;
 font-size: 0.95rem;
 `
 
-const DescriptionFontLink = styled(DescriptionFont)`
-  color: #0000ff;
+const DescriptionFontSoon = styled(DescriptionFont)`
+	display: flex;
+  align-items: center;
+
+	justify-content: center;
+	font-size: 1.5rem;
 `
 
 const faqStyles = {
