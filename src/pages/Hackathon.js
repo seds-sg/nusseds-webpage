@@ -165,7 +165,7 @@ const HackathonPage = () => {
 							iconStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Workshop 2</h3>
-							<h4 className="vertical-timeline-element-subtitle">CAD (Beginners) Assembly and Simulation</h4>
+							<h4 className="vertical-timeline-element-subtitle">CAD (Beginners)</h4>
 							<p>
 								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
 								<br></br><br></br>
@@ -194,11 +194,11 @@ const HackathonPage = () => {
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(170, 171, 174)' }}
-							date="29th Jul, 10am - 12.30pm"
+							date="29th Jul, 10am - 12.00pm"
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Workshop 3</h3>
-							<h4 className="vertical-timeline-element-subtitle">CAD (Intermediate) Modelling and Simulation</h4>
+							<h4 className="vertical-timeline-element-subtitle">CAD (Intermediate) Simulation and Manufacturing Design</h4>
 							<p>
 								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
 								<br></br><br></br>
@@ -220,7 +220,7 @@ const HackathonPage = () => {
 							</p>
 						</VerticalTimelineElement> */}
 
-						<VerticalTimelineElement
+						{/* <VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid rgb(170, 171, 174)' }}
@@ -236,6 +236,42 @@ const HackathonPage = () => {
 								With this workshop you can learn the fundamentals of setting up robust electrical systems and making judicious decisions 
 								that (literally) power systems like Mars Rovers.
 							</p>
+						</VerticalTimelineElement> */}
+
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid rgb(170, 171, 174)' }}
+							date="29th Jul, 2pm - 5pm"
+							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Workshop 4</h3>
+							<h4 className="vertical-timeline-element-subtitle">ARC MATLAB Deep Learning (Computer Vision)</h4>
+							<p>
+								<b>Conducted by: NUS Advanced Robotics Centre</b>
+								<br></br><br></br>
+								Artificial Intelligence techniques like deep learning are introducing automation to the products we build and the way we do business. These techniques can be used to solve complex problems related to images, signals, text, and controls. In this hands-on workshop, you will write code and use MATLAB Online to:
+								•	Create deep learning models from scratch for image data.
+								•	Explore pretrained models such as Alexnet, GoogleNet etc.
+								•	Perform transfer learning for a classification problem.
+								•	Automatically generate code for embedded targets (NVIDIA Jetson Nano 2GB or desktop PC with GPU)
+								•	Integrating with other tools like Keras and Tensorflow
+
+							</p>
+						</VerticalTimelineElement>
+
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid  rgb(170, 171, 174)' }}
+							date="29th Jul, 6.30pm - 7pm"
+							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Mini Hackathon Opening Ceremony</h3>
+							{/* <h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4> */}
+							<p>
+								Remember to join in by 6.15pm. Details about the hackathon will be provided during this opening ceremony.
+							</p>
 						</VerticalTimelineElement>
 
 						<VerticalTimelineElement
@@ -249,6 +285,20 @@ const HackathonPage = () => {
 							{/* <h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4> */}
 							<p>
 								A broad themed hackathon.
+							</p>
+						</VerticalTimelineElement>
+
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid  rgb(170, 171, 174)' }}
+							date="29th Jul, 8.30pm - 9.30pm (TBC)"
+							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Mini Hackathon Mentoring Session</h3>
+							{/* <h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4> */}
+							<p>
+							Mentors will be present in a zoom call for teams to pop in and ask any questions that they may have.
 							</p>
 						</VerticalTimelineElement>
 
@@ -300,7 +350,7 @@ const HackathonPage = () => {
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(225,123,16)' }}
-							date="30th Jul, 9pm - 10pm"
+							date="30th Jul, 8pm - 9pm"
 							iconStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Workshop 7</h3>
@@ -319,6 +369,20 @@ const HackathonPage = () => {
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(45, 44, 80)' }}
+							date="31st Jul, 12am"
+							iconStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Hackathon</h3>
+							<h4 className="vertical-timeline-element-subtitle">Challlenge statements released</h4>
+							<p>
+								Let the hacks begin!
+							</p>
+						</VerticalTimelineElement>
+
+						{/* <VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid  rgb(45, 44, 80)' }}
 							date="31st Jul"
 							iconStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
 						>
@@ -327,9 +391,23 @@ const HackathonPage = () => {
 							<p>
 								Rover based challenges.
 							</p>
-						</VerticalTimelineElement>
+						</VerticalTimelineElement> */}
 
 						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid  rgb(45, 44, 80)' }}
+							date="31st Jul, Timing TBC"
+							iconStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Hackathon Day 1</h3>
+							<h4 className="vertical-timeline-element-subtitle">Mentoring Session 1</h4>
+							<p>
+								Teams can choose a slot to ask questions to the mentors.
+							</p>
+						</VerticalTimelineElement>
+
+						{/* <VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(65, 64, 100)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(65, 64, 100)' }}
@@ -340,6 +418,34 @@ const HackathonPage = () => {
 							<h4 className="vertical-timeline-element-subtitle">Day 2</h4>
 							<p>
 								Rover based challenges.
+							</p>
+						</VerticalTimelineElement> */}
+
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid  rgb(45, 44, 80)' }}
+							date="1st Aug, Timing TBC"
+							iconStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Hackathon Day 2</h3>
+							<h4 className="vertical-timeline-element-subtitle">Mentoring Session 2</h4>
+							<p>
+								Teams can choose a slot to ask questions to the mentors.
+							</p>
+						</VerticalTimelineElement>
+
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid  rgb(45, 44, 80)' }}
+							date="1st Aug, 6pm"
+							iconStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Hackathon Submission and Closing Ceremony</h3>
+							<h4 className="vertical-timeline-element-subtitle">Submission deadline: 6pm</h4>
+							<p>
+								Closing comments and debrief session.
 							</p>
 						</VerticalTimelineElement>
 
