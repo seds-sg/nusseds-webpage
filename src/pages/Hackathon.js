@@ -167,7 +167,7 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 2</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Beginners) Assembly and Simulation</h4>
 							<p>
-								<b>Conducted by: Daniel, an Autodesk represent and Factorem intern</b>
+								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
 								<br></br><br></br>
 								Some exciting things you can expect to learn include an introduction to Fusion 360 Interface, 
 								extruding 3D objects from sketches, turning a sketch into a surface and using sketching, modelling, 
@@ -200,7 +200,7 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 3</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Intermediate) Modelling and Simulation</h4>
 							<p>
-								<b>Conducted by: Daniel, an Autodesk represent and Factorem intern</b>
+								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
 								<br></br><br></br>
 								Subject to number of sign-ups.
 							</p>
@@ -224,13 +224,13 @@ const HackathonPage = () => {
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid rgb(170, 171, 174)' }}
-							date="29th Jul, 4pm - 6pm"
+							date="29th Jul, 2pm - 4pm"
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Workshop 4</h3>
 							<h4 className="vertical-timeline-element-subtitle">Energy Systems and Electronic Skills</h4>
 							<p>
-								<b>Conducted by: TBC</b>
+								<b>Conducted by: Gollapudi Venkata Sambahvi Deepthi, Research Engineer at School of Design and Environment</b>
 								<br></br><br></br>
 								What do microcontrollers, sensors, wheels and cameras have in common? They are all powered by a central battery system!
 								With this workshop you can learn the fundamentals of setting up robust electrical systems and making judicious decisions 
