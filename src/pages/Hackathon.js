@@ -143,11 +143,29 @@ const HackathonPage = () => {
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
+							contentArrowStyle={{ borderRight: '7px solid rgb(26, 23, 68)' }}
+							date="28th Jul, 1pm - 2.30pm"
+							iconStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
+						>
+							<h3 className="vertical-timeline-element-title">Workshop 1</h3>
+							<h4 className="vertical-timeline-element-subtitle">Energy Systems and Electronic Skills</h4>
+							<p>
+								<b>Conducted by: Gollapudi Venkata Sambahvi Deepthi, Research Engineer at School of Design and Environment</b>
+								<br></br><br></br>
+								What do microcontrollers, sensors, wheels and cameras have in common? They are all powered by a central battery system!
+								With this workshop you can learn the fundamentals of setting up robust electrical systems and making judicious decisions 
+								that (literally) power systems like Mars Rovers.
+							</p>
+						</VerticalTimelineElement>
+
+						<VerticalTimelineElement
+							className="vertical-timeline-element--work"
+							contentStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
 							contentArrowStyle={{ borderRight: '7px solid  rgb(26, 23, 68)' }}
 							date="28th Jul, 3pm - 4pm"
 							iconStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
 						>
-						<h3 className="vertical-timeline-element-title">Workshop 1/Talk</h3>
+						<h3 className="vertical-timeline-element-title">Workshop 2/Talk</h3>
 						<h4 className="vertical-timeline-element-subtitle">Introduction to ROS</h4>
 						<p>
 							<b>Conducted by: A*STAR</b>
@@ -164,7 +182,7 @@ const HackathonPage = () => {
 							date="28th Jul, 6pm - 8pm"
 							iconStyle={{ background: 'rgb(26, 23, 68)', color: '#fff' }}
 						>
-							<h3 className="vertical-timeline-element-title">Workshop 2</h3>
+							<h3 className="vertical-timeline-element-title">Workshop 3</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Beginners)</h4>
 							<p>
 								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
@@ -197,7 +215,7 @@ const HackathonPage = () => {
 							date="29th Jul, 10am - 12.00pm"
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
-							<h3 className="vertical-timeline-element-title">Workshop 3</h3>
+							<h3 className="vertical-timeline-element-title">Workshop 4</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Intermediate) Simulation and Manufacturing Design</h4>
 							<p>
 								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
@@ -245,7 +263,7 @@ const HackathonPage = () => {
 							date="29th Jul, 2pm - 5pm"
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
-							<h3 className="vertical-timeline-element-title">Workshop 4</h3>
+							<h3 className="vertical-timeline-element-title">Workshop 5</h3>
 							<h4 className="vertical-timeline-element-subtitle">ARC MATLAB Deep Learning (Computer Vision)</h4>
 							<p>
 								<b>Conducted by: NUS Advanced Robotics Centre</b>
@@ -309,7 +327,7 @@ const HackathonPage = () => {
 							date="30th Jul, 10am - 12pm"
 							iconStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
 						>
-							<h3 className="vertical-timeline-element-title">Workshop 5</h3>
+							<h3 className="vertical-timeline-element-title">Workshop 6</h3>
 							<h4 className="vertical-timeline-element-subtitle">PCB Design (CAD)</h4>
 							<p>
 								<b>Conducted by: Eugene Ee (Advisor, NUS iDP)</b>
