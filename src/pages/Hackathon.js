@@ -7,13 +7,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import StyledButton, {IconButton} from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
-import { ImageWrapper, StyledAvatar, StyledImageWithTitle, StyledThumbnailImage } from "../components/leadership"
+import { ImageWrapper, StyledAvatar, StyledImageWithTitle, StyledThumbnailImage, AvatarName, AvatarDescription } from "../components/leadership"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaTelegramPlane, FaYoutube, FaInstagram} from 'react-icons/fa';
 import Faq from "react-faq-component";
 import ReadMoreReact from 'read-more-react';
 import "./Hackathon.css"
+import colips from "../images/spaceouthack/Colips.jpg"
 
 const HackathonPage = () => {
 
@@ -61,6 +62,15 @@ const HackathonPage = () => {
 				Gokul: file(relativePath: { eq: "spaceouthack/Gokul.jpg" }) {
 					...squareImage
 				}
+				Eugene: file(relativePath: { eq: "spaceouthack/Eugene.PNG" }) {
+					...squareImage
+				}
+				Hong: file(relativePath: { eq: "spaceouthack/Hong.PNG" }) {
+					...squareImage
+				}
+				Xinyuan: file(relativePath: { eq: "spaceouthack/Xinyuan.jpg" }) {
+					...squareImage
+				}
 			}
 		`
 	)
@@ -87,13 +97,14 @@ const HackathonPage = () => {
 								{"Event Date: July 28, 2021 to Aug 1, 2021"}
 							</ProjectDateWrapper>
 							<ProjectDetailsButton
-								onClick={() => window.open("https://nus.campuslabs.com/engage/submitter/form/start/491498")}
+								onClick={()=>{}}
 								buttonText="Register Now (For NUS Students)"
 							/>
 							<ProjectDetailsButton
-								onClick={() => window.open("https://forms.gle/5yiZ1c1JP8fLYofs9")}
+								onClick={()=>{}}
 								buttonText="Register Now (For NON-NUS Students)"
 							/>
+							<DescriptionFontClosed>Registrations have closed!</DescriptionFontClosed>
 						</div>
 					</StyledNavBarPadding>
 				</StyledBackgroundImage>
@@ -115,12 +126,12 @@ const HackathonPage = () => {
 					<div>
 						<SectionHeaderWrapper headerText="SPEAKERS" />
 						<DescriptionFont></DescriptionFont>
-						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
-						{/* <ImageWrapper>
-							<StyledAvatar name="Google Home" description="Top 3 For Main Hack" data={data} imageName="google_home"/>
-							<StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
-							<StyledAvatar name="Vouchers" description="Various categories" data={data} imageName="vouchers"/>
-						</ImageWrapper> */}
+						<ImageWrapper>
+							<StyledAvatar name="Gokul M. C." description="Ex Rocket Scientist, Cloud engineer, Software developer" data={data} imageName="Gokul"/>
+							{/* <StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
+							<StyledAvatar name="Vouchers" description="Various categories" data={data} imageName="vouchers"/> */}
+						</ImageWrapper>
+						<DescriptionFontSoon>More Speakers Coming Soon!</DescriptionFontSoon>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="EVENT FLOW" />
@@ -498,7 +509,16 @@ const HackathonPage = () => {
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="SPONSORS" />
-						<DescriptionFontSoon>Coming Soon!</DescriptionFontSoon>
+						<AvatarName>
+							<img src={colips} width={200}/><br></br><br></br>Colips</AvatarName>
+							<AvatarDescription>Chinese and Oriental Languages Information Processing Society</AvatarDescription>
+							<br></br><br></br>
+							<DescriptionFont>Find out about them<a href="http://www.colips.org/wp/about/"> here.</a><br></br></DescriptionFont>
+							<DescriptionFontCenter>
+								<ReadMore>The Chinese and Oriental Languages Information Processing Society (COLIPS) is a non-profit professional organisation that was established 
+								in 1988 to advance the research of computer processing of Chinese and other Asian languages. It promotes the free exchange of information about information processing of 
+								these languages in the best scientific and professional tradition. COLIPS organizes international conferences, short courses and seminars for members and the public.  
+								Having its members from all over the world, COLIPS is based in Singapore.</ReadMore></DescriptionFontCenter>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="JUDGES" />
@@ -524,8 +544,24 @@ const HackathonPage = () => {
 								to a total budget of USD 1.4M. Gokul has B. Tech and M.Tech degrees in Electrical Engineering from IIT Bombay, and is currently pursuing his PhD from the National University of Singapore in 
 								Dept of Electrical and Computing Engineering. He is working on Cloud computing methodologies for Radar application, a project funded by DSO, Singapore. He is also the president of the 
 								Graduate Students’ Society of NUS. </ReadMore></DescriptionFont>
+							<StyledAvatarWithSpace name="Eugene EE" description="Rover-themed Hackathon" data={data} imageName="Eugene"/>
+							<DescriptionFont><ReadMore>Eugene obtained his Masters of Science and Bachelor of Engineering Degrees from the NUS department of Electrical and Computer Engineering in 2018 and 2014 respectively. 
+								He has also attained certification as an IPC Certified Interconnect Designer (IPC-CID) in the course of his career. As an instructor at the Engineering Design and Innovation Centre, he is teaching, 
+								supervising and providing guidance to students working on the various multi-disciplinary projects involving electrical and electronics design.
+								Prior to his current appointment, Eugene was a research engineer at the department of ECE and was the systems engineer in the team responsible for the successful assembly, integration, testing 
+								and launch of “Galassia”, NUS First Nano-Satellite, which went on to win the IES Prestigious Engineering Achievement Awards 2016 (Engineering Project Category) and ASEAN Outstanding Engineering Achievement 
+								Awards 2016.</ReadMore></DescriptionFont>
+							<StyledAvatarWithSpace name="Lim Hong Wee" description="Rover-themed Hackathon" data={data} imageName="Hong"/>
+							<DescriptionFont><ReadMore>Lim Hong Wee obtained his Master’s of Engineering in Mechanical Engineering from NUS in 2013. He also has a Graduate Certificate in the Management of Technology. He is currently 
+								holding concurrent appointment in both Engineering Design Incubation Center (EDIC) and Institute of Engineering Leadership (IEL) as an instructor for engineering design and prototyping. His expertise is 
+								in engineering design, including CAD design, simulation, analysis, design optimization and manufacturing. He has design and managed numerous race vehicles and teams for the Formula SAE competition and 
+								a full electric roadster. His experience allows him to guide his students to think innovatively for a unique solution.</ReadMore></DescriptionFont>
+								<StyledAvatarWithSpace name="Xinyuan Qian" description="Rover-themed Hackathon" data={data} imageName="Xinyuan"/>
+							<DescriptionFont><ReadMore>Dr. Xinyuan Qian received the B.Eng. degree (with First Class Hons.) in Electronics and Electrical Engineering, the M.Sc. degree (with Distinction.) in Signal Processing and 
+								Communications in 2014 and 2015 respectively, both from the University of Edinburgh, U.K., and the Ph.D. degree in Computer Science from Queen Mary University of London, U.K. in  2020. From 2017 to 2018, 
+								she was a visiting student at Fondazione Bruno Kessler (FBK), Trento, Italy. Since February 2020,  she has been a Research Fellow of the HLT lab in the Department of Electrical and Computer Engineering, 
+								National University of Singapore. Her research interests mainly include sound source localization, multimodal fusion and target tracking.</ReadMore></DescriptionFont>
 						</ImageWrapper>
-						<DescriptionFontSoon>More judges coming soon!</DescriptionFontSoon>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="CONTACT US" />
@@ -553,7 +589,7 @@ const StyledNavBarPaddingContent = styled(NavbarPaddingContainer)`
 `
 
 const ProjectDetailsButton = styled(StyledButton)`
-  background-color: black;
+  background-color: grey;
   border: 0;
   margin: 3.5rem;
   padding: 0.75rem 2.5rem;
@@ -684,6 +720,23 @@ const DescriptionFontSoon = styled(DescriptionFont)`
 
 	justify-content: center;
 	font-size: 1.5rem;
+`
+
+const DescriptionFontCenter = styled(DescriptionFont)`
+	display: flex;
+  align-items: center;
+
+	justify-content: center;
+`
+
+const DescriptionFontClosed = styled(LandingTitleFont)`
+	display: flex;
+  align-items: center;
+
+	justify-content: center;
+	font-size: 1.5rem;
+	color: red;
+	background-color: white;
 `
 
 const faqStyles = {

@@ -45,7 +45,7 @@ const Avatar = styled(Img)`
   border-radius: 100px;
 `
 
-const AvatarName = styled(ButtonFont)`
+export const AvatarName = styled(ButtonFont)`
   font-size: 1rem;
   font-weight: 900;
   padding-top: 1rem;
@@ -54,7 +54,7 @@ const AvatarName = styled(ButtonFont)`
   text-align: center;
 `
 
-const AvatarDescription = styled(AvatarName)`
+export const AvatarDescription = styled(AvatarName)`
   font-weight: 400;
   margin: auto;
   font-size: 0.85rem;
