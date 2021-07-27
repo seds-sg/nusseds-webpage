@@ -71,6 +71,12 @@ const HackathonPage = () => {
 				Xinyuan: file(relativePath: { eq: "spaceouthack/Xinyuan.jpg" }) {
 					...squareImage
 				}
+				female: file(relativePath: { eq: "female_kerbal.jpeg" }) {
+					...squareImage
+				}
+				male: file(relativePath: { eq: "male_kerbal.jpeg" }) {
+					...squareImage
+				}
 			}
 		`
 	)
@@ -128,10 +134,10 @@ const HackathonPage = () => {
 						<DescriptionFont></DescriptionFont>
 						<ImageWrapper>
 							<StyledAvatar name="Gokul M. C." description="Ex Rocket Scientist, Cloud engineer, Software developer" data={data} imageName="Gokul"/>
-							{/* <StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
-							<StyledAvatar name="Vouchers" description="Various categories" data={data} imageName="vouchers"/> */}
+							<StyledAvatar name="Ramu Uma" description="Engineer at A*STAR" data={data} imageName="female"/>
+							<StyledAvatar name="Ren Lingfei" description="Engineer at A*STAR" data={data} imageName="male"/>
 						</ImageWrapper>
-						<DescriptionFontSoon>More Speakers Coming Soon!</DescriptionFontSoon>
+						{/* <DescriptionFontSoon>More Speakers Coming Soon!</DescriptionFontSoon> */}
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="EVENT FLOW" />
