@@ -71,10 +71,10 @@ const HackathonPage = () => {
 				Xinyuan: file(relativePath: { eq: "spaceouthack/Xinyuan.jpg" }) {
 					...squareImage
 				}
-				female: file(relativePath: { eq: "female_kerbal.jpeg" }) {
+				Uma: file(relativePath: { eq: "spaceouthack/Uma.png" }) {
 					...squareImage
 				}
-				male: file(relativePath: { eq: "male_kerbal.jpeg" }) {
+				Lingfei: file(relativePath: { eq: "spaceouthack/Lingfei.jpg" }) {
 					...squareImage
 				}
 			}
@@ -134,8 +134,8 @@ const HackathonPage = () => {
 						<DescriptionFont></DescriptionFont>
 						<ImageWrapper>
 							<StyledAvatar name="Gokul M. C." description="Ex Rocket Scientist, Cloud engineer, Software developer" data={data} imageName="Gokul"/>
-							<StyledAvatar name="Ramu Uma" description="Engineer at A*STAR" data={data} imageName="female"/>
-							<StyledAvatar name="Ren Lingfei" description="Engineer at A*STAR" data={data} imageName="male"/>
+							<StyledAvatar name="Ramu Uma" description="Engineer at A*STAR" data={data} imageName="Uma"/>
+							<StyledAvatar name="Ren Lingfei" description="Engineer at A*STAR" data={data} imageName="Lingfei"/>
 						</ImageWrapper>
 						{/* <DescriptionFontSoon>More Speakers Coming Soon!</DescriptionFontSoon> */}
 					</div>
