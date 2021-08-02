@@ -15,6 +15,31 @@ import Faq from "react-faq-component";
 import ReadMoreReact from 'read-more-react';
 import "./Hackathon.css"
 import colips from "../images/spaceouthack/Colips.jpg"
+import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import img1 from "../images/spaceouthack/logo.jpg"
+import img2 from "../images/spaceouthack/astar1.png"
+import img3 from "../images/spaceouthack/games1.jpg"
+import img4 from "../images/spaceouthack/games2.png"
+import img5 from "../images/spaceouthack/games3.png"
+import img6 from "../images/spaceouthack/cad1.png"
+import img7 from "../images/spaceouthack/cad2.jpg"
+import img8 from "../images/spaceouthack/cad3.jpg"
+import img9 from "../images/spaceouthack/cadi1.png"
+import img10 from "../images/spaceouthack/cadi2.png"
+import img11 from "../images/spaceouthack/pcb1.jpg"
+import img12 from "../images/spaceouthack/talk1.png"
+import img13 from "../images/spaceouthack/talk2.jpg"
+import img14 from "../images/spaceouthack/talk3.png"
+import img15 from "../images/spaceouthack/talk4.png"
+import img16 from "../images/spaceouthack/rover1.png"
+import img17 from "../images/spaceouthack/rover2.png"
+import img18 from "../images/spaceouthack/rover3.png"
+import img19 from "../images/spaceouthack/close1.png"
+import img20 from "../images/spaceouthack/close2.png"
+import img21 from "../images/spaceouthack/close3.png"
+import img22 from "../images/spaceouthack/close4.png"
+import img23 from "../images/spaceouthack/close5.jpg"
 
 const HackathonPage = () => {
 
@@ -120,6 +145,18 @@ const HackathonPage = () => {
 						<DescriptionFont>For the first time NUS Rover Team is organising Space Out, a space-themed hackathon filled with workshops, challenges, fun, and learning!! Join us from 28th July to 1st August!</DescriptionFont>
 					</div>
 					<div>
+						<SectionHeaderWrapper headerText="PHOTO GALLERY" />
+							<AliceCarousel autoPlay autoPlayInterval="3000" fadeOutAnimation={true} mouseTrackingEnabled={true}>
+								<img src={img1} className="sliderimg" /><img src={img2} className="sliderimg" /><img src={img3} className="sliderimg" /><img src={img4} className="sliderimg" />
+								<img src={img5} className="sliderimg" /><img src={img6} className="sliderimg" /><img src={img7} className="sliderimg" /><img src={img8} className="sliderimg" />
+								<img src={img9} className="sliderimg" /><img src={img10} className="sliderimg" /><img src={img11} className="sliderimg" /><img src={img12} className="sliderimg" />
+								<img src={img13} className="sliderimg" /><img src={img14} className="sliderimg" /><img src={img15} className="sliderimg" /><img src={img16} className="sliderimg" />
+								<img src={img17} className="sliderimg" /><img src={img18} className="sliderimg" /><img src={img19} className="sliderimg" /><img src={img20} className="sliderimg" />
+								<img src={img21} className="sliderimg" /><img src={img22} className="sliderimg" /><img src={img23} className="sliderimg" />
+
+							</AliceCarousel>
+					</div>
+					<div>
 						<SectionHeaderWrapper headerText="PRIZES" />
 						{/* <DescriptionFont>Amazing prizes to be won!</DescriptionFont> */}
 						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
@@ -202,7 +239,7 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 3</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Beginners)</h4>
 							<p>
-								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
+								<b>Conducted by: Brian Teo, Instructor at NUS EDIC</b>
 								<br></br><br></br>
 								Some exciting things you can expect to learn include an introduction to Fusion 360 Interface, 
 								extruding 3D objects from sketches, turning a sketch into a surface and using sketching, modelling, 
@@ -235,7 +272,7 @@ const HackathonPage = () => {
 							<h3 className="vertical-timeline-element-title">Workshop 4</h3>
 							<h4 className="vertical-timeline-element-subtitle">CAD (Intermediate) Simulation and Manufacturing Design</h4>
 							<p>
-								<b>Conducted by: Daniel, an Autodesk representative and Factorem intern</b>
+								<b>Conducted by: Brian Teo, Instructor at NUS EDIC</b>
 								<br></br><br></br>
 								Subject to number of sign-ups.
 							</p>
