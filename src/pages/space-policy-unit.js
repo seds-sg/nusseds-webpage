@@ -34,12 +34,12 @@ const SPUPage = ({ data }) => (
         By Chen Wei and Yeo Shen Kai 
 				<br />
 				<br />
-        Read our <a href="src/content/SPU/ASEANs Space Industry and Debris Mitigation Guidelines.pdf" download="ASEANs Space Industry and Debris Mitigation Guidelines.pdf" target="_blank">policy brief</a> on IADC's Space Debris Mitigation Guidelines 
+        Read our <a href="../content/SPU/ASEANs Space Industry and Debris Mitigation Guidelines.pdf" download="ASEANs Space Industry and Debris Mitigation Guidelines.pdf" target="_blank">policy brief</a> on IADC's Space Debris Mitigation Guidelines 
         and how they may adapt to the needs of emerging spacefaring nations.
 			</DescriptionFont>
 			<SectionHeaderWrapper headerText="SINGAPORE SPACE INSIGHTS REPORT 2020" />
       <DescriptionFont>
-      Download the entire report <a href="src/content/SPU/SEDS SG Insights Report.pdf" download="SEDS SG Insights Report.pdf" target="_blank">here</a>.
+      Download the entire report <a href="../content/SPU/SEDS SG Insights Report.pdf" download="SEDS SG Insights Report.pdf" target="_blank">here</a>.
       <br />
       <br />
       Over the summer of 2020, we carried out a project wherein we consolidated the views of the various 
