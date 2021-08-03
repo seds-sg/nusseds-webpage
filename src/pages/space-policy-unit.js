@@ -39,7 +39,7 @@ const SPUPage = ({ data }) => (
 			</DescriptionFont>
 			<SectionHeaderWrapper headerText="SINGAPORE SPACE INSIGHTS REPORT 2020" />
       <DescriptionFont>
-      Download the entire report <a href="../content/SPU/SEDS SG Insights Report.pdf" download="SEDS SG Insights Report.pdf" target="_blank">here</a>.
+      Download the entire report <a href="/src/content/SPU/SEDS SG Insights Report.pdf" download="SEDS SG Insights Report.pdf" target="_blank">here</a>.
       <br />
       <br />
       Over the summer of 2020, we carried out a project wherein we consolidated the views of the various 
