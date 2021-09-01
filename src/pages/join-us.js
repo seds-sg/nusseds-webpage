@@ -8,7 +8,7 @@ import { Link } from "gatsby"
 import StyledButton from "../components/button"
 
 const JoinUs = () => {
-	const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdyZTTvTO5qOWs4F4jOMilX3jI8n-WfEQZc3L6j2wYnrZF9pQ/viewform?usp=sf_link"
+	const formUrl = "mailto:seds@u.nus.edu"
 	return (
 		<Layout>
 			<NavbarPaddingContainer>
@@ -17,6 +17,9 @@ const JoinUs = () => {
 				<JoinUsDescription>
 					<ButtonWrapper buttonText="Join Now." onClick={() => window.open(formUrl)} />
 				</JoinUsDescription>
+				<DescriptionFont>
+					Interested applicants can email SEDS NUS at<a href="mailto:seds@u.nus.edu">seds@u.nus.edu</a>  for more.
+				</DescriptionFont>
 				<SectionHeaderWrapper headerText="PROJECT TEAMS" />
 				<DescriptionFont>
 					All current NUS students (undergraduate and postgraduate) are eligible for membership, regardless of
