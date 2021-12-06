@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import StyledButton, {IconButton} from "../components/button"
 import SectionHeaderWrapper from "../components/sectionHeader"
-import { ImageWrapper, StyledAvatar, StyledImageWithTitle, StyledThumbnailImage, AvatarName, AvatarDescription } from "../components/leadership"
+import { ImageWrapper, StyledAvatar, StyledAvatarSubmit1, StyledAvatarSubmit2, AvatarName, AvatarDescription } from "../components/leadership"
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { FaTelegramPlane, FaYoutube, FaInstagram} from 'react-icons/fa';
@@ -69,13 +69,10 @@ const HackathonPage = () => {
 						}
 					}
 				}
-				google_home: file(relativePath: { eq: "spaceouthack/googleHome.jpg" }) {
+				grabvouchers: file(relativePath: { eq: "spaceouthack/grabVoucher.png" }) {
 					...squareImage
 				}
-				gaming_mouse: file(relativePath: { eq: "spaceouthack/gamingMouse.jpg" }) {
-					...squareImage
-				}
-				vouchers: file(relativePath: { eq: "spaceouthack/vouchers.jpg" }) {
+				capitavouchers: file(relativePath: { eq: "spaceouthack/capitaVouchers.jpg" }) {
 					...squareImage
 				}
 				Justyna: file(relativePath: { eq: "spaceouthack/Justyna.jpg" }) {
@@ -100,6 +97,21 @@ const HackathonPage = () => {
 					...squareImage
 				}
 				Lingfei: file(relativePath: { eq: "spaceouthack/Lingfei.jpg" }) {
+					...squareImage
+				}
+				eventhorizon: file(relativePath: { eq: "spaceouthack/winners/eventHorizon.png" }) {
+					...squareImage
+				}
+				nova: file(relativePath: { eq: "spaceouthack/winners/nova.png" }) {
+					...squareImage
+				}
+				kerbals: file(relativePath: { eq: "spaceouthack/winners/kerbals.png" }) {
+					...squareImage
+				}
+				bumsi: file(relativePath: { eq: "spaceouthack/winners/bumsi.PNG" }) {
+					...squareImage
+				}
+				musk: file(relativePath: { eq: "spaceouthack/winners/musk.jpeg" }) {
 					...squareImage
 				}
 			}
@@ -159,12 +171,25 @@ const HackathonPage = () => {
 					<div>
 						<SectionHeaderWrapper headerText="PRIZES" />
 						{/* <DescriptionFont>Amazing prizes to be won!</DescriptionFont> */}
-						<DescriptionFontSoon>Details Coming Soon!</DescriptionFontSoon>
-						{/* <ImageWrapper>
-							<StyledAvatar name="Google Home" description="Top 3 For Main Hack" data={data} imageName="google_home"/>
-							<StyledAvatar name="Gaming Mouse" description="Weirdest interpretation for Broad Hack" data={data} imageName="gaming_mouse"/>
-							<StyledAvatar name="Vouchers" description="Various categories" data={data} imageName="vouchers"/>
-						</ImageWrapper> */}
+						<ImageWrapper>
+							<StyledAvatar name="Grab Vouchers" description="Prizes for Mini Hackathon Winners (1st, 2nd and 3rd positions)" data={data} imageName="grabvouchers"/>
+							<StyledAvatar name="CapitaMall Vouchers" description="Prizes for Rover Hackathon Winners (1st, 2nd and 3rd positions)" data={data} imageName="capitavouchers"/>
+						</ImageWrapper>
+					</div>
+					<div>
+						<SectionHeaderWrapper headerText="Space Out Hackathon 2021 Winners" />
+						<DescriptionFont>Mini Hackathon</DescriptionFont>
+						<ImageWrapper>
+							<StyledAvatarSubmit1 name="Kerbals" description="1st Position" contactLink="/spaceouthack/minihack/Kerbals.pdf" data={data} imageName="kerbals"/>
+							<StyledAvatarSubmit1 name="Nova" description="2nd Position" data={data} contactLink="/spaceouthack/minihack/Nova.pdf" imageName="nova"/>
+							<StyledAvatarSubmit1 name="Event Horizon" description="3rd Position" data={data} contactLink="/spaceouthack/minihack/Event Horizon.pdf" imageName="eventhorizon"/>
+						</ImageWrapper>
+						<DescriptionFont>Rover Hackathon</DescriptionFont>
+						<ImageWrapper>
+							<StyledAvatarSubmit2 name="Kerbals" description="1st Position" contactLink="/spaceouthack/mainhack/Kerbals Autonomous Navigation.pdf" contactLink2="/spaceouthack/mainhack/Kerbals End Effector Design.pdf" data={data} imageName="kerbals"/>
+							<StyledAvatarSubmit1 name="BumsiRovers" description="2nd Position" data={data} contactLink="/spaceouthack/mainhack/BumsiRovers.pdf" imageName="bumsi"/>
+							<StyledAvatarSubmit1 name="Musk's Children" description="3rd Position" data={data} contactLink="/spaceouthack/mainhack/Musk's Children.pdf" imageName="musk"/>
+						</ImageWrapper>
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="SPEAKERS" />
@@ -174,7 +199,6 @@ const HackathonPage = () => {
 							<StyledAvatar name="Ramu Uma" description="Engineer at A*STAR" data={data} imageName="Uma"/>
 							<StyledAvatar name="Ren Lingfei" description="Engineer at A*STAR" data={data} imageName="Lingfei"/>
 						</ImageWrapper>
-						{/* <DescriptionFontSoon>More Speakers Coming Soon!</DescriptionFontSoon> */}
 					</div>
 					<div>
 						<SectionHeaderWrapper headerText="EVENT FLOW" />
@@ -278,38 +302,6 @@ const HackathonPage = () => {
 							</p>
 						</VerticalTimelineElement>
 
-						{/* <VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
-							contentArrowStyle={{ borderRight: '7px solid  rgb(170, 171, 174)' }}
-							date="29th Jul, 2pm - 3pm"
-							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
-						>
-							<h3 className="vertical-timeline-element-title">Talk</h3>
-							<h4 className="vertical-timeline-element-subtitle">Speakers: Mr. Torsten Kriening</h4>
-							<p>
-							
-							</p>
-						</VerticalTimelineElement> */}
-
-						{/* <VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
-							contentArrowStyle={{ borderRight: '7px solid rgb(170, 171, 174)' }}
-							date="29th Jul, 2pm - 4pm"
-							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
-						>
-							<h3 className="vertical-timeline-element-title">Workshop 4</h3>
-							<h4 className="vertical-timeline-element-subtitle">Energy Systems and Electronic Skills</h4>
-							<p>
-								<b>Conducted by: Gollapudi Venkata Sambahvi Deepthi, Research Engineer at School of Design and Environment</b>
-								<br></br><br></br>
-								What do microcontrollers, sensors, wheels and cameras have in common? They are all powered by a central battery system!
-								With this workshop you can learn the fundamentals of setting up robust electrical systems and making judicious decisions 
-								that (literally) power systems like Mars Rovers.
-							</p>
-						</VerticalTimelineElement> */}
-
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
@@ -340,7 +332,6 @@ const HackathonPage = () => {
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Mini Hackathon Opening Ceremony</h3>
-							{/* <h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4> */}
 							<p>
 								Remember to join in by 6.15pm. Details about the hackathon will be provided during this opening ceremony.
 							</p>
@@ -354,7 +345,6 @@ const HackathonPage = () => {
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Mini Hackathon</h3>
-							{/* <h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4> */}
 							<p>
 								A broad themed hackathon.
 							</p>
@@ -368,7 +358,6 @@ const HackathonPage = () => {
 							iconStyle={{ background: 'rgb(170, 171, 174)', color: '#fff' }}
 						>
 							<h3 className="vertical-timeline-element-title">Mini Hackathon Mentoring Session</h3>
-							{/* <h4 className="vertical-timeline-element-subtitle">Judges: Coming Soon!</h4> */}
 							<p>
 							Mentors will be present in a zoom call for teams to pop in and ask any questions that they may have.
 							</p>
@@ -389,20 +378,6 @@ const HackathonPage = () => {
 								Learn the basics of using EAGLE CAD to design professional-grade Printed Circuit Boards and Schematics.
 							</p>
 						</VerticalTimelineElement>
-
-						{/* <VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
-							contentArrowStyle={{ borderRight: '7px solid  rgb(225,123,16)' }}
-							date="30th Jul, 4pm - 6pm"
-							iconStyle={{ background: 'rgb(225,123,16)', color: '#fff' }}
-						>
-							<h3 className="vertical-timeline-element-title">Workshop 6</h3>
-							<h4 className="vertical-timeline-element-subtitle">Introduction to OpenCV/CV Seminar</h4>
-							<p>
-							
-							</p>
-						</VerticalTimelineElement> */}
 
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
@@ -451,20 +426,6 @@ const HackathonPage = () => {
 							</p>
 						</VerticalTimelineElement>
 
-						{/* <VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
-							contentArrowStyle={{ borderRight: '7px solid  rgb(45, 44, 80)' }}
-							date="31st Jul"
-							iconStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
-						>
-							<h3 className="vertical-timeline-element-title">Hackathon</h3>
-							<h4 className="vertical-timeline-element-subtitle">Day 1</h4>
-							<p>
-								Rover based challenges.
-							</p>
-						</VerticalTimelineElement> */}
-
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
 							contentStyle={{ background: 'rgb(45, 44, 80)', color: '#fff' }}
@@ -478,20 +439,6 @@ const HackathonPage = () => {
 								Teams can choose a slot to ask questions to the mentors.
 							</p>
 						</VerticalTimelineElement>
-
-						{/* <VerticalTimelineElement
-							className="vertical-timeline-element--work"
-							contentStyle={{ background: 'rgb(65, 64, 100)', color: '#fff' }}
-							contentArrowStyle={{ borderRight: '7px solid  rgb(65, 64, 100)' }}
-							date="1st Aug"
-							iconStyle={{ background: 'rgb(65, 64, 100)', color: '#fff' }}
-						>
-							<h3 className="vertical-timeline-element-title">Hackathon</h3>
-							<h4 className="vertical-timeline-element-subtitle">Day 2</h4>
-							<p>
-								Rover based challenges.
-							</p>
-						</VerticalTimelineElement> */}
 
 						<VerticalTimelineElement
 							className="vertical-timeline-element--work"
