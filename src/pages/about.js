@@ -69,27 +69,23 @@ const AboutPage = ({ data }) => (
 			<ImageWrapper>
 				<StyledAvatar name="Prof. Low Kay-Soon" description="Advisor" data={data} imageName="male_kerbal" />
 				<StyledAvatar name="Mr. Eugene Ee" description="Mentor" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Joanna Hioe" description="Advisor, Space Policy Unit" data={data} imageName="male_kerbal" />
+
 			</ImageWrapper>
 			<SectionHeaderWrapper headerText="OUR CORE TEAM" />
 			<ImageWrapper>
-				<StyledAvatar name="Ian Wu Ling En" description="President" data={data} imageName="ian" />
-				<StyledAvatar name="Yeoh Jun Kai" description="Project Director (Propulsion Lab)" data={data} imageName="jun_kai" />
-				<StyledAvatar name="Anisha Nicole Joseph" description="Finance Lead" data={data} imageName="anisha" />
-				<StyledAvatar
-					name="Dean Su Di Yang"
-					description="Outreach Lead (External)"
-					data={data}
-					imageName="dean"
-				/>
-				<StyledAvatar name="Yeoh Jun Jie" description="Events Manager" data={data} imageName="jun_jie" />
-				<StyledAvatar name="Benedict Goh" description="Secretary" data={data} imageName="benedict" />
+				<StyledAvatar name="Ryeson Tan" description="President" data={data} imageName="male_kerbal" />
 				<StyledAvatar
 					name="Pranati Rajagopal"
-					description="Project Director (Rover Team)"
+					description="Vice President & Rover Unit, Director"
 					data={data}
-					imageName="pranati"
+					imageName="male_kerbal"
 				/>
-				<StyledAvatar name="Arka Ray" description="Space Policy Unit Lead" data={data} imageName="arka_ray" />
+				<StyledAvatar name="Yeoh Jun Kai" description="Propulsion Lab Unit, Director" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Anisha Nicole Joseph" description="Web Master" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Zheng Yan" description="Publicity & Events, Director" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Benedict Goh" description="Secretary" data={data} imageName="male_kerbal" />
+				<StyledAvatar name="Reenah Tamilarusu" description="Space Policy Unit, Director" data={data} imageName="male_kerbal" />
 			</ImageWrapper>
 			<SectionHeaderWrapper headerText="FOLLOW US ON" />
 			<StyledFollowUsContent />

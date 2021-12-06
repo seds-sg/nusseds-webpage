@@ -29,9 +29,17 @@ const SPUPage = ({ data }) => (
         <br />
         Ad Astra!
 			</DescriptionFont>
+      <SectionHeaderWrapper headerText="IADC’s Space Debris Mitigation Guidelines Implementations In ASEAN’s Space Sector" />
+			<DescriptionFont>
+        By Chen Wei and Yeo Shen Kai 
+				<br />
+				<br />
+        Read our <a href="/SPU/ASEANs Space Industry and Debris Mitigation Guidelines.pdf">policy brief</a> on IADC's Space Debris Mitigation Guidelines 
+        and how they may adapt to the needs of emerging spacefaring nations.
+			</DescriptionFont>
 			<SectionHeaderWrapper headerText="SINGAPORE SPACE INSIGHTS REPORT 2020" />
       <DescriptionFont>
-      Download the entire report <a href="../content/SEDS SG Insights Report.pdf" download>here</a>.
+      Download the entire report <a href="/SPU/SEDS SG Insights Report.pdf">here</a>.
       <br />
       <br />
       Over the summer of 2020, we carried out a project wherein we consolidated the views of the various 
