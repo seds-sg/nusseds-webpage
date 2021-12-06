@@ -101,7 +101,30 @@ const AvatarWithTitle = ({ className, name, description, data, imageName, contac
 		{contactLink && <AvatarDescription><a href={contactLink}>LinkedIn</a></AvatarDescription>}
 	</div>
 )
+const AvatarWithTitleSubmit1 = ({ className, name, description, data, imageName, contactLink }) => (
+	<div className={className}>
+		<Avatar fixed={data[imageName].childImageSharp.fixed} />
+		<AvatarName>{name.toUpperCase()}</AvatarName>
+		{description && <AvatarDescription>{description}</AvatarDescription>}
+		{contactLink && <AvatarDescription><a href={contactLink}>Submission</a></AvatarDescription>}
+	</div>
+)
+const AvatarWithTitleSubmit2 = ({ className, name, description, data, imageName, contactLink, contactLink2 }) => (
+	<div className={className}>
+		<Avatar fixed={data[imageName].childImageSharp.fixed} />
+		<AvatarName>{name.toUpperCase()}</AvatarName>
+		{description && <AvatarDescription>{description}</AvatarDescription>}
+		{contactLink && <AvatarDescription><a href={contactLink}>Submission 1</a></AvatarDescription>}
+		{contactLink2 && <AvatarDescription><a href={contactLink2}>Submission 2</a></AvatarDescription>}
+	</div>
+)
 
 export const StyledAvatar = styled(AvatarWithTitle)`
+  padding: 1rem 2rem;
+`
+export const StyledAvatarSubmit1 = styled(AvatarWithTitleSubmit1)`
+  padding: 1rem 2rem;
+`
+export const StyledAvatarSubmit2 = styled(AvatarWithTitleSubmit2)`
   padding: 1rem 2rem;
 `
